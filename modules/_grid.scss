@@ -1,0 +1,67 @@
+/* *******************************************
+veGrid - Grid System by Adonis K.
+******************************************* */
+
+// partial requirements
+//	Requires: borderbox dependency
+//	Requires: clearfix dependency
+//
+
+@import "../generic/borderbox";
+@import "../generic/clearfix";
+
+// this mixin generates column units by using a divisor ($N). It starts looping from 1 (and increasing by 1) until it reaches the divisor's number ($N).
+@mixin col($N){
+	// left-edge-case : if(i - 1 == 0) then convert that value to 1
+	$last : 1;
+	@if($N - 1 != 0){
+		$last : $N - 1;
+	}
+	// loop through the numbers given and generate column unit classes
+	@for $i from 1 through $last{
+		.col-#{$i}-#{$N}{
+			width: percentage($i / $N);
+		}
+	}
+}
+
+@mixin grid($N : false, $padding : 0){
+	// if no $N was selected, create classic 12 column grid
+	@if($N){
+		$N : 12;
+	}
+
+	// loop through the amount of columns that got selected and create their column classes
+	@for $i from 1 through $N{
+		@include col($i);
+	}
+
+	.grid{
+		display: block;
+		padding: $padding 0 0 $padding;
+		margin: 0;
+		text-align: left;
+		@include borderbox;
+		@include clearfix;
+
+		.grid{
+			margin: 0;
+			padding-bottom: 0;
+		}
+	}
+
+	[class|=col]{
+		display: block;
+		float: left;
+
+		@if($padding != 0){
+			padding-right: $padding;
+
+			&:last-child{
+				padding-right: $padding;
+			}
+		}
+
+		@include borderbox;
+	}
+}
