@@ -10,7 +10,7 @@ veRepo - is a collection of modules and mixins for fast and maintainable fronten
 
 todo
 
-## Contribute Guidelines
+## Contribution Guidelines
 
 todo
 

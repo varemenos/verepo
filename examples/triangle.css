@@ -1,0 +1,8 @@
+.item {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: solid 20px;
+  border-color: red transparent transparent transparent;
+}
