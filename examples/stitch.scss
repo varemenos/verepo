@@ -1,0 +1,5 @@
+@import "../partials/_stitch";
+
+.item{
+	@include stitch(#fff, red);
+}

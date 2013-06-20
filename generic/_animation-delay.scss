@@ -1,0 +1,6 @@
+@mixin animation-delay($val...){
+	-webkit-animation-delay: $val;
+	-moz-animation-delay: $val;
+	-o-animation-delay: $val;
+	animation-delay: $val;
+}

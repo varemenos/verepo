@@ -1,0 +1,13 @@
+.item {
+  color: transparent;
+  text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  -webkit-transition: 150ms;
+  -moz-transition: 150ms;
+  -o-transition: 150ms;
+  -ms-transition: 150ms;
+  transition: 150ms;
+}
+.item:hover {
+  color: red;
+  text-shadow: none;
+}

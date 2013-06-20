@@ -1,8 +1,13 @@
-@mixin stitch($bg-color, $stitch-color){
+// Experimental
+
+@import "../generic/_border-radius";
+@import "../generic/_box-shadow";
+
+@mixin stitch($bg-color, $stitch-color, $radius: 3px){
 	&{
 		background-color: $bg-color;
 		border: 2px dashed $stitch-color;
-		border-radius: 10px;
-		box-shadow: 0 0 0 4px $bg-color;
+		@include border-radius($radius);
+		@include box-shadow(0 0 0 4px $bg-color);
 	}
 }

@@ -1,0 +1,6 @@
+@mixin animation($val...){
+	-webkit-animation: $val;
+	-moz-animation: $val;
+	-o-animation: $val;
+	animation: $val;
+}
