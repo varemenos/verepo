@@ -1,4 +1,15 @@
-verepo
+veRepo - SCSS Library
+
 ======
 
-veRepo - is an SCSS Library / Collection of modules and mixins that will help the frontend developers write faster and better organized SCSS stylesheets.
+## About
+
+veRepo - is a collection of modules and mixins that will help the frontend developers write faster, more organized and maintainable SCSS stylesheets.
+
+## Guide
+
+todo: give some usage examples (+ more)
+
+## License
+
+todo: include license
