@@ -1,0 +1,18 @@
+@mixin border-radius($val, $horizontal:false, $vertical:false){
+	@if($horizontal){
+		-webkit-border-radius: $val;
+		-moz-border-radius: $val;
+		border-radius: $val;
+	}@else if($vertical){
+	}@else{
+		-webkit-border-#{$horizontal}-#{$vertical}-radius: $val;
+		-moz-border-radius-#{$horizontal}#{$vertical}: $val;
+		border-#{$horizontal}-#{$vertical}-radius: $val;
+	}
+
+	// Sometimes you can see a background-color "leak" outside of a border when border-radius is present.
+	// To prevent this you use background-clip
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+}
