@@ -1,5 +1,0 @@
-@import "../generic/_box-shadow";
-
-.item{
-	@include box-shadow(0 0 5px #f60, 0 0 5px #f60 inset, 10px 10px 0 #fff);
-}
