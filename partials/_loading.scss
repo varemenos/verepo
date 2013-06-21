@@ -1,19 +1,20 @@
 // TODO: make it work for any amount of spans
-// REQUIRES a div.loading and 3* spans inside div.loading
+// REQUIRES a `div` and `3 * span` inside of that `div`
 
+@import "../generic/_keyframes";
 @import "../generic/_animation";
 @import "../generic/_animation-delay";
 @import "../generic/_transform";
 
-@mixin loading{
-		text-align: center;
+@mixin loading($width: 1.5em){
+	text-align: center;
 
 	& span{
 		display: inline-block;
 		vertical-align: middle;
-		width: 24px;
-		height: 24px;
-		margin: 50px auto;
+		width: $width;
+		height: $width;
+		margin: $width auto;
 		background: black;
 		@include animation(loading 0.9s infinite alternate);
 	}
@@ -27,20 +28,9 @@
 	}
 }
 
-@-webkit-keyframes loading{
+@include keyframes(loading){
 	0%{
 		opacity: 0.9;
-		@include transform(translateY(0));
-	}
-	100%{
-		opacity: 0.1;
-	}
-}
-
-@-moz-keyframes loading{
-	0%{
-		opacity: 0.9;
-		@include transform(translateY(0));
 	}
 	100%{
 		opacity: 0.1;

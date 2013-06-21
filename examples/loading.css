@@ -28,15 +28,60 @@
   }
 }
 
+@-ms-keyframes loading {
+  0% {
+    opacity: 0.9;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@-o-keyframes loading {
+  0% {
+    opacity: 0.9;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0.9;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
 .item {
   text-align: center;
 }
 .item span {
   display: inline-block;
   vertical-align: middle;
-  width: 24px;
-  height: 24px;
-  margin: 50px auto;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 3em auto;
   background: black;
   -webkit-animation: loading 0.9s infinite alternate;
   -moz-animation: loading 0.9s infinite alternate;
