@@ -2,6 +2,11 @@
 veGrid - Grid System by Adonis K.
 ******************************************* */
 
+// partial requirements
+//	Requires: borderbox dependency
+//	Requires: clearfix dependency
+//
+
 @import "../generic/borderbox";
 @import "../generic/clearfix";
 
@@ -20,8 +25,8 @@ veGrid - Grid System by Adonis K.
 	}
 }
 
-@mixin grid($N : false, $padding : 0){
-	// if no $N was selected, create classic 12 column grid
+@mixin grid($N : false, $gutter : 0){
+	// if no $N was selected, create a classic 12 column grid
 	@if($N){
 		$N : 12;
 	}
@@ -32,12 +37,12 @@ veGrid - Grid System by Adonis K.
 	}
 
 	.grid{
-		display: block;
-		padding: $padding 0 0 $padding;
-		margin: 0;
-		text-align: left;
 		@include borderbox;
 		@include clearfix;
+		display: block;
+		padding: $gutter 0 0 $gutter;
+		margin: 0;
+		text-align: left;
 
 		.grid{
 			margin: 0;
@@ -45,18 +50,17 @@ veGrid - Grid System by Adonis K.
 		}
 	}
 
-	[class|=col]{
+	[class ^= col]{
+		@include borderbox;
 		display: block;
 		float: left;
 
-		@if($padding != 0){
-			padding-right: $padding;
+		@if($gutter != 0){
+			padding-right: $gutter;
 
 			&:last-child{
-				padding-right: $padding;
+				padding-right: $gutter;
 			}
 		}
-
-		@include borderbox;
 	}
 }
