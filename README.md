@@ -40,6 +40,7 @@ veRepo - is a collection of modules and mixins for fast and maintainable fronten
 
 #Credits
 
-The CONTRIBUTE.md of this project is a slightly modified copy of Nicolas Gallagher's CONTRIBUTE.md file from normalize.css
+The `CONTRIBUTE.md` file of this project is a slightly modified copy `CONTRIBUTE.md` file from the normalize.css project.
+The `debug.scss` module from this project is a direct copy (might change in the future) from the inuit.css project. 
 
 	#TODO add more
