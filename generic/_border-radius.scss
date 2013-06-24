@@ -1,13 +1,21 @@
 @mixin border-radius($val, $horizontal:false, $vertical:false){
 	@if($horizontal){
+		@if($vertical){
+			-webkit-border-#{$horizontal}-#{$vertical}-radius: $val;
+			-moz-border-radius-#{$horizontal}#{$vertical}: $val;
+			border-#{$horizontal}-#{$vertical}-radius: $val;
+		}@else{
+			-webkit-border-#{$horizontal}-left-radius: $val;
+			-moz-border-radius-#{$horizontal}left: $val;
+			border-#{$horizontal}-left-radius: $val;
+			-webkit-border-#{$horizontal}-right-radius: $val;
+			-moz-border-radius-#{$horizontal}right: $val;
+			border-#{$horizontal}-right-radius: $val;
+		}
+	}@else{
 		-webkit-border-radius: $val;
 		-moz-border-radius: $val;
 		border-radius: $val;
-	}@else if($vertical){
-	}@else{
-		-webkit-border-#{$horizontal}-#{$vertical}-radius: $val;
-		-moz-border-radius-#{$horizontal}#{$vertical}: $val;
-		border-#{$horizontal}-#{$vertical}-radius: $val;
 	}
 
 	// Sometimes you can see a background-color "leak" outside of a border when border-radius is present.

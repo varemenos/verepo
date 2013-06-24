@@ -12,7 +12,7 @@
 	margin: 0;
 	padding: 0;
 
-	& li{
+	& > *{
 		position: relative;
 		float: left;
 		width: 250px;
@@ -24,8 +24,8 @@
 		@include box-shadow(0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset);
 	}
 
-	& li:before,
-	& li:after{
+	& > *:before,
+	& > *:after{
 		content: '';
 		z-index: -1;
 		position: absolute;
@@ -39,7 +39,7 @@
 		@include transform(skew(-15deg) rotate(-6deg));
 	}
 
-	& li:after{
+	& > *:after{
 		left: auto;
 		right: 10px;
 		@include transform(skew(15deg) rotate(6deg));
