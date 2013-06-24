@@ -12,7 +12,7 @@ veRepo - is a collection of modules and mixins for fast and maintainable fronten
 
 ## Contribution Guidelines
 
-read [CONTRIBUTE.md](CONTRIBUTE.md)
+[CONTRIBUTE.md](CONTRIBUTE.md)
 
 ## License
 
