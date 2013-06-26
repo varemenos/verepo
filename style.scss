@@ -166,6 +166,7 @@ footer{
 }
 
 #wrapper{
+	@include borderbox;
 	width: 1140px;
 	margin: 0 auto;
 
@@ -175,6 +176,7 @@ footer{
 
 	@media only screen and (max-width: 1139px){
 		width: 100%;
+		padding: 0 2em;
 		border: none;
 	}
 }
