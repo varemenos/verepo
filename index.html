@@ -7,14 +7,23 @@
 </head>
 <body>
 	<div id="wrapper" class="grid">
-		<header>
-			<h1>veRepo</h1>
+		<header role="banner">
+			<h1><a href="http://varemenos.github.io/verepo">veRepo</a></h1>
 			<h2>veRepo is a SASS Collection of mixins and modules by Adonis K.</h2>
 		</header>
 
 		<hr>
 
-		<div class="row">
+		<div class="vertical-spacing align--right" role="main">
+				<div class="item">
+					<a href="https://github.com/varemenos/verepo" class="blue-flat-button large">Fork</a>
+					<a href="https://github.com/varemenos/verepo/archive/master.zip" class="dark-blue-flat-button large">Download</a>
+				</div>
+		</div>
+
+		<hr>
+
+		<div class="row vertical-spacing last">
 			<div class="col-4-12 align--center">
 				<div class="item">
 					<h3 class="align--left">Flat Buttons</h3>
@@ -22,12 +31,25 @@
 					<button class="blue-flat-button">Button</button>
 					<button class="white-flat-button">Button</button>
 				</div>
+
 				<hr>
+
 				<div class="item">
 					<h3 class="align--left">Curved Buttons</h3>
 					<button class="dark-blue-curved-button">Button</button>
 					<button class="blue-curved-button">Button</button>
 					<button class="white-curved-button">Button</button>
+				</div>
+
+				<hr>
+
+				<div class="item">
+					<h3>Loading</h3>
+					<div class="loading">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
 				</div>
 			</div>
 
@@ -40,6 +62,14 @@
 				<hr>
 
 				<div class="item">
+					<h3>Stitches</h3>
+					<div class="stitch">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, quae architecto nemo mollitia iure in ratione vitae dolorum adipisci officiis nesciunt delectus voluptatibus molestias natus quaerat vel consectetur aliquid sit voluptates fugit autem tenetur necessitatibus perspiciatis laudantium repellat dicta magni sequi soluta inventore quia incidunt veritatis facilis sapiente! Optio, necessitatibus!
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="item">
 					<h3>Truncate</h3>
 					<p class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, quae architecto nemo mollitia iure in ratione vitae dolorum adipisci officiis nesciunt delectus voluptatibus molestias natus quaerat vel consectetur aliquid sit voluptates fugit autem tenetur necessitatibus perspiciatis laudantium repellat dicta magni sequi soluta inventore quia incidunt veritatis facilis sapiente! Optio, necessitatibus!</p>
 				</div>
@@ -47,16 +77,34 @@
 
 			<div class="col-4-12">
 				<div class="item">
-					<h3>Loading</h3>
-					<div class="loading">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
+					<h3>Triangles</h3>
+					<span class="triangle-right"></span>
+					<span class="triangle-left"></span>
+					<span class="triangle-top"></span>
+					<span class="triangle-bottom"></span>
+				</div>
+
+				<hr>
+
+				<div class="item">
+					<h3>Triangle combinations</h3>
+					<span class="triangle-topright"></span>
+					<span class="triangle-topleft"></span>
+					<span class="triangle-bottomright"></span>
+					<span class="triangle-bottomleft"></span>
+					<span class="triangle-topbottom"></span>
+					<span class="triangle-leftright"></span>
+					<span class="triangle-topbottomright"></span>
+					<span class="triangle-topbottomleft"></span>
+					<span class="triangle-topleftright"></span>
+					<span class="triangle-bottomleftright"></span>
 				</div>
 			</div>
 		</div>
 
+		<footer role="contentinfo">
+			<p>&copy; 2013 Adonis K.</p>
+		</footer>
 	</div>
 </body>
 </html>

@@ -1,17 +1,39 @@
 @mixin triangle($size, $color, $direction){
 	content: "";
-	display: block;
+	display: inline-block;
 	width: 0;
 	height: 0;
 	border: solid $size;
 
-	@if($direction == top){
+	$direction: "#{$direction}";
+
+	@if($direction == "top"){
 		border-color: $color transparent transparent transparent;
-	}@else if($direction == bottom){
+	}@else if($direction == "bottom"){
 		border-color: transparent transparent $color transparent;
-	}@else if($direction == left){
+	}@else if($direction == "left"){
 		border-color: transparent transparent transparent $color;
-	}@else if($direction == right){
+	}@else if($direction == "right"){
 		border-color: transparent $color transparent transparent;
+	}@else if($direction == "top left" or $direction == "left top"){
+		border-color: $color transparent transparent $color;
+	}@else if($direction == "bottom left" or $direction == "left bottom"){
+		border-color: transparent transparent $color $color;
+	}@else if($direction == "top right" or $direction == "right top"){
+		border-color: $color $color transparent transparent;
+	}@else if($direction == "bottom right" or $direction == "right bottom"){
+		border-color: transparent $color $color transparent;
+	}@else if($direction == "top bottom" or $direction == "bottom top"){
+		border-color: $color transparent $color transparent;
+	}@else if($direction == "left right" or $direction == "right left"){
+		border-color: transparent $color transparent $color;
+	}@else if($direction == "top bottom left" or $direction == "top left bottom" or $direction == "bottom top left" or $direction == "bottom left top" or $direction == "left top bottom" or $direction == "left bottom top"){
+		border-color: $color transparent $color $color;
+	}@else if($direction == "top bottom right" or $direction == "top right bottom" or $direction == "bottom top right" or $direction == "bottom right top" or $direction == "right top bottom" or $direction == "left bottom top"){
+		border-color: $color $color $color transparent;
+	}@else if($direction == "left right top" or $direction == "left top right" or $direction == "right left top" or $direction == "right top left" or $direction == "top left right" or $direction == "top right left"){
+		border-color: $color $color transparent $color;
+	}@else if($direction == "left right bottom" or $direction == "left bottom right" or $direction == "right left bottom" or $direction == "right bottom left" or $direction == "bottom left right" or $direction == "bottom right left"){
+		border-color: transparent $color $color $color;
 	}
 }

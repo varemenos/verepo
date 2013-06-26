@@ -802,6 +802,132 @@ veGrid - Grid System by Adonis K.
   box-shadow: 0 0 3px #445588, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
 }
 
+.triangle-top {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid 30px;
+  border-color: red transparent transparent transparent;
+}
+
+.triangle-left {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid 30px;
+  border-color: transparent transparent transparent blue;
+}
+
+.triangle-bottom {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid 30px;
+  border-color: transparent transparent yellow transparent;
+}
+
+.triangle-right {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid 30px;
+  border-color: transparent black transparent transparent;
+}
+
+.triangle-topleft {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid 30px;
+  border-color: red transparent transparent red;
+}
+
+.triangle-bottomleft {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid 30px;
+  border-color: transparent transparent blue blue;
+}
+
+.triangle-bottomright {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid 30px;
+  border-color: transparent yellow yellow transparent;
+}
+
+.triangle-topright {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid 30px;
+  border-color: black black transparent transparent;
+}
+
+.triangle-leftright {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid 30px;
+  border-color: transparent green transparent green;
+}
+
+.triangle-topbottom {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid 30px;
+  border-color: pink transparent pink transparent;
+}
+
+.triangle-topleftright {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid 30px;
+  border-color: orange orange transparent orange;
+}
+
+.triangle-bottomleftright {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid 30px;
+  border-color: transparent brown brown brown;
+}
+
+.triangle-topbottomleft {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid 30px;
+  border-color: grey transparent grey grey;
+}
+
+.triangle-topbottomright {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid 30px;
+  border-color: cyan cyan cyan transparent;
+}
+
 .spoiler {
   color: transparent;
   text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
@@ -851,14 +977,74 @@ veGrid - Grid System by Adonis K.
   animation-delay: 0.6s;
 }
 
+.stitch {
+  padding: 1em;
+}
+.stitch {
+  background-color: white;
+  border: 2px dashed red;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 0 0 4px white;
+  -moz-box-shadow: 0 0 0 4px white;
+  box-shadow: 0 0 0 4px white;
+}
+
+[class*=triangle] {
+  margin-right: 0.5em;
+}
+
+body {
+  overflow-x: auto;
+  overflow-y: scroll;
+}
+
 header h1 {
   font-size: 4em;
   color: #222;
   margin: 0.25em 0;
 }
+header h1 > a, header h1 > a:visited {
+  color: #222;
+  text-decoration: none;
+  -webkit-transition: 250ms ease-in-out;
+  -moz-transition: 250ms ease-in-out;
+  -o-transition: 250ms ease-in-out;
+  -ms-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+header h1 > a:hover {
+  text-shadow: 0 0 1em #4db8ff, 0 2px 1px #9ad7ff;
+}
 header h2 {
   font-size: 1.2em;
-  color: #666;
+  color: #aaa;
+}
+
+footer {
+  text-align: center;
+  color: #fff;
+  background-color: #999;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+}
+footer p {
+  margin: 0;
+  padding: 1em;
+}
+
+.vertical-spacing {
+  padding: 1em 0;
+}
+
+.last {
+  margin-bottom: 4em;
 }
 
 #wrapper {
@@ -899,4 +1085,8 @@ hr {
   border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
   border-left: none;
   border-right: none;
+}
+
+.large {
+  font-size: 2em;
 }

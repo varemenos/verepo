@@ -5,6 +5,9 @@
 @import "partials/_spoiler";
 @import "partials/_truncate";
 @import "partials/_loading";
+@import "partials/_triangle";
+@import "partials/_stitch";
+@import "partials/_fixed-footer";
 
 // generate a 12-column grid with 1em gutter spacing
 @include grid(12, 1em);
@@ -34,6 +37,63 @@
 	@include button(#fff, #458, 2px);
 }
 
+// triangles
+.triangle-top{
+	@include triangle(30px, red, top);
+}
+
+.triangle-left{
+	@include triangle(30px, blue, left);
+}
+
+.triangle-bottom{
+	@include triangle(30px, yellow, bottom);
+}
+
+.triangle-right{
+	@include triangle(30px, black, right);
+}
+
+.triangle-topleft{
+	@include triangle(30px, red, top left);
+}
+
+.triangle-bottomleft{
+	@include triangle(30px, blue, bottom left);
+}
+
+.triangle-bottomright{
+	@include triangle(30px, yellow, bottom right);
+}
+
+.triangle-topright{
+	@include triangle(30px, black, top right);
+}
+
+.triangle-leftright{
+	@include triangle(30px, green, left right);
+}
+
+.triangle-topbottom{
+	@include triangle(30px, pink, top bottom);
+}
+
+.triangle-topleftright{
+	@include triangle(30px, orange, top left right);
+}
+
+.triangle-bottomleftright{
+	@include triangle(30px, brown, bottom left right);
+}
+
+.triangle-topbottomleft{
+	@include triangle(30px, grey, top bottom left);
+}
+
+.triangle-topbottomright{
+	@include triangle(30px, cyan, top bottom right);
+}
+
 // other partials
 .spoiler{
 	@include spoiler;
@@ -46,18 +106,63 @@
 	@include loading;
 }
 
+.stitch{
+	padding: 1em;
+	@include stitch(#fff, red, 5px);
+}
+
+[class*=triangle]{
+	margin-right: 0.5em;
+}
+
 // page styling
+
+body{
+	overflow-x: auto;
+	overflow-y: scroll;
+}
+
 header{
 	h1{
 		font-size: 4em;
 		color: #222;
 		margin: 0.25em 0;
+
+		& > a,
+		& > a:visited{
+			color: #222;
+			text-decoration: none;
+			@include transition(250ms ease-in-out);
+		}
+		& > a:hover{
+			text-shadow: 0 0 1em #4db8ff, 0 2px 1px lighten(#4db8ff, 15%);
+		}
 	}
 
 	h2{
 		font-size: 1.2em;
-		color: #666;
+		color: #aaa;
 	}
+}
+
+footer{
+	text-align: center;
+	color: #fff;
+	background-color: #999;
+	@include fixed-footer;
+
+	p{
+		margin: 0;
+		padding: 1em;
+	}
+}
+
+.vertical-spacing{
+	padding: 1em 0;
+}
+
+.last{
+	margin-bottom: 4em;
 }
 
 #wrapper{
@@ -95,4 +200,8 @@ hr{
 	border-bottom: 2px dashed rgba(black, 0.2);
 	border-left: none;
 	border-right: none;
+}
+
+.large{
+	font-size: 2em;
 }
