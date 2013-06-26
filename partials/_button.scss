@@ -3,26 +3,40 @@
 @import "../generic/_box-shadow";
 @import "../generic/_transform";
 
-@mixin button($radius: 0){
+@mixin button($font-color, $bg-color, $radius: 0){
+	$x: hue($bg-color); // deg
+	$y: saturation($bg-color); // %
+	$z: lightness($bg-color); // %
+
+	position: relative;
 	display: inline-block;
 	padding: 0.5em 1em;
-	color: #222;
+	color: $font-color;
 	text-decoration: none;
-	background-color: rgba(black,0.15);
-	border: 1px solid rgba(black,0.25);
+	background-color: $bg-color;
+	border: 1px solid darken($bg-color, 10%);
 	@include border-radius($radius);
-	@include transition(150ms);
-	@include box-shadow(0 0 3px rgba(black,0.20), 0 -3px 10px rgba(black,0.15) inset);
+	@include transition(150ms ease-in-out);
 
 	&:hover,
 	&:focus{
 		cursor: pointer;
-		@include box-shadow(0 0 3px rgba(black,0.20), 0 -3px 20px rgba(black,0.20) inset);
+		@if(lightness($bg-color) > 50%) {
+			background-color: darken($bg-color, 5%);
+			border: 1px solid darken($bg-color, 15%);
+		}@else {
+			background-color: lighten($bg-color, 15%);
+			border: 1px solid $bg-color;
+		}
 	}
 		
 	&:active{
 		cursor: pointer;
-		@include box-shadow(0 0 3px rgba(black,0.25), 0 -3px 30px rgba(black,0.25) inset,  0 3px 0 rgba(black,0.35));
-		@include transform(translateY(-3px));
+		@if(lightness($bg-color) > 50%) {
+			border: 1px solid rgba(black, 0.125);
+			@include box-shadow(0 0 3px rgba(black, 0.125), 0 0 0.5em rgba(black, 0.25) inset);
+		}@else {
+			@include box-shadow(0 0 3px $bg-color, 0 0 0.5em rgba(black, 0.25) inset);
+		}
 	}
 }

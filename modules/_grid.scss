@@ -2,10 +2,6 @@
 veGrid - Grid System by Adonis K.
 ******************************************* */
 
-// mixin/partial requirements
-//	Requires: borderbox mixin
-//	Requires: clearfix mixin
-
 @import "../generic/borderbox";
 @import "../generic/clearfix";
 
@@ -32,27 +28,49 @@ veGrid - Grid System by Adonis K.
 		@include borderbox;
 		@include clearfix;
 		display: block;
-		padding: $gutter 0 0 $gutter;
 		margin: 0;
+		padding: 0;
 		text-align: left;
-
-		.grid{
-			margin: 0;
-			padding-bottom: 0;
-		}
 	}
 
-	[class ^= col]{
+	.row{
 		@include borderbox;
+		@include clearfix;
 		display: block;
-		float: left;
 
 		@if($gutter != 0){
-			padding-right: $gutter;
 			padding-bottom: $gutter;
 
 			&:last-child{
+				padding-bottom: 0;
+			}
+		}
+
+		& > *{
+			@include borderbox;
+			display: block;
+			float: left;
+
+			@if($gutter != 0){
 				padding-right: $gutter;
+
+				&:last-child{
+					padding-right: 0;
+				}
+			}
+
+			@media only screen and (max-width: 1023px){
+				width: 100%;
+				float: none;
+				padding: 0;
+
+				@if($gutter != 0){
+					padding-bottom: $gutter;
+
+					&:last-child{
+						padding-bottom: 0;
+					}
+				}
 			}
 		}
 	}

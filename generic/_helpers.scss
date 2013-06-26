@@ -1,6 +1,11 @@
-.float--right   { float:right!important; }
-.float--left    { float:left !important; }
-.float--none    { float:none !important; }
+.float--right { float:right!important; }
+.float--left { float:left !important; }
+.float--none { float:none !important; }
+
+.align--left { text-align: left; }
+.align--right { text-align: right; }
+.align--center { text-align: center; }
+.align--justify { text-align: justify; }
 
 .ir { background-color: transparent; border: 0; overflow: hidden; *text-indent: -9999px; }
 .ir:before { content: ""; display: block; width: 0; height: 150%; }

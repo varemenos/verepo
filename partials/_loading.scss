@@ -14,7 +14,7 @@
 		vertical-align: middle;
 		width: $width;
 		height: $width;
-		margin: $width auto;
+		margin: 0 auto;
 		background: black;
 		@include animation(loading 0.9s infinite alternate);
 	}

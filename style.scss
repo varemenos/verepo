@@ -1,0 +1,90 @@
+@import "generic/_normalize";
+@import "generic/_helpers";
+@import "modules/_grid";
+@import "partials/_button";
+@import "partials/_spoiler";
+@import "partials/_loading";
+
+@include grid(12, 1em);
+
+.blue-square-button{
+	@include button(#fff, #09f, 0);
+}
+
+.blue-curved-button{
+	@include button(#fff, #09f, 2px);
+}
+
+.white-square-button{
+	@include button(#222, #fff, 0);
+}
+
+.white-curved-button{
+	@include button(#222, #fff, 2px);
+}
+
+.dark-blue-square-button{
+	@include button(#fff, #458, 0);
+}
+
+.dark-blue-curved-button{
+	@include button(#fff, #458, 2px);
+}
+
+.spoiler{
+	@include spoiler;
+}
+
+.loading{
+	@include loading;
+}
+
+header{
+	h1{
+		font-size: 4em;
+		color: #222;
+		margin: 0.25em 0;
+	}
+
+	h2{
+		font-size: 1.2em;
+		color: #666;
+	}
+}
+
+#wrapper{
+	width: 1140px;
+	margin: 0 auto;
+
+	@media only screen and (min-width: 1024px){
+		min-width: 1024px;
+	}
+
+	@media only screen and (max-width: 1023px){
+		width: 100%;
+		border: none;
+	}
+}
+
+.item{
+	@include borderbox;
+	padding: 1em;
+	background-color: #f5f5f5;
+	border: 1px solid #eee;
+
+	h3{
+		color: #444;
+		margin-top: 0;
+	}
+
+	& > *:last-child{
+		margin-bottom: 0;
+	}
+}
+
+hr{
+	border-top: 2px dashed rgba(black, 0.2);
+	border-bottom: 2px dashed rgba(black, 0.2);
+	border-left: none;
+	border-right: none;
+}
