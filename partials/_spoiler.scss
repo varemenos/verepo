@@ -3,7 +3,7 @@
 @mixin spoiler($color: inherit){
 	color: transparent;
 	text-shadow: 0 0 0.5em rgba(0,0,0,0.5);
-	@include transition(150ms);
+	@include transition(500ms);
 
 	&:hover{
 		color: $color;

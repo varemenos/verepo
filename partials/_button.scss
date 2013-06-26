@@ -22,19 +22,20 @@
 	&:focus{
 		cursor: pointer;
 		@if(lightness($bg-color) > 50%) {
-			background-color: darken($bg-color, 5%);
-			border: 1px solid darken($bg-color, 15%);
+			@if(lightness($bg-color) > 75%) {
+				background-color: darken($bg-color, 5%);
+			}@else{
+				background-color: darken($bg-color, 10%);
+			}
 		}@else {
 			background-color: lighten($bg-color, 15%);
-			border: 1px solid $bg-color;
 		}
 	}
 		
 	&:active{
 		cursor: pointer;
 		@if(lightness($bg-color) > 50%) {
-			border: 1px solid rgba(black, 0.125);
-			@include box-shadow(0 0 3px rgba(black, 0.125), 0 0 0.5em rgba(black, 0.25) inset);
+			@include box-shadow(0 0 3px rgba(black, 0.125), 0 0 0.5em rgba(black, 0.125) inset);
 		}@else {
 			@include box-shadow(0 0 3px $bg-color, 0 0 0.5em rgba(black, 0.25) inset);
 		}

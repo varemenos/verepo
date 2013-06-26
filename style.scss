@@ -3,11 +3,14 @@
 @import "modules/_grid";
 @import "partials/_button";
 @import "partials/_spoiler";
+@import "partials/_truncate";
 @import "partials/_loading";
 
+// generate a 12-column grid with 1em gutter spacing
 @include grid(12, 1em);
 
-.blue-square-button{
+// buttons
+.blue-flat-button{
 	@include button(#fff, #09f, 0);
 }
 
@@ -15,7 +18,7 @@
 	@include button(#fff, #09f, 2px);
 }
 
-.white-square-button{
+.white-flat-button{
 	@include button(#222, #fff, 0);
 }
 
@@ -23,7 +26,7 @@
 	@include button(#222, #fff, 2px);
 }
 
-.dark-blue-square-button{
+.dark-blue-flat-button{
 	@include button(#fff, #458, 0);
 }
 
@@ -31,14 +34,67 @@
 	@include button(#fff, #458, 2px);
 }
 
+.grey-flat-button{
+	@include button(#fff, #999, 0);
+}
+
+.grey-curved-button{
+	@include button(#fff, #999, 2px);
+}
+
+.yellow-flat-button{
+	@include button(#222, #ff6, 0);
+}
+
+.yellow-curved-button{
+	@include button(#222, #ff6, 2px);
+}
+
+.pink-flat-button{
+	@include button(#222, #fadadd, 0);
+}
+
+.pink-curved-button{
+	@include button(#222, #fadadd, 2px);
+}
+
+.black-flat-button{
+	@include button(#fff, #000, 0);
+}
+
+.black-curved-button{
+	@include button(#fff, #000, 2px);
+}
+
+.red-flat-button{
+	@include button(#fff, #da0000, 0);
+}
+
+.red-curved-button{
+	@include button(#fff, #da0000, 2px);
+}
+
+.green-flat-button{
+	@include button(#222, #0f0, 0);
+}
+
+.green-curved-button{
+	@include button(#222, #0f0, 2px);
+}
+
+// other partials
 .spoiler{
 	@include spoiler;
+}
+.truncate{
+	@include truncate;
 }
 
 .loading{
 	@include loading;
 }
 
+// page styling
 header{
 	h1{
 		font-size: 4em;

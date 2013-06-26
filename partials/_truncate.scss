@@ -1,4 +1,4 @@
-@mixin truncate($width){
+@mixin truncate($width: 100%){
 	width: $width;
 	white-space: nowrap;
 	overflow: hidden;

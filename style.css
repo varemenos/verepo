@@ -616,7 +616,7 @@ veGrid - Grid System by Adonis K.
   }
 }
 
-.blue-square-button {
+.blue-flat-button {
   position: relative;
   display: inline-block;
   padding: 0.5em 1em;
@@ -636,12 +636,11 @@ veGrid - Grid System by Adonis K.
   -ms-transition: 150ms ease-in-out;
   transition: 150ms ease-in-out;
 }
-.blue-square-button:hover, .blue-square-button:focus {
+.blue-flat-button:hover, .blue-flat-button:focus {
   cursor: pointer;
   background-color: #4db8ff;
-  border: 1px solid #0099ff;
 }
-.blue-square-button:active {
+.blue-flat-button:active {
   cursor: pointer;
   -webkit-box-shadow: 0 0 3px #0099ff, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
   -moz-box-shadow: 0 0 3px #0099ff, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
@@ -671,7 +670,6 @@ veGrid - Grid System by Adonis K.
 .blue-curved-button:hover, .blue-curved-button:focus {
   cursor: pointer;
   background-color: #4db8ff;
-  border: 1px solid #0099ff;
 }
 .blue-curved-button:active {
   cursor: pointer;
@@ -680,7 +678,7 @@ veGrid - Grid System by Adonis K.
   box-shadow: 0 0 3px #0099ff, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
 }
 
-.white-square-button {
+.white-flat-button {
   position: relative;
   display: inline-block;
   padding: 0.5em 1em;
@@ -700,17 +698,15 @@ veGrid - Grid System by Adonis K.
   -ms-transition: 150ms ease-in-out;
   transition: 150ms ease-in-out;
 }
-.white-square-button:hover, .white-square-button:focus {
+.white-flat-button:hover, .white-flat-button:focus {
   cursor: pointer;
   background-color: #f2f2f2;
-  border: 1px solid #d9d9d9;
 }
-.white-square-button:active {
+.white-flat-button:active {
   cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
-  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
 }
 
 .white-curved-button {
@@ -736,17 +732,15 @@ veGrid - Grid System by Adonis K.
 .white-curved-button:hover, .white-curved-button:focus {
   cursor: pointer;
   background-color: #f2f2f2;
-  border: 1px solid #d9d9d9;
 }
 .white-curved-button:active {
   cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
-  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
 }
 
-.dark-blue-square-button {
+.dark-blue-flat-button {
   position: relative;
   display: inline-block;
   padding: 0.5em 1em;
@@ -766,12 +760,11 @@ veGrid - Grid System by Adonis K.
   -ms-transition: 150ms ease-in-out;
   transition: 150ms ease-in-out;
 }
-.dark-blue-square-button:hover, .dark-blue-square-button:focus {
+.dark-blue-flat-button:hover, .dark-blue-flat-button:focus {
   cursor: pointer;
   background-color: #6679b3;
-  border: 1px solid #445588;
 }
-.dark-blue-square-button:active {
+.dark-blue-flat-button:active {
   cursor: pointer;
   -webkit-box-shadow: 0 0 3px #445588, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
   -moz-box-shadow: 0 0 3px #445588, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
@@ -801,7 +794,6 @@ veGrid - Grid System by Adonis K.
 .dark-blue-curved-button:hover, .dark-blue-curved-button:focus {
   cursor: pointer;
   background-color: #6679b3;
-  border: 1px solid #445588;
 }
 .dark-blue-curved-button:active {
   cursor: pointer;
@@ -810,18 +802,397 @@ veGrid - Grid System by Adonis K.
   box-shadow: 0 0 3px #445588, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
 }
 
+.grey-flat-button {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: white;
+  text-decoration: none;
+  background-color: #999999;
+  border: 1px solid gray;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-transition: 150ms ease-in-out;
+  -moz-transition: 150ms ease-in-out;
+  -o-transition: 150ms ease-in-out;
+  -ms-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+}
+.grey-flat-button:hover, .grey-flat-button:focus {
+  cursor: pointer;
+  background-color: gray;
+}
+.grey-flat-button:active {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+}
+
+.grey-curved-button {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: white;
+  text-decoration: none;
+  background-color: #999999;
+  border: 1px solid gray;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-transition: 150ms ease-in-out;
+  -moz-transition: 150ms ease-in-out;
+  -o-transition: 150ms ease-in-out;
+  -ms-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+}
+.grey-curved-button:hover, .grey-curved-button:focus {
+  cursor: pointer;
+  background-color: gray;
+}
+.grey-curved-button:active {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+}
+
+.yellow-flat-button {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: #222222;
+  text-decoration: none;
+  background-color: #ffff66;
+  border: 1px solid #ffff33;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-transition: 150ms ease-in-out;
+  -moz-transition: 150ms ease-in-out;
+  -o-transition: 150ms ease-in-out;
+  -ms-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+}
+.yellow-flat-button:hover, .yellow-flat-button:focus {
+  cursor: pointer;
+  background-color: #ffff33;
+}
+.yellow-flat-button:active {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+}
+
+.yellow-curved-button {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: #222222;
+  text-decoration: none;
+  background-color: #ffff66;
+  border: 1px solid #ffff33;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-transition: 150ms ease-in-out;
+  -moz-transition: 150ms ease-in-out;
+  -o-transition: 150ms ease-in-out;
+  -ms-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+}
+.yellow-curved-button:hover, .yellow-curved-button:focus {
+  cursor: pointer;
+  background-color: #ffff33;
+}
+.yellow-curved-button:active {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+}
+
+.pink-flat-button {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: #222222;
+  text-decoration: none;
+  background-color: #fadadd;
+  border: 1px solid #f4adb4;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-transition: 150ms ease-in-out;
+  -moz-transition: 150ms ease-in-out;
+  -o-transition: 150ms ease-in-out;
+  -ms-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+}
+.pink-flat-button:hover, .pink-flat-button:focus {
+  cursor: pointer;
+  background-color: #f7c4c8;
+}
+.pink-flat-button:active {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+}
+
+.pink-curved-button {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: #222222;
+  text-decoration: none;
+  background-color: #fadadd;
+  border: 1px solid #f4adb4;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-transition: 150ms ease-in-out;
+  -moz-transition: 150ms ease-in-out;
+  -o-transition: 150ms ease-in-out;
+  -ms-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+}
+.pink-curved-button:hover, .pink-curved-button:focus {
+  cursor: pointer;
+  background-color: #f7c4c8;
+}
+.pink-curved-button:active {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.125), 0 0 0.5em rgba(0, 0, 0, 0.125) inset;
+}
+
+.black-flat-button {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  border: 1px solid black;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-transition: 150ms ease-in-out;
+  -moz-transition: 150ms ease-in-out;
+  -o-transition: 150ms ease-in-out;
+  -ms-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+}
+.black-flat-button:hover, .black-flat-button:focus {
+  cursor: pointer;
+  background-color: #262626;
+}
+.black-flat-button:active {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 3px black, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+  -moz-box-shadow: 0 0 3px black, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+  box-shadow: 0 0 3px black, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+}
+
+.black-curved-button {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  border: 1px solid black;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-transition: 150ms ease-in-out;
+  -moz-transition: 150ms ease-in-out;
+  -o-transition: 150ms ease-in-out;
+  -ms-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+}
+.black-curved-button:hover, .black-curved-button:focus {
+  cursor: pointer;
+  background-color: #262626;
+}
+.black-curved-button:active {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 3px black, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+  -moz-box-shadow: 0 0 3px black, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+  box-shadow: 0 0 3px black, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+}
+
+.red-flat-button {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: white;
+  text-decoration: none;
+  background-color: #da0000;
+  border: 1px solid #a70000;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-transition: 150ms ease-in-out;
+  -moz-transition: 150ms ease-in-out;
+  -o-transition: 150ms ease-in-out;
+  -ms-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+}
+.red-flat-button:hover, .red-flat-button:focus {
+  cursor: pointer;
+  background-color: #ff2727;
+}
+.red-flat-button:active {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 3px #da0000, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+  -moz-box-shadow: 0 0 3px #da0000, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+  box-shadow: 0 0 3px #da0000, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+}
+
+.red-curved-button {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: white;
+  text-decoration: none;
+  background-color: #da0000;
+  border: 1px solid #a70000;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-transition: 150ms ease-in-out;
+  -moz-transition: 150ms ease-in-out;
+  -o-transition: 150ms ease-in-out;
+  -ms-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+}
+.red-curved-button:hover, .red-curved-button:focus {
+  cursor: pointer;
+  background-color: #ff2727;
+}
+.red-curved-button:active {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 3px #da0000, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+  -moz-box-shadow: 0 0 3px #da0000, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+  box-shadow: 0 0 3px #da0000, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+}
+
+.green-flat-button {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: #222222;
+  text-decoration: none;
+  background-color: lime;
+  border: 1px solid #00cc00;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-transition: 150ms ease-in-out;
+  -moz-transition: 150ms ease-in-out;
+  -o-transition: 150ms ease-in-out;
+  -ms-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+}
+.green-flat-button:hover, .green-flat-button:focus {
+  cursor: pointer;
+  background-color: #4dff4d;
+}
+.green-flat-button:active {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 3px lime, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+  -moz-box-shadow: 0 0 3px lime, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+  box-shadow: 0 0 3px lime, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+}
+
+.green-curved-button {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: #222222;
+  text-decoration: none;
+  background-color: lime;
+  border: 1px solid #00cc00;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-transition: 150ms ease-in-out;
+  -moz-transition: 150ms ease-in-out;
+  -o-transition: 150ms ease-in-out;
+  -ms-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+}
+.green-curved-button:hover, .green-curved-button:focus {
+  cursor: pointer;
+  background-color: #4dff4d;
+}
+.green-curved-button:active {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 3px lime, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+  -moz-box-shadow: 0 0 3px lime, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+  box-shadow: 0 0 3px lime, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+}
+
 .spoiler {
   color: transparent;
   text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
-  -webkit-transition: 150ms;
-  -moz-transition: 150ms;
-  -o-transition: 150ms;
-  -ms-transition: 150ms;
-  transition: 150ms;
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
+  -o-transition: 500ms;
+  -ms-transition: 500ms;
+  transition: 500ms;
 }
 .spoiler:hover {
   color: inherit;
   text-shadow: none;
+}
+
+.truncate {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .loading {
