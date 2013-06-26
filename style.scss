@@ -34,54 +34,6 @@
 	@include button(#fff, #458, 2px);
 }
 
-.grey-flat-button{
-	@include button(#fff, #999, 0);
-}
-
-.grey-curved-button{
-	@include button(#fff, #999, 2px);
-}
-
-.yellow-flat-button{
-	@include button(#222, #ff6, 0);
-}
-
-.yellow-curved-button{
-	@include button(#222, #ff6, 2px);
-}
-
-.pink-flat-button{
-	@include button(#222, #fadadd, 0);
-}
-
-.pink-curved-button{
-	@include button(#222, #fadadd, 2px);
-}
-
-.black-flat-button{
-	@include button(#fff, #000, 0);
-}
-
-.black-curved-button{
-	@include button(#fff, #000, 2px);
-}
-
-.red-flat-button{
-	@include button(#fff, #da0000, 0);
-}
-
-.red-curved-button{
-	@include button(#fff, #da0000, 2px);
-}
-
-.green-flat-button{
-	@include button(#222, #0f0, 0);
-}
-
-.green-curved-button{
-	@include button(#222, #0f0, 2px);
-}
-
 // other partials
 .spoiler{
 	@include spoiler;
