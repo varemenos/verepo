@@ -1,10 +1,14 @@
-veRepo - SCSS Library
+veRepo - SASS Library
 
 ======
 
 ## About
 
 veRepo - is a collection of modules and mixins for fast and maintainable frontend development.
+
+## SCSS to SASS
+
+For the SASS syntax lovers or the SCSS syntax haters, you can use `sass-convert` to convert the scss files to sass. Later on I might write a script to automate it but currently it doesn't seem wise to develop a tool which will most probably be rewriten again due to this repository's current state (pre-alpha phase).
 
 ## Guide / Examples
 
