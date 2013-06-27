@@ -1038,6 +1038,14 @@ footer p {
   margin: 0;
   padding: 1em;
 }
+@media only screen and (max-width: 1139px) {
+  footer {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: 100%;
+  }
+}
 
 .vertical-spacing {
   padding: 1em 0;
@@ -1045,6 +1053,11 @@ footer p {
 
 .last {
   margin-bottom: 4em;
+}
+@media only screen and (max-width: 1139px) {
+  .last {
+    margin-bottom: 0;
+  }
 }
 
 #wrapper {
@@ -1054,11 +1067,6 @@ footer p {
   box-sizing: border-box;
   width: 1140px;
   margin: 0 auto;
-}
-@media only screen and (min-width: 1140px) {
-  #wrapper {
-    min-width: 1140px;
-  }
 }
 @media only screen and (max-width: 1139px) {
   #wrapper {

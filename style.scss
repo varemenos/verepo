@@ -155,6 +155,13 @@ footer{
 		margin: 0;
 		padding: 1em;
 	}
+
+	@media only screen and (max-width: 1139px){
+		position: relative;
+		left: auto;
+		bottom: auto;
+		width:100%;
+	}
 }
 
 .vertical-spacing{
@@ -163,16 +170,16 @@ footer{
 
 .last{
 	margin-bottom: 4em;
+
+	@media only screen and (max-width: 1139px){
+		margin-bottom: 0;
+	}
 }
 
 #wrapper{
 	@include borderbox;
 	width: 1140px;
 	margin: 0 auto;
-
-	@media only screen and (min-width: 1140px){
-		min-width: 1140px;
-	}
 
 	@media only screen and (max-width: 1139px){
 		width: 100%;
