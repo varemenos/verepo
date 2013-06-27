@@ -39,59 +39,59 @@
 
 // triangles
 .triangle-top{
-	@include triangle(30px, red, top);
+	@include triangle(30px, #0099ff, top);
 }
 
 .triangle-left{
-	@include triangle(30px, blue, left);
+	@include triangle(30px, #0099ff, left);
 }
 
 .triangle-bottom{
-	@include triangle(30px, yellow, bottom);
+	@include triangle(30px, #0099ff, bottom);
 }
 
 .triangle-right{
-	@include triangle(30px, black, right);
+	@include triangle(30px, #0099ff, right);
 }
 
 .triangle-topleft{
-	@include triangle(30px, red, top left);
+	@include triangle(30px, #0099ff, top left);
 }
 
 .triangle-bottomleft{
-	@include triangle(30px, blue, bottom left);
+	@include triangle(30px, #0099ff, bottom left);
 }
 
 .triangle-bottomright{
-	@include triangle(30px, yellow, bottom right);
+	@include triangle(30px, #0099ff, bottom right);
 }
 
 .triangle-topright{
-	@include triangle(30px, black, top right);
+	@include triangle(30px, #0099ff, top right);
 }
 
 .triangle-leftright{
-	@include triangle(30px, green, left right);
+	@include triangle(30px, #0099ff, left right);
 }
 
 .triangle-topbottom{
-	@include triangle(30px, pink, top bottom);
+	@include triangle(30px, #0099ff, top bottom);
 }
 
 .triangle-topleftright{
-	@include triangle(30px, orange, top left right);
+	@include triangle(30px, #0099ff, top left right);
 }
 
 .triangle-bottomleftright{
-	@include triangle(30px, brown, bottom left right);
+	@include triangle(30px, #0099ff, bottom left right);
 }
 
 .triangle-topbottomleft{
-	@include triangle(30px, grey, top bottom left);
+	@include triangle(30px, #0099ff, top bottom left);
 }
 
 .triangle-topbottomright{
-	@include triangle(30px, cyan, top bottom right);
+	@include triangle(30px, #0099ff, top bottom right);
 }
 
 // other partials
@@ -135,12 +135,13 @@ header{
 			@include transition(250ms ease-in-out);
 		}
 		& > a:hover{
-			text-shadow: 0 0 1em #4db8ff, 0 2px 1px lighten(#4db8ff, 15%);
+			text-shadow: 0 0 1em #4db8ff, 0 0px 15px #C89;
 		}
 	}
 
 	h2{
-		font-size: 1.2em;
+		margin-bottom: 0;
+		font-size: 1em;
 		color: #aaa;
 	}
 }
@@ -188,6 +189,10 @@ footer{
 	}
 }
 
+.nav{
+	margin-top: 1em;
+}
+
 .item{
 	@include borderbox;
 	padding: 1em;
@@ -197,6 +202,11 @@ footer{
 	h3{
 		color: #444;
 		margin-top: 0;
+	}
+
+	h4{
+		font-size: 0.8em;
+		color: #666;
 	}
 
 	& > *:last-child{
@@ -211,6 +221,6 @@ hr{
 	border-right: none;
 }
 
-.large{
-	font-size: 2em;
+.no-top-margin{
+	margin-top: 0;
 }
