@@ -16,7 +16,7 @@
 	background-color: $bg-color;
 	border: 1px solid darken($bg-color, 10%);
 	@include border-radius($radius);
-	@include transition(150ms ease-in-out);
+	@include transition(150ms ease-in-out background-color,150ms ease-in-out box-shadow);
 
 	&:hover,
 	&:focus{

@@ -2,12 +2,11 @@
 @import "generic/_helpers";
 @import "modules/_grid";
 @import "partials/_button";
-@import "partials/_spoiler";
 @import "partials/_truncate";
 @import "partials/_loading";
 @import "partials/_triangle";
-@import "partials/_stitch";
 @import "partials/_fixed-footer";
+@import "partials/_form";
 
 // generate a 12-column grid with 1em gutter spacing
 @include grid(12, 1em);
@@ -94,21 +93,19 @@
 	@include triangle(30px, #0099ff, top bottom right);
 }
 
-// other partials
-.spoiler{
-	@include spoiler;
+// form partials
+
+.vertical-form{
+	@include vertical-form;
 }
+
+// other partials
 .truncate{
 	@include truncate;
 }
 
 .loading{
 	@include loading;
-}
-
-.stitch{
-	padding: 1em;
-	@include stitch(#fff, red, 5px);
 }
 
 [class*=triangle]{
@@ -132,7 +129,7 @@ header{
 		& > a:visited{
 			color: #222;
 			text-decoration: none;
-			@include transition(250ms ease-in-out);
+			@include transition(250ms ease-in-out text-shadow);
 		}
 		& > a:hover{
 			text-shadow: 0 0 1em #4db8ff, 0 0px 15px #C89;
@@ -193,6 +190,7 @@ footer{
 	margin-top: 1em;
 }
 
+.grid-item,
 .item{
 	@include borderbox;
 	padding: 1em;

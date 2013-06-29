@@ -506,6 +506,108 @@ veGrid - Grid System by Adonis K.
   }
 }
 
+input,
+label,
+textarea,
+select,
+progress,
+output,
+meter,
+keygen {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.5em;
+  display: inline-block;
+  -webkit-transition: 150ms linear border-color;
+  -moz-transition: 150ms linear border-color;
+  -o-transition: 150ms linear border-color;
+  -ms-transition: 150ms linear border-color;
+  transition: 150ms linear border-color;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=date]:focus,
+input[type=month]:focus,
+input[type=time]:focus,
+input[type=datetime]:focus,
+input[type=datetime-local]:focus,
+input[type=week]:focus,
+input[type=number]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=color]:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+  border-color: #09f;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=date],
+input[type=month],
+input[type=time],
+input[type=datetime],
+input[type=datetime-local],
+input[type=week],
+input[type=number],
+input[type=search],
+input[type=tel],
+input[type=color],
+textarea {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 1px 5px #cccccc inset;
+  -moz-box-shadow: 0 1px 5px #cccccc inset;
+  box-shadow: 0 1px 5px #cccccc inset;
+}
+
+[required]:focus:invalid,
+.invalid {
+  outline: 0;
+  border-color: red !important;
+}
+
+[required]:focus:valid,
+.valid {
+  outline: 0;
+  border-color: green !important;
+}
+
+[disabled],
+.disabled {
+  opacity: 0.5;
+}
+[disabled]:hover,
+.disabled:hover {
+  cursor: not-allowed !important;
+}
+
+.resize--vertical {
+  resize: vertical;
+}
+
+.resize--horizontal {
+  resize: horizontal;
+}
+
+.resize--both {
+  resize: both;
+}
+
 .col-1-12 {
   width: 8.33333%;
 }
@@ -630,11 +732,11 @@ veGrid - Grid System by Adonis K.
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding-box;
   background-clip: padding-box;
-  -webkit-transition: 150ms ease-in-out;
-  -moz-transition: 150ms ease-in-out;
-  -o-transition: 150ms ease-in-out;
-  -ms-transition: 150ms ease-in-out;
-  transition: 150ms ease-in-out;
+  -webkit-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  -moz-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  -o-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  -ms-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
 }
 .blue-flat-button:hover, .blue-flat-button:focus {
   cursor: pointer;
@@ -661,11 +763,11 @@ veGrid - Grid System by Adonis K.
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding-box;
   background-clip: padding-box;
-  -webkit-transition: 150ms ease-in-out;
-  -moz-transition: 150ms ease-in-out;
-  -o-transition: 150ms ease-in-out;
-  -ms-transition: 150ms ease-in-out;
-  transition: 150ms ease-in-out;
+  -webkit-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  -moz-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  -o-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  -ms-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
 }
 .blue-curved-button:hover, .blue-curved-button:focus {
   cursor: pointer;
@@ -692,11 +794,11 @@ veGrid - Grid System by Adonis K.
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding-box;
   background-clip: padding-box;
-  -webkit-transition: 150ms ease-in-out;
-  -moz-transition: 150ms ease-in-out;
-  -o-transition: 150ms ease-in-out;
-  -ms-transition: 150ms ease-in-out;
-  transition: 150ms ease-in-out;
+  -webkit-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  -moz-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  -o-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  -ms-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
 }
 .white-flat-button:hover, .white-flat-button:focus {
   cursor: pointer;
@@ -723,11 +825,11 @@ veGrid - Grid System by Adonis K.
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding-box;
   background-clip: padding-box;
-  -webkit-transition: 150ms ease-in-out;
-  -moz-transition: 150ms ease-in-out;
-  -o-transition: 150ms ease-in-out;
-  -ms-transition: 150ms ease-in-out;
-  transition: 150ms ease-in-out;
+  -webkit-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  -moz-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  -o-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  -ms-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
 }
 .white-curved-button:hover, .white-curved-button:focus {
   cursor: pointer;
@@ -754,11 +856,11 @@ veGrid - Grid System by Adonis K.
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding-box;
   background-clip: padding-box;
-  -webkit-transition: 150ms ease-in-out;
-  -moz-transition: 150ms ease-in-out;
-  -o-transition: 150ms ease-in-out;
-  -ms-transition: 150ms ease-in-out;
-  transition: 150ms ease-in-out;
+  -webkit-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  -moz-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  -o-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  -ms-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
 }
 .dark-blue-flat-button:hover, .dark-blue-flat-button:focus {
   cursor: pointer;
@@ -785,11 +887,11 @@ veGrid - Grid System by Adonis K.
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding-box;
   background-clip: padding-box;
-  -webkit-transition: 150ms ease-in-out;
-  -moz-transition: 150ms ease-in-out;
-  -o-transition: 150ms ease-in-out;
-  -ms-transition: 150ms ease-in-out;
-  transition: 150ms ease-in-out;
+  -webkit-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  -moz-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  -o-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  -ms-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+  transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
 }
 .dark-blue-curved-button:hover, .dark-blue-curved-button:focus {
   cursor: pointer;
@@ -928,18 +1030,16 @@ veGrid - Grid System by Adonis K.
   border-color: #0099ff #0099ff #0099ff transparent;
 }
 
-.spoiler {
-  color: transparent;
-  text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
-  -webkit-transition: 500ms;
-  -moz-transition: 500ms;
-  -o-transition: 500ms;
-  -ms-transition: 500ms;
-  transition: 500ms;
+.vertical-form label, .vertical-form input, .vertical-form select, .vertical-form textarea {
+  width: 100%;
+  margin-bottom: 1em;
 }
-.spoiler:hover {
-  color: inherit;
-  text-shadow: none;
+.vertical-form label:last-child, .vertical-form input:last-child, .vertical-form select:last-child, .vertical-form textarea:last-child {
+  margin-bottom: 0;
+}
+.vertical-form label > input[type="radio"], .vertical-form label > input[type="checkbox"] {
+  vertical-align: baseline;
+  width: auto;
 }
 
 .truncate {
@@ -977,23 +1077,6 @@ veGrid - Grid System by Adonis K.
   animation-delay: 0.6s;
 }
 
-.stitch {
-  padding: 1em;
-}
-.stitch {
-  background-color: white;
-  border: 2px dashed red;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding-box;
-  background-clip: padding-box;
-  -webkit-box-shadow: 0 0 0 4px white;
-  -moz-box-shadow: 0 0 0 4px white;
-  box-shadow: 0 0 0 4px white;
-}
-
 [class*=triangle] {
   margin-right: 0.5em;
 }
@@ -1011,11 +1094,11 @@ header h1 {
 header h1 > a, header h1 > a:visited {
   color: #222;
   text-decoration: none;
-  -webkit-transition: 250ms ease-in-out;
-  -moz-transition: 250ms ease-in-out;
-  -o-transition: 250ms ease-in-out;
-  -ms-transition: 250ms ease-in-out;
-  transition: 250ms ease-in-out;
+  -webkit-transition: 250ms ease-in-out text-shadow;
+  -moz-transition: 250ms ease-in-out text-shadow;
+  -o-transition: 250ms ease-in-out text-shadow;
+  -ms-transition: 250ms ease-in-out text-shadow;
+  transition: 250ms ease-in-out text-shadow;
 }
 header h1 > a:hover {
   text-shadow: 0 0 1em #4db8ff, 0 0px 15px #C89;
@@ -1081,6 +1164,7 @@ footer p {
   margin-top: 1em;
 }
 
+.grid-item,
 .item {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1090,14 +1174,17 @@ footer p {
   background-color: #f5f5f5;
   border: 1px solid #eee;
 }
+.grid-item h3,
 .item h3 {
   color: #444;
   margin-top: 0;
 }
+.grid-item h4,
 .item h4 {
   font-size: 0.8em;
   color: #666;
 }
+.grid-item > *:last-child,
 .item > *:last-child {
   margin-bottom: 0;
 }
