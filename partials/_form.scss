@@ -59,6 +59,18 @@ textarea{
 }
 
 @mixin vertical-form{
+
+	& > input,
+	& > label,
+	& > textarea,
+	& > select,
+	& > progress,
+	& > output,
+	& > meter,
+	& > keygen{
+		padding: 0.5em 0;
+	}
+
 	& label,
 	& input,
 	& select,

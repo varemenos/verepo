@@ -456,6 +456,22 @@ table {
 /* *******************************************
 veGrid - Grid System by Adonis K.
 ******************************************* */
+.button--xsmall {
+  font-size: 70%;
+}
+
+.button--small {
+  font-size: 85%;
+}
+
+.button--large {
+  font-size: 110%;
+}
+
+.button--xlarge {
+  font-size: 125%;
+}
+
 @-webkit-keyframes loading {
   0% {
     opacity: 0.9;
@@ -1030,6 +1046,9 @@ textarea {
   border-color: #0099ff #0099ff #0099ff transparent;
 }
 
+.vertical-form > input, .vertical-form > label, .vertical-form > textarea, .vertical-form > select, .vertical-form > progress, .vertical-form > output, .vertical-form > meter, .vertical-form > keygen {
+  padding: 0.5em 0;
+}
 .vertical-form label, .vertical-form input, .vertical-form select, .vertical-form textarea {
   width: 100%;
   margin-bottom: 1em;
