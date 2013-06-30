@@ -4,10 +4,6 @@
 @import "../generic/_transform";
 
 @mixin button($font-color, $bg-color, $radius: 0){
-	$x: hue($bg-color); // deg
-	$y: saturation($bg-color); // %
-	$z: lightness($bg-color); // %
-
 	position: relative;
 	display: inline-block;
 	padding: 0.5em 1em;
@@ -16,7 +12,7 @@
 	background-color: $bg-color;
 	border: 1px solid darken($bg-color, 10%);
 	@include border-radius($radius);
-	@include transition(150ms ease-in-out background-color,150ms ease-in-out box-shadow);
+	@include transition(150ms ease-in-out background-color, 150ms ease-in-out box-shadow);
 
 	&:hover,
 	&:focus{

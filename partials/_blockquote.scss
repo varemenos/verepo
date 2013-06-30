@@ -1,0 +1,22 @@
+@mixin blockquote($border-color){
+	margin: 0;
+	padding: 0 0 0 0.5em;
+	border-left: 0.25em solid $border-color;
+
+	& > *{
+		margin: 0.5em 0;
+		padding: 0.25em 0;
+	}
+
+	& > p{
+		text-indent: 1em;
+	}
+
+	& cite{
+			font-style: italic;
+	}
+
+	& cite:before {
+		content: "\2014 \2009";
+	}
+}
