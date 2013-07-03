@@ -6,33 +6,22 @@
 @import "../generic/_animation-delay";
 @import "../generic/_transform";
 
-@mixin loading($width: 1.5em){
-	text-align: center;
-
-	& span{
-		display: inline-block;
-		vertical-align: middle;
-		width: $width;
-		height: $width;
-		margin: 0 auto;
-		background: black;
-		@include animation(loading 0.9s infinite alternate);
-	}
-
-	& span:nth-of-type(2){
-		@include animation-delay(0.3s);
-	}
-
-	& span:nth-of-type(3){
-		@include animation-delay(0.6s);
-	}
+@mixin loading($width: 1.5em, $color: #09f){
+	content: "";
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border: solid $width;
+	@include border-radius($width*10);
+	border-color: $color transparent $color transparent;
+	@include animation(loadingSpin 1s linear infinite);
 }
 
-@include keyframes(loading){
-	0%{
-		opacity: 0.9;
+@include keyframes(loadingSpin){
+	0%: {
+		@include transform(rotate(0deg));
 	}
-	100%{
-		opacity: 0.1;
+	100%: {
+		@include transform(rotate(360deg));
 	}
 }

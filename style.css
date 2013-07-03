@@ -472,53 +472,93 @@ veGrid - Grid System by Adonis K.
   font-size: 125%;
 }
 
-@-webkit-keyframes loading {
+@-webkit-keyframes loadingSpin {
   0% {
-    opacity: 0.9;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   100% {
-    opacity: 0.1;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
-@-moz-keyframes loading {
+@-moz-keyframes loadingSpin {
   0% {
-    opacity: 0.9;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   100% {
-    opacity: 0.1;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
-@-ms-keyframes loading {
+@-ms-keyframes loadingSpin {
   0% {
-    opacity: 0.9;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   100% {
-    opacity: 0.1;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
-@-o-keyframes loading {
+@-o-keyframes loadingSpin {
   0% {
-    opacity: 0.9;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   100% {
-    opacity: 0.1;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
-@keyframes loading {
+@keyframes loadingSpin {
   0% {
-    opacity: 0.9;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   100% {
-    opacity: 0.1;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -1088,31 +1128,22 @@ blockquote cite:before {
 }
 
 .loading {
-  text-align: center;
-}
-.loading span {
+  content: "";
   display: inline-block;
-  vertical-align: middle;
-  width: 1.5em;
-  height: 1.5em;
-  margin: 0 auto;
-  background: black;
-  -webkit-animation: loading 0.9s infinite alternate;
-  -moz-animation: loading 0.9s infinite alternate;
-  -o-animation: loading 0.9s infinite alternate;
-  animation: loading 0.9s infinite alternate;
-}
-.loading span:nth-of-type(2) {
-  -webkit-animation-delay: 0.3s;
-  -moz-animation-delay: 0.3s;
-  -o-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-}
-.loading span:nth-of-type(3) {
-  -webkit-animation-delay: 0.6s;
-  -moz-animation-delay: 0.6s;
-  -o-animation-delay: 0.6s;
-  animation-delay: 0.6s;
+  width: 0;
+  height: 0;
+  border: solid 1.5em;
+  -webkit-border-radius: 15em;
+  -moz-border-radius: 15em;
+  border-radius: 15em;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  border-color: #0099ff transparent #0099ff transparent;
+  -webkit-animation: loadingSpin 1s linear infinite;
+  -moz-animation: loadingSpin 1s linear infinite;
+  -o-animation: loadingSpin 1s linear infinite;
+  animation: loadingSpin 1s linear infinite;
 }
 
 [class*=triangle] {
