@@ -1127,7 +1127,7 @@ blockquote cite:before {
   text-overflow: ellipsis;
 }
 
-.loading {
+.loading1 {
   content: "";
   display: inline-block;
   width: 0;
@@ -1140,6 +1140,25 @@ blockquote cite:before {
   -moz-background-clip: padding-box;
   background-clip: padding-box;
   border-color: #0099ff transparent #0099ff transparent;
+  -webkit-animation: loadingSpin 1s linear infinite;
+  -moz-animation: loadingSpin 1s linear infinite;
+  -o-animation: loadingSpin 1s linear infinite;
+  animation: loadingSpin 1s linear infinite;
+}
+
+.loading2 {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid 1.5em;
+  -webkit-border-radius: 15em;
+  -moz-border-radius: 15em;
+  border-radius: 15em;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  border-color: #0099ff transparent transparent transparent;
   -webkit-animation: loadingSpin 1s linear infinite;
   -moz-animation: loadingSpin 1s linear infinite;
   -o-animation: loadingSpin 1s linear infinite;

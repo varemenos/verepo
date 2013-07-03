@@ -6,14 +6,19 @@
 @import "../generic/_animation-delay";
 @import "../generic/_transform";
 
-@mixin loading($width: 1.5em, $color: #09f){
+@mixin loading($width: 1.5em, $type: 1, $color: #09f){
 	content: "";
 	display: inline-block;
 	width: 0;
 	height: 0;
 	border: solid $width;
 	@include border-radius($width*10);
-	border-color: $color transparent $color transparent;
+	@if($type == 1){
+		border-color: $color transparent $color transparent;
+	}@else{
+		border-color: $color transparent transparent transparent;
+	}
+
 	@include animation(loadingSpin 1s linear infinite);
 }
 

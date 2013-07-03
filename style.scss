@@ -108,8 +108,12 @@ blockquote{
 	@include truncate;
 }
 
-.loading{
-	@include loading;
+.loading1{
+	@include loading(1.5em);
+}
+
+.loading2{
+	@include loading(1.5em, 2);
 }
 
 [class*=triangle]{
