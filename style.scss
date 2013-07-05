@@ -1,12 +1,12 @@
-@import "generic/_base";
-@import "modules/_grid";
-@import "partials/_button";
-@import "partials/_truncate";
-@import "partials/_loading";
-@import "partials/_triangle";
-@import "partials/_blockquote";
-@import "partials/_fixed-footer";
-@import "partials/_form";
+@import "lib/generic/_base";
+@import "lib/modules/_grid";
+@import "lib/partials/_button";
+@import "lib/partials/_truncate";
+@import "lib/partials/_loading";
+@import "lib/partials/_triangle";
+@import "lib/partials/_blockquote";
+@import "lib/partials/_fixed-footer";
+@import "lib/partials/_form";
 
 // generate a 12-column grid with 1em gutter spacing
 @include grid(12, 1em);
