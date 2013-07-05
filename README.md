@@ -45,6 +45,5 @@ For the SASS syntax lovers or the SCSS syntax haters, you can use `sass-convert`
 #Credits
 
 The `CONTRIBUTE.md` file of this project is a slightly modified copy `CONTRIBUTE.md` file from the normalize.css project.
-The `debug.scss` module from this project is a direct copy (might change in the future) from the inuit.css project. 
 
 	#TODO add more
