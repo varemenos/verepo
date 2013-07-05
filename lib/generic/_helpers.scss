@@ -1,3 +1,5 @@
+@import "_clearfix";
+
 .float--right { float:right!important; }
 .float--left { float:left !important; }
 .float--none { float:none !important; }
@@ -16,7 +18,4 @@
 .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
 .invisible { visibility: hidden; }
 
-.clearfix:before,
-.clearfix:after { content: " "; display: table; }
-.clearfix:after { clear: both; }
-.clearfix { *zoom: 1; }
+.clearfix { @include clearfix; }
