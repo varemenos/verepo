@@ -1,12 +1,13 @@
-@import "lib/generic/_base";
-@import "lib/modules/_grid";
-@import "lib/partials/_button";
-@import "lib/partials/_truncate";
-@import "lib/partials/_loading";
-@import "lib/partials/_triangle";
-@import "lib/partials/_blockquote";
-@import "lib/partials/_fixed-footer";
-@import "lib/partials/_form";
+@import "../lib/generic/_base";
+@import "../lib/generic/_font-face";
+@import "../lib/modules/_grid";
+@import "../lib/partials/_button";
+@import "../lib/partials/_truncate";
+@import "../lib/partials/_loading";
+@import "../lib/partials/_triangle";
+@import "../lib/partials/_blockquote";
+@import "../lib/partials/_fixed-footer";
+@import "../lib/partials/_form";
 
 // generate a 12-column grid with 1em gutter spacing
 @include grid(12, 1em);
@@ -125,30 +126,30 @@ blockquote{
 body{
 	overflow-x: auto;
 	overflow-y: scroll;
+	font-family: sans-serif;
 }
 
-header{
-	h1{
-		font-size: 4em;
+h1{
+	text-align: center;
+	font-size: 8em;
+	color: #222;
+	margin: 0.25em 0;
+
+	& > a,
+	& > a:visited{
 		color: #222;
-		margin: 0.25em 0;
-
-		& > a,
-		& > a:visited{
-			color: #222;
-			text-decoration: none;
-			@include transition(250ms ease-in-out text-shadow);
-		}
-		& > a:hover{
-			text-shadow: 0 0 1em #4db8ff, 0 0px 15px #C89;
-		}
+		text-decoration: none;
+		@include transition(250ms ease-in-out text-shadow);
 	}
-
-	h2{
-		margin-bottom: 0;
-		font-size: 1em;
-		color: #aaa;
+	& > a:hover{
+		text-shadow: 0 0 1em #4db8ff, 0 0px 15px #C89;
 	}
+}
+
+h2{
+	margin-bottom: 0;
+	font-size: 1em;
+	color: #aaa;
 }
 
 footer{
@@ -185,7 +186,6 @@ footer{
 }
 
 .nav{
-	margin-top: 1em;
 }
 
 .item{

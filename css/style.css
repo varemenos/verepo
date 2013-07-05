@@ -1172,14 +1172,16 @@ blockquote cite:before {
 body {
   overflow-x: auto;
   overflow-y: scroll;
+  font-family: sans-serif;
 }
 
-header h1 {
-  font-size: 4em;
+h1 {
+  text-align: center;
+  font-size: 8em;
   color: #222;
   margin: 0.25em 0;
 }
-header h1 > a, header h1 > a:visited {
+h1 > a, h1 > a:visited {
   color: #222;
   text-decoration: none;
   -webkit-transition: 250ms ease-in-out text-shadow;
@@ -1188,10 +1190,11 @@ header h1 > a, header h1 > a:visited {
   -ms-transition: 250ms ease-in-out text-shadow;
   transition: 250ms ease-in-out text-shadow;
 }
-header h1 > a:hover {
+h1 > a:hover {
   text-shadow: 0 0 1em #4db8ff, 0 0px 15px #C89;
 }
-header h2 {
+
+h2 {
   margin-bottom: 0;
   font-size: 1em;
   color: #aaa;
@@ -1235,10 +1238,6 @@ footer p {
     padding: 0 2em;
     border: none;
   }
-}
-
-.nav {
-  margin-top: 1em;
 }
 
 .item {
