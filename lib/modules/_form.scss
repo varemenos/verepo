@@ -58,11 +58,8 @@ textarea{
 	@include box-shadow(0 1px 5px #ccc inset);
 }
 
-select{
-	border: 1px solid #ccc;
-}
-
 @mixin vertical-form{
+
 	& > input,
 	& > label,
 	& > textarea,
