@@ -628,6 +628,10 @@ textarea {
   box-shadow: 0 1px 5px #cccccc inset;
 }
 
+select {
+  border: 1px solid #ccc;
+}
+
 [required]:focus:invalid,
 .invalid {
   outline: 0;
