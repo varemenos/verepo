@@ -4,7 +4,17 @@ veRepo - SASS Library
 
 ## About
 
-veRepo is a SASS library of modules and mixins for robust and maintainable front-end development using SASS.
+veRepo is a SASS library of modules and mixins for robust and maintainable front-end development using SASS. Most of the modular items/objects in this repo will work by just adding 1 class name to the html element you desire to style, for example:
+
+```css
+.button{
+	@include button(#fff, #09f, 0);
+}
+```
+
+```html
+<button class="button">
+```
 
 ## SCSS to SASS
 
