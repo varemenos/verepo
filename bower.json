@@ -1,0 +1,17 @@
+{
+  "name": "veRepo",
+  "version": "1.0.0",
+  "main": "lib/",
+  "ignore": [
+    "css",
+    "docs",
+    ".gitignore",
+    "CONTRIBUTE.md",
+    "README.md",
+    ".bowerrc",
+    "bower.json",
+    "index.html"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}
