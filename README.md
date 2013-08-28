@@ -22,6 +22,13 @@ For the SASS syntax lovers or the SCSS syntax haters, you can use `sass-convert`
 
 ## Guide / Examples
 
+### Bower
+
+veRepo is now in the bower package directory and you can install it by simply running this command:
+
+	bower install verepo
+
+
 	#TODO
 
 ## Documentation
