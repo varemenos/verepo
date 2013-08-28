@@ -1,17 +1,22 @@
 {
-  "name": "veRepo",
-  "version": "1.0.2",
-  "main": "lib/",
-  "ignore": [
-    "css",
-    "docs",
-    ".gitignore",
-    "CONTRIBUTE.md",
-    "README.md",
-    ".bowerrc",
-    "bower.json",
-    "index.html"
-  ],
-  "dependencies": {},
-  "devDependencies": {}
+	"name": "veRepo",
+	"version": "1.0.2",
+	"main": "lib/",
+	"ignore": [
+		"css",
+		"docs",
+		"node_modules",
+		".gitignore",
+		"CONTRIBUTE.md",
+		"README.md",
+		"Gruntfile.js",
+		"package.json",
+		"index.html"
+	],
+	"dependencies": {},
+	"devDependencies": {
+	    "grunt": "~0.4.1",
+	    "grunt-shell": "~0.3.1",
+	    "grunt-contrib-watch": "~0.5.3"
+	}
 }
