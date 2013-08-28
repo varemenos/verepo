@@ -20,30 +20,29 @@ veRepo is a SASS library of modules and mixins for robust and maintainable front
 
 For the SASS syntax lovers or the SCSS syntax haters, you can use `sass-convert` to convert the scss files to sass. Later on I might write a script to automate it but currently it doesn't seem wise to develop a tool which will most probably be rewriten again due to this repository's current state (alpha phase).
 
+## Documentation
+
+### Live
+
+Visit [this](http://varemenos.github.io/verepo/docs/) link to read the online version, or follow the next steps to get a local version:
+
+1. To generate the docs for this library you need to have the sassdoc gem installed and then while being inside the verepo, type: `sassdoc -d ./docs -n veRepo`
+
+2. To view the docs you need to serve them in an http server. One of the fastest ways to do that is via python's httpserver: `cd docs` and then `python -m http.server`
+
 ## Guide / Examples
 
 	#TODO
+
+### Grunt.js
+
+You can now use grunt.js to generate the docs automatically, by running `grunt:watch` while being in the root directory of the repository.
 
 ### Bower
 
 veRepo is now in the bower package directory and you can install it by simply running this command:
 
 	bower install verepo
-
-## Documentation
-
-### To generate the docs
-
-To generate the docs for this library you need to have the sassdoc gem installed and then while being inside the verepo, type:
-
-	sassdoc -d ./docs -n veRepo
-
-### To view the docs
-
-To view the docs you need to serve them in an http server. One of the fastest ways to do that is via python's httpserver:
-
-	cd docs
-	python -m http.server
 
 ## Contribution Guidelines
 
