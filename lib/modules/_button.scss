@@ -3,6 +3,31 @@
 @import "../generic/_box-shadow";
 @import "../generic/_transform";
 
+// A mixin that generates CSS for a styled button
+// @category objects
+// @mixin button
+// @param $font-color {String} is the value that defines the button's font color
+// @param $bg-color {String} is the value that defines the button's background color
+// @param $radius {Number} is the value that defines the button's border radius (default value is 0)
+// @usage:
+// .blue-flat-button{
+//	=button(#fff, #09f, 0);
+// }
+// .blue-curved-button{
+//	=button(#fff, #09f, 2px);
+// }
+// .white-flat-button{
+//	=button(#222, #fff, 0);
+// }
+// .white-curved-button{
+//	=button(#222, #fff, 2px);
+// }
+// .dark-blue-flat-button{
+//	=button(#fff, #458, 0);
+// }
+// .dark-blue-curved-button{
+//	=button(#fff, #458, 2px);
+// }
 @mixin button($font-color, $bg-color, $radius: 0){
 	position: relative;
 	display: inline-block;
@@ -27,7 +52,7 @@
 			background-color: lighten($bg-color, 15%);
 		}
 	}
-		
+
 	&:active{
 		cursor: pointer;
 		@if(lightness($bg-color) > 50%) {

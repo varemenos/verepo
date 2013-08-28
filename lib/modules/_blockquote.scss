@@ -1,3 +1,11 @@
+// A mixin that generates CSS for a styled blockquote
+// @mixin blockquote
+// @category objects
+// @param $border-color {String} is the value that defines the blockquote's border color
+// @usage:
+// .blockquote{
+// 	=blockquote(#ccc);
+// }
 @mixin blockquote($border-color){
 	margin: 0;
 	padding: 0 0 0 0.5em;

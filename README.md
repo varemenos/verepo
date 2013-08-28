@@ -24,6 +24,21 @@ For the SASS syntax lovers or the SCSS syntax haters, you can use `sass-convert`
 
 	#TODO
 
+## Documentation
+
+### To generate the docs
+
+To generate the docs for this library you need to have the sassdoc gem installed and then while being inside the verepo, type:
+
+	sassdoc -d ./docs -n veRepo
+
+### To view the docs
+
+To view the docs you need to serve them in an http server. One of the fastest ways to do that is via python's httpserver:
+
+	cd docs
+	python -m http.server
+
 ## Contribution Guidelines
 
 [CONTRIBUTE.md](CONTRIBUTE.md)

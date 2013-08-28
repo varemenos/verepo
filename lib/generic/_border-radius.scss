@@ -1,26 +1,19 @@
-@mixin border-radius($val, $horizontal:false, $vertical:false){
-	@if($horizontal){
-		@if($vertical){
-			-webkit-border-#{$horizontal}-#{$vertical}-radius: $val;
-			-moz-border-radius-#{$horizontal}#{$vertical}: $val;
-			border-#{$horizontal}-#{$vertical}-radius: $val;
-		}@else{
-			-webkit-border-#{$horizontal}-left-radius: $val;
-			-moz-border-radius-#{$horizontal}left: $val;
-			border-#{$horizontal}-left-radius: $val;
-			-webkit-border-#{$horizontal}-right-radius: $val;
-			-moz-border-radius-#{$horizontal}right: $val;
-			border-#{$horizontal}-right-radius: $val;
-		}
-	}@else{
-		-webkit-border-radius: $val;
-		-moz-border-radius: $val;
-		border-radius: $val;
-	}
+@import "_background-clip";
+
+// A mixin that generates CSS prefixes for border-radius
+// @mixin border-radius
+// @category prefixes
+// @param $val {String} border-radius's valid value
+// @usage:
+// .an-element{
+// 	=border-radius(5px top right);
+// }
+@mixin border-radius($val...){
+	-webkit-border-radius: $val;
+	-moz-border-radius: $val;
+	border-radius: $val;
 
 	// Sometimes you can see a background-color "leak" outside of a border when border-radius is present.
 	// To prevent this you use background-clip
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding-box;
-	background-clip: padding-box;
+	@include background-clip(padding-box);
 }

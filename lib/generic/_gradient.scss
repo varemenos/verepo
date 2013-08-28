@@ -1,5 +1,5 @@
 // TODO: make it more functional
-
+// TODO: Document this mixin
 @mixin gradient($color1, $color2, $type:''){
 	@if($type == vertical){
 		background: $color1;

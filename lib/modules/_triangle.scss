@@ -1,3 +1,52 @@
+// A mixin that generates CSS for a triangle
+// @mixin triangle
+// @category objects
+// @param $size {Number} is the value that defines the triangle's size
+// @param $color {String} is the value that defines the triangle's color
+// @param $direction {String} is the value that defines the triangle's directions color [top, left, bottom, right, top left, bottom left, bottom right, top right, left right, top bottom, top left right, bottom left right, top bottom left, top bottom right]
+// @usage:
+// .triangle-top{
+//	=triangle(30px, #0099ff, top);
+// }
+// .triangle-left{
+//	=triangle(30px, #0099ff, left);
+// }
+// .triangle-bottom{
+//	=triangle(30px, #0099ff, bottom);
+// }
+// .triangle-right{
+//	=triangle(30px, #0099ff, right);
+// }
+// .triangle-topleft{
+//	=triangle(30px, #0099ff, top left);
+// }
+// .triangle-bottomleft{
+//	=triangle(30px, #0099ff, bottom left);
+// }
+// .triangle-bottomright{
+//	=triangle(30px, #0099ff, bottom right);
+// }
+// .triangle-topright{
+//	=triangle(30px, #0099ff, top right);
+// }
+// .triangle-leftright{
+//	=triangle(30px, #0099ff, left right);
+// }
+// .triangle-topbottom{
+//	=triangle(30px, #0099ff, top bottom);
+// }
+// .triangle-topleftright{
+//	=triangle(30px, #0099ff, top left right);
+// }
+// .triangle-bottomleftright{
+//	=triangle(30px, #0099ff, bottom left right);
+// }
+// .triangle-topbottomleft{
+//	=triangle(30px, #0099ff, top bottom left);
+// }
+// .triangle-topbottomright{
+//	=triangle(30px, #0099ff, top bottom right);
+// }
 @mixin triangle($size, $color, $direction){
 	content: "";
 	display: inline-block;

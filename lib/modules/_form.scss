@@ -3,6 +3,44 @@
 @import "../generic/transition";
 @import "../generic/clearfix";
 
+// A mixin that generates CSS for a vertical form
+// @mixin vertical-form
+// @category objects
+// @usage:
+// .vertical-form{
+// 	=vertical-form;
+// }
+@mixin vertical-form{
+	& > input,
+	& > label,
+	& > textarea,
+	& > select,
+	& > progress,
+	& > output,
+	& > meter,
+	& > keygen{
+		padding: 0.5em 0;
+	}
+
+	& label,
+	& input,
+	& select,
+	& textarea{
+		width: 100%;
+		margin-bottom: 1em;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	& label > input[type="radio"],
+	& label > input[type="checkbox"]{
+		vertical-align: baseline;
+		width: auto;
+	}
+}
+
 input,
 label,
 textarea,
@@ -59,37 +97,6 @@ select{
 	@include box-shadow(0 1px 5px #ccc inset);
 }
 
-@mixin vertical-form{
-	& > input,
-	& > label,
-	& > textarea,
-	& > select,
-	& > progress,
-	& > output,
-	& > meter,
-	& > keygen{
-		padding: 0.5em 0;
-	}
-
-	& label,
-	& input,
-	& select,
-	& textarea{
-		width: 100%;
-		margin-bottom: 1em;
-
-		&:last-child{
-			margin-bottom: 0;
-		}
-	}
-
-	& label > input[type="radio"],
-	& label > input[type="checkbox"]{
-		vertical-align: baseline;
-		width: auto;
-	}
-}
-
 // Form Helpers
 
 [required]:focus:invalid,
@@ -124,32 +131,3 @@ select{
 .resize--both{
 	resize: both;
 }
-
-// Other, mostly considered junk
-
-// failed attempt at making fully functional custom radio buttons
-// @mixin radio($bg-color){
-// 	display: inline-block;
-// 	width: 1em;
-// 	height: 1em;
-// 	color: transparent;
-// 	background-color: $bg-color;
-// 	border: 1px solid darken($bg-color, 30%);
-// 	@include box-shadow(0 0 2px darken($bg-color, 20%));
-// 	@include border-radius(150em);
-
-// 	& > input{
-// 		display: none;
-		
-// 		&:checked{
-
-// 		}
-// 	}
-
-// 	&:hover,
-// 	&:active{
-// 		border: 1px solid darken($bg-color, 45%);
-// 		background-color: invert($bg-color);
-// 		@include box-shadow(0 0 2px darken($bg-color, 20%), 0 3px 0 $bg-color inset, 0 -3px 0 $bg-color inset, 3px 0 0 $bg-color inset, -3px 0 0 $bg-color inset);
-// 	}
-// }

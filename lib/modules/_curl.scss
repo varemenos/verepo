@@ -1,5 +1,11 @@
 // TODO: Make it flexible
-
+// A mixin that generates CSS for a curl-shadow effect
+// @mixin curl
+// @category effects
+// @usage:
+// .curled{
+// 	=curl;
+// }
 @import "../generic/_box-shadow";
 @import "../generic/_transform";
 
