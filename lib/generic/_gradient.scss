@@ -1,5 +1,14 @@
-// TODO: make it more functional
-// TODO: Document this mixin
+// TODO: make it more flexible
+// A mixin that generates CSS prefixes for 2-color gradients
+// @mixin gradient
+// @category prefixes
+// @param $color1 {String} is the value that defines the gradient's 1st color
+// @param $color2 {String} is the value that defines the gradient's 2nd color
+// @param $type {String} is the value that defines the gradient's type [vertical, radial]
+// @usage:
+// .an-element{
+// 	=gradient(#222, #000, radial);
+// }
 @mixin gradient($color1, $color2, $type:''){
 	@if($type == vertical){
 		background: $color1;
