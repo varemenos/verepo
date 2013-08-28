@@ -24,15 +24,13 @@ For the SASS syntax lovers or the SCSS syntax haters, you can use `sass-convert`
 
 ### Live
 
-Visit [this](http://varemenos.github.io/verepo/docs/) link to read the online version, or follow the next steps to get a local version:
+Visit [this link](http://varemenos.github.io/verepo/docs/) to read the online version, or follow the next steps to get a local version:
 
 1. To generate the docs for this library you need to have the sassdoc gem installed and then while being inside the verepo, type: `sassdoc -d ./docs -n veRepo`
 
 2. To view the docs you need to serve them in an http server. One of the fastest ways to do that is via python's httpserver: `cd docs` and then `python -m http.server`
 
-## Guide / Examples
-
-	#TODO
+## Guides
 
 ### Grunt.js
 
