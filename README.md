@@ -16,10 +16,6 @@ veRepo is a SASS library of modules and mixins for robust and maintainable front
 <button class="button">
 ```
 
-## SCSS to SASS
-
-For the SASS syntax lovers or the SCSS syntax haters, you can use `sass-convert` to convert the scss files to sass. Later on I might write a script to automate it but currently it doesn't seem wise to develop a tool which will most probably be rewriten again due to this repository's current state (alpha phase).
-
 ## Documentation
 
 ### Live
@@ -41,6 +37,10 @@ For grunt to start working you need to run `npm install --save-dev` so that npm 
 veRepo is now in the bower package directory and you can install it by simply running this command:
 
 	bower install verepo
+
+### SCSS to SASS
+
+For the SASS syntax lovers or the SCSS syntax haters, you can use `sass-convert` to convert the scss files to sass. Later on I might write a script to automate it but currently it doesn't seem wise to develop a tool which will most probably be rewriten again due to this repository's current state (alpha phase).
 
 ## Contribution Guidelines
 

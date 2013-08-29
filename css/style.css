@@ -1191,6 +1191,9 @@ h1 > a, h1 > a:visited {
 h1 > a:hover {
   text-shadow: 0 0 1em #4db8ff, 0 0px 15px #C89;
 }
+h1 sub {
+  font-size: 0.1em;
+}
 
 h2 {
   margin-bottom: 0;
