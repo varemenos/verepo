@@ -7,9 +7,18 @@ module.exports = function(grunt) {
 				command: "sassdoc -d ./docs -n veRepo"
 			}
 		},
+		connect: {
+			server: {
+				options: {
+					port: 8080,
+					base: './docs',
+					keepalive: true
+				}
+			}
+		},
 		watch: {
 			docs: {
-				files: ["lib/**/_*.scss"],
+				files: ["lib/*/_*.scss"],
 				tasks: ["shell:compileDocs"],
 				options: {
 					interrupt: true
@@ -19,6 +28,7 @@ module.exports = function(grunt) {
 	});
 
 	// load tasks
+	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-shell');
 
