@@ -6,9 +6,10 @@
 		"css",
 		"docs",
 		"node_modules",
-		".gitignore",
-		"CONTRIBUTE.md",
 		"README.md",
+		"CONTRIBUTE.md",
+		".gitignore",
+		".editorconfig",
 		"Gruntfile.js",
 		"package.json",
 		"index.html"
