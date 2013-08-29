@@ -33,5 +33,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-shell');
 
 	// default task
-	grunt.registerTask('default', ['watch']);
+	grunt.registerTask('default', ['connect:server']);
 }

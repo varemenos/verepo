@@ -30,7 +30,13 @@ Visit [this link](http://varemenos.github.io/verepo/docs/) to read the online ve
 
 ### Grunt.js
 
-For grunt to start working you need to run `npm install --save-dev` so that npm can install all the dependencies then you can now use grunt.js to generate the docs automatically, by running `grunt:watch` while being in the root directory of the repository.
+For grunt to start working you need to run `npm install --save-dev` so that npm can install all the dependencies then you can now use grunt.js to generate the docs automatically, after that while being in the root directory of the repository you can perform one of these tasks:
+
+1. `grunt` to initiate a simple http server at http://localhost:8080 which will server a local viewer for the docs
+2. `grunt connect` same as 1.
+3. `grunt watch` to watch any changes you do to the .scss files which will automatically regenerate the docs
+
+to stop the tasks, you need to press `CTRL` + `C`
 
 ### Bower
 
