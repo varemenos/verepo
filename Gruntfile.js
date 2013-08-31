@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 	// Project conf
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -34,4 +34,4 @@ module.exports = function(grunt) {
 
 	// default task
 	grunt.registerTask('default', ['connect:server']);
-}
+};
