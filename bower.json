@@ -1,6 +1,7 @@
 {
 	"name": "veRepo",
-	"version": "1.0.2",
+	"version": "1.0.6",
+	"directory": "assets/css",
 	"main": "lib/",
 	"ignore": [
 		"css",
@@ -10,14 +11,12 @@
 		"CONTRIBUTE.md",
 		".gitignore",
 		".editorconfig",
-		"Gruntfile.js",
+		".bower.json",
+		"bower.json",
 		"package.json",
+		"Gruntfile.js",
 		"index.html"
 	],
 	"dependencies": {},
-	"devDependencies": {
-		"grunt": "~0.4.1",
-		"grunt-shell": "~0.3.1",
-		"grunt-contrib-watch": "~0.5.3"
-	}
+	"devDependencies": {}
 }
