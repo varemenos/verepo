@@ -1,8 +1,7 @@
 {
 	"name": "veRepo",
-	"version": "1.0.6",
-	"directory": "assets/css",
-	"main": "lib/",
+	"version": "1.0.7",
+	"main": "assets/",
 	"ignore": [
 		"css",
 		"docs",
