@@ -18,7 +18,7 @@ module.exports = function (grunt) {
 		},
 		watch: {
 			docs: {
-				files: ["assets/css/lib/*/_*.scss"],
+				files: ["lib/*/_*.scss"],
 				tasks: ["shell:compileDocs"],
 				options: {
 					interrupt: true
