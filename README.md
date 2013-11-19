@@ -2,21 +2,23 @@
 
 ## About
 
-veRepo is a SASS library of modules and mixins for robust and maintainable front-end development using SASS. Most of the modular items/objects in this repo will work by just adding 1 class name to the html element you desire to style (though there are some exceptions), for example:
-
-```scss
-.button{
-	@include button(#fff, #09f, 0);
-}
-```
-
-```html
-<button class="button">
-```
+veRepo is a SASS library of modules and mixins for robust and maintainable front-end development using SASS. Most of the modular items/objects in this repo will work by just adding 1 class name to the html element you desire to style (although there are some exceptions).
 
 ## Documentation
 
+### Live
+
+Visit [this link](http://varemenos.github.io/verepo/docs/) to read the online version, or follow the next steps to get a local version:
+
+1. To generate the docs for this library you need to have the sassdoc gem installed (`gem install sassdoc`) and then while being inside the verepo, type: `sassdoc -d ./docs -n veRepo`. Or you can use the grunt command that generates the docs mentioned [here](https://github.com/varemenos/verepo#gruntjs).
+
+2. To view the docs you need to serve them in an http server. One of the fastest ways to do that is via python's httpserver: `cd docs` and then `python -m http.server`
+
+## Guides
+
 ### How to use veRepo
+
+(It is highly recommended to use veRepo via [bower](https://github.com/varemenos/verepo#bower))
 
 Assuming that your current file structure looks like this:
 
@@ -28,9 +30,9 @@ Assuming that your current file structure looks like this:
 	│   └── modules
 	│       ├── _*.scss
 
-Where `style.scss` is the main stylesheet of your project and `verepo` is the verepo library folder. Now all you have to do is to import the parts of verepo you want to use inside of style.scss and then use them with `include`.
+Where `style.scss` is the main stylesheet of your project and `verepo` is the verepo library folder. Now all you have to do is to import the parts of verepo you want to use inside of `style.scss` and then use them with `@include`.
 
-__example #1__
+__example #1:__
 
 ```scss
 @import "verepo/generic/_box-sizing";
@@ -59,7 +61,7 @@ which will be processed into the following:
 }
 ```
 
-__example #2__
+__example #2:__
 
 ```scss
 @import "verepo/modules/_triangle";
@@ -122,15 +124,11 @@ And then inside a declaration block, include the imported items, for example:
 }
 ```
 
-### Live
+### Bower
 
-Visit [this link](http://varemenos.github.io/verepo/docs/) to read the online version, or follow the next steps to get a local version:
+veRepo is now in the bower package directory and you can install it by simply running this command:
 
-1. To generate the docs for this library you need to have the sassdoc gem installed and then while being inside the verepo, type: `sassdoc -d ./docs -n veRepo`
-
-2. To view the docs you need to serve them in an http server. One of the fastest ways to do that is via python's httpserver: `cd docs` and then `python -m http.server`
-
-## Guides
+	bower install verepo
 
 ### Grunt.js
 
@@ -142,12 +140,6 @@ For grunt to start working you need to run `npm install --save-dev` so that npm 
 4. `grunt connect` to initiate a simple http server at http://localhost:8080 which will server a local viewer for the docs
 
 to stop the tasks, you need to press `CTRL` + `C`
-
-### Bower
-
-veRepo is now in the bower package directory and you can install it by simply running this command:
-
-	bower install verepo
 
 ### SCSS to SASS
 
