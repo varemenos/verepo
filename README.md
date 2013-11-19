@@ -18,6 +18,43 @@ veRepo is a SASS library of modules and mixins for robust and maintainable front
 
 ## Documentation
 
+### How to use veRepo
+
+Assuming that your current filestructure like this:
+
+css
+└── style.scss
+├── lib
+│   ├── generic
+│   │   ├── _*.scss
+│   └── modules
+│       ├── _*.scss
+
+Where `style.scss` is the main stylesheet of your project and `lib` is the verepo library folder. Now all you have to do is to import the parts of verepo you want to use, for example:
+
+	@import "../lib/generic/_base";
+	@import "../lib/generic/_font-face";
+	@import "../lib/modules/_grid";
+	@import "../lib/modules/_button";
+
+And then inside a declaration block, include the imported items, for example:
+
+	.aClass{
+		@include box-sizing(border-box);
+		@include background-clip(padding-box);
+	}
+
+which will generate the following:
+
+	.aClass{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-background-clip: padding-box;
+		-moz-background-clip: padding-box;
+		background-clip: padding-box;
+	}
+
 ### Live
 
 Visit [this link](http://varemenos.github.io/verepo/docs/) to read the online version, or follow the next steps to get a local version:
