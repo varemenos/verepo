@@ -1,6 +1,4 @@
-veRepo - SASS Library
-
----
+# veRepo - SASS Library
 
 ## About
 
@@ -15,8 +13,6 @@ veRepo is a SASS library of modules and mixins for robust and maintainable front
 ```html
 <button class="button">
 ```
-
----
 
 ## Documentation
 
@@ -134,8 +130,6 @@ Visit [this link](http://varemenos.github.io/verepo/docs/) to read the online ve
 
 2. To view the docs you need to serve them in an http server. One of the fastest ways to do that is via python's httpserver: `cd docs` and then `python -m http.server`
 
----
-
 ## Guides
 
 ### Grunt.js
@@ -167,13 +161,9 @@ Currently the only differences between v1 and v2 are:
 * In the past  if only included `_base`, you now need to import `_normalize` as well because it's no longer imported inside `_base`.
 * flex's syntax was changed
 
----
-
 ## Contribution Guidelines
 
 [CONTRIBUTE.md](CONTRIBUTE.md)
-
----
 
 ## License
 
@@ -198,8 +188,6 @@ Currently the only differences between v1 and v2 are:
 	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 	THE SOFTWARE.
-
----
 
 ## Credits
 
