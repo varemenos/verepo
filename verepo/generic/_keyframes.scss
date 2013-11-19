@@ -3,17 +3,16 @@
 // @category prefixes
 // @param $animation {String} is the value that defines the name of the animation's keyframes
 // @usage:
-// @import verepo/generic/_keyframes
-// @include keyframes(animationName){
+// =keyframes(animationName){
 // 	0%: {
-// 		@include transform(rotate(0deg));
+// 		=transform(rotate(0deg));
 // 	}
 // 	100%: {
-// 		@include transform(rotate(360deg));
+// 		=transform(rotate(360deg));
 // 	}
 // }
 // .an-element{
-// 	@include animation(animationName 1s linear infinite);
+// 	=animation(animationName 1s linear infinite);
 // }
 
 @mixin keyframes($animation){

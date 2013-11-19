@@ -2,11 +2,8 @@
 // @mixin display-flex
 // @category prefixes
 // @usage:
-// @import verepo/generic/_display-flex
 // .an-element{
 //  =display-flex;
-//  =flex(a-width-value);
-//  =order(the-order-value);
 // }
 @mixin display-flex{
   display: -webkit-box;
