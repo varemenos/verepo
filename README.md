@@ -32,28 +32,34 @@ Assuming that your current file structure looks like this:
 
 Where `style.scss` is the main stylesheet of your project and `lib` is the verepo library folder. Now all you have to do is to import the parts of verepo you want to use, for example:
 
-	@import "../lib/generic/_base";
-	@import "../lib/generic/_font-face";
-	@import "../lib/modules/_grid";
-	@import "../lib/modules/_button";
+```scss
+@import "../lib/generic/_base";
+@import "../lib/generic/_font-face";
+@import "../lib/modules/_grid";
+@import "../lib/modules/_button";
+```
 
 And then inside a declaration block, include the imported items, for example:
 
-	.aClass{
-		@include box-sizing(border-box);
-		@include background-clip(padding-box);
-	}
+```scss
+.aClass{
+	@include box-sizing(border-box);
+	@include background-clip(padding-box);
+}
+```
 
 which will generate the following:
 
-	.aClass{
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		-webkit-background-clip: padding-box;
-		-moz-background-clip: padding-box;
-		background-clip: padding-box;
-	}
+```scss
+.aClass{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+}
+```
 
 ### Live
 
