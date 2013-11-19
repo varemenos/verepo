@@ -1,6 +1,6 @@
 veRepo - SASS Library
 
-======
+---
 
 ## About
 
@@ -16,6 +16,8 @@ veRepo is a SASS library of modules and mixins for robust and maintainable front
 <button class="button">
 ```
 
+---
+
 ## Documentation
 
 ### How to use veRepo
@@ -30,13 +32,13 @@ Assuming that your current file structure looks like this:
 	│   └── modules
 	│       ├── _*.scss
 
-Where `style.scss` is the main stylesheet of your project and `verepo` is the verepo library folder. Now all you have to do is to import the parts of verepo you want to use, for example:
+Where `style.scss` is the main stylesheet of your project and `verepo` is the verepo library folder. Now all you have to do is to import the parts of verepo you want to use inside of style.scss and then use them with `include`.
+
+__example #1__
 
 ```scss
-@import "verepo/generic/_base";
-@import "verepo/generic/_font-face";
-@import "verepo/modules/_grid";
-@import "verepo/modules/_button";
+@import "verepo/generic/_box-sizing";
+@import "verepo/generic/_background-clip";
 ```
 
 And then inside a declaration block, include the imported items, for example:
@@ -48,9 +50,9 @@ And then inside a declaration block, include the imported items, for example:
 }
 ```
 
-which will generate the following:
+which will be processed into the following:
 
-```scss
+```css
 .aClass{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -61,6 +63,69 @@ which will generate the following:
 }
 ```
 
+__example #2__
+
+```scss
+@import "verepo/modules/_triangle";
+@import "verepo/modules/_button";
+```
+
+And then inside a declaration block, include the imported items, for example:
+
+```scss
+.triangle-topright{
+	@include triangle(30px, #0099ff, top right);
+}
+
+.blue-flat-button{
+	@include button(#fff, #09f, 0);
+}
+```
+
+```css
+.triangle-topright {
+	content: "";
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border: solid 30px;
+	border-color: #0099ff #0099ff transparent transparent;
+}
+
+.blue-flat-button {
+	position: relative;
+	display: inline-block;
+	padding: 0.5em 1em;
+	color: white;
+	text-decoration: none;
+	background-color: #0099ff;
+	border: 1px solid #007acc;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+	-webkit-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+	-moz-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+	-o-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+	-ms-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+	transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+}
+
+.blue-flat-button:hover, .blue-flat-button:focus {
+	cursor: pointer;
+	background-color: #4db8ff;
+}
+
+.blue-flat-button:active {
+	cursor: pointer;
+	-webkit-box-shadow: 0 0 3px #0099ff, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+	-moz-box-shadow: 0 0 3px #0099ff, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+	box-shadow: 0 0 3px #0099ff, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+}
+```
+
 ### Live
 
 Visit [this link](http://varemenos.github.io/verepo/docs/) to read the online version, or follow the next steps to get a local version:
@@ -68,6 +133,8 @@ Visit [this link](http://varemenos.github.io/verepo/docs/) to read the online ve
 1. To generate the docs for this library you need to have the sassdoc gem installed and then while being inside the verepo, type: `sassdoc -d ./docs -n veRepo`
 
 2. To view the docs you need to serve them in an http server. One of the fastest ways to do that is via python's httpserver: `cd docs` and then `python -m http.server`
+
+---
 
 ## Guides
 
@@ -100,9 +167,13 @@ Currently the only differences between v1 and v2 are:
 * In the past  if only included `_base`, you now need to import `_normalize` as well because it's no longer imported inside `_base`.
 * flex's syntax was changed
 
+---
+
 ## Contribution Guidelines
 
 [CONTRIBUTE.md](CONTRIBUTE.md)
+
+---
 
 ## License
 
@@ -128,7 +199,9 @@ Currently the only differences between v1 and v2 are:
 	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 	THE SOFTWARE.
 
-#Credits
+---
+
+## Credits
 
 The `CONTRIBUTE.md` file of this project is a slightly modified copy `CONTRIBUTE.md` file from the normalize.css project.
 
