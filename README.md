@@ -20,7 +20,7 @@ veRepo is a SASS library of modules and mixins for robust and maintainable front
 
 ### How to use veRepo
 
-Assuming that your current filestructure like this:
+Assuming that your current file structure looks like this:
 
 	css
 	└── style.scss
