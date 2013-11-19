@@ -22,13 +22,13 @@ veRepo is a SASS library of modules and mixins for robust and maintainable front
 
 Assuming that your current filestructure like this:
 
-css
-└── style.scss
-├── lib
-│   ├── generic
-│   │   ├── _*.scss
-│   └── modules
-│       ├── _*.scss
+	css
+	└── style.scss
+	├── lib
+	│   ├── generic
+	│   │   ├── _*.scss
+	│   └── modules
+	│       ├── _*.scss
 
 Where `style.scss` is the main stylesheet of your project and `lib` is the verepo library folder. Now all you have to do is to import the parts of verepo you want to use, for example:
 
