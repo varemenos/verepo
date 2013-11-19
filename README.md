@@ -92,6 +92,14 @@ veRepo is now in the bower package directory and you can install it by simply ru
 
 For the SASS syntax lovers or the SCSS syntax haters, you can use `sass-convert` to convert the scss files to sass. Later on I might write a script to automate it but currently it doesn't seem wise to develop a tool which will most probably be rewriten again due to this repository's current state (alpha phase).
 
+### v1.X.X to v2.X.X
+
+Currently the only differences between v1 and v2 are:
+
+* the name of the library folder was renamed from `lib` to `verepo` to avoid getting folders mixed due to it's generic name.
+* In the past  if only included `_base`, you now need to import `_normalize` as well because it's no longer imported inside `_base`.
+* flex's syntax was changed
+
 ## Contribution Guidelines
 
 [CONTRIBUTE.md](CONTRIBUTE.md)
