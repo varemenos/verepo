@@ -24,19 +24,19 @@ Assuming that your current file structure looks like this:
 
 	css
 	└── style.scss
-	├── lib
+	├── verepo
 	│   ├── generic
 	│   │   ├── _*.scss
 	│   └── modules
 	│       ├── _*.scss
 
-Where `style.scss` is the main stylesheet of your project and `lib` is the verepo library folder. Now all you have to do is to import the parts of verepo you want to use, for example:
+Where `style.scss` is the main stylesheet of your project and `verepo` is the verepo library folder. Now all you have to do is to import the parts of verepo you want to use, for example:
 
 ```scss
-@import "../lib/generic/_base";
-@import "../lib/generic/_font-face";
-@import "../lib/modules/_grid";
-@import "../lib/modules/_button";
+@import "verepo/generic/_base";
+@import "verepo/generic/_font-face";
+@import "verepo/modules/_grid";
+@import "verepo/modules/_button";
 ```
 
 And then inside a declaration block, include the imported items, for example:
@@ -75,9 +75,10 @@ Visit [this link](http://varemenos.github.io/verepo/docs/) to read the online ve
 
 For grunt to start working you need to run `npm install --save-dev` so that npm can install all the dependencies then you can now use grunt.js. After that while being in the root directory of the repository, you can perform one of these tasks:
 
-1. `grunt` to initiate a simple http server at http://localhost:8080 which will server a local viewer for the docs
-2. `grunt connect` same as 1.
+1. `grunt` to compile the docs (it only runs once, if you want a watch-like task, using 3.)
+2. `grunt shell` same as 1.
 3. `grunt watch` to watch any changes you do to the .scss files which will automatically regenerate the docs
+4. `grunt connect` to initiate a simple http server at http://localhost:8080 which will server a local viewer for the docs
 
 to stop the tasks, you need to press `CTRL` + `C`
 

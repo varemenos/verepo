@@ -1,9 +1,9 @@
 {
 	"name": "veRepo",
-	"version": "1.0.8",
-	"main": "lib/",
+	"version": "2.0.0",
+	"main": "verepo/",
 	"ignore": [
-		"css",
+		"example",
 		"docs",
 		"node_modules",
 		"README.md",
