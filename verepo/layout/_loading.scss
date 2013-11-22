@@ -1,3 +1,7 @@
+@import "../prefixes/_keyframes";
+@import "../prefixes/_animation";
+@import "../prefixes/_animation-delay";
+@import "../prefixes/_transform";
 // REQUIRES: a `div` and `3 * span` inside of that `div`
 // A mixin that generates CSS for an animated loading element
 // @mixin loading
@@ -13,11 +17,6 @@
 //	=loading(1.5em, 2);
 // }
 // TODO: make it work for any amount of spans
-@import "../generic/_keyframes";
-@import "../generic/_animation";
-@import "../generic/_animation-delay";
-@import "../generic/_transform";
-
 @mixin loading($width: 1.5em, $style: 1, $color: #09f){
 	content: "";
 	display: inline-block;

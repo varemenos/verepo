@@ -1,4 +1,4 @@
-@import "../prefixes/clearfix";
+@import "../helpers/clearfix";
 // A mixin that generates CSS for unstyled lists
 // @mixin unstyled-list
 // @category layout
@@ -29,7 +29,6 @@
 // .my-list{
 // 	=unstyled-list;
 // }
-
 
 @mixin floated-list($spacing: false, $direction: left){
 	@include unstyled-list;
