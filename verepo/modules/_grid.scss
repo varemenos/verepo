@@ -1,5 +1,5 @@
-@import "../generic/borderbox";
-@import "../generic/clearfix";
+@import "../prefixes/borderbox";
+@import "../helpers/clearfix";
 // A mixin that generates CSS for a grid system
 // @mixin grid
 // @category objects

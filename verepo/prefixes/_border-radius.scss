@@ -7,14 +7,8 @@
 // .an-element{
 // 	=border-radius(5px 0 0 5px);
 // }
-
-@import "_background-clip";
 @mixin border-radius($val...){
 	-webkit-border-radius: $val;
 	-moz-border-radius: $val;
 	border-radius: $val;
-
-	// Sometimes you can see a background-color "leak" outside of a border when border-radius is present.
-	// To prevent this you use background-clip
-	@include background-clip(padding-box);
 }

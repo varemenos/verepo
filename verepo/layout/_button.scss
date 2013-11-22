@@ -1,10 +1,9 @@
-@import "../generic/_border-radius";
-@import "../generic/_transition";
-@import "../generic/_box-shadow";
-@import "../generic/_transform";
-
+@import "../prefixes/_border-radius";
+@import "../prefixes/_transition";
+@import "../prefixes/_box-shadow";
+@import "../prefixes/_transform";
 // A mixin that generates CSS for a styled button
-// @category objects
+// @category layout
 // @mixin button
 // @param $font-color {String} is the value that defines the button's font color
 // @param $bg-color {String} is the value that defines the button's background color

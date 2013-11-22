@@ -1,14 +1,12 @@
+@import "../prefixes/clearfix";
 // A mixin that generates CSS for unstyled lists
 // @mixin unstyled-list
-// @category objects
+// @category layout
 // @param $gutter {Number} is the value that defines the grid's gutter spacing (defaults to 0)
 // @usage:
 // .my-list{
 // 	=unstyled-list;
 // }
-
-@import "../generic/clearfix";
-
 @mixin unstyled-list{
 	list-style: none;
 	list-position: outside;

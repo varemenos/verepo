@@ -1,9 +1,15 @@
-@import "../generic/borderbox";
-@import "../generic/border-radius";
-@import "../generic/_box-shadow";
-@import "../generic/transition";
-@import "../generic/clearfix";
-
+@import "../prefixes/borderbox";
+@import "../prefixes/border-radius";
+@import "../prefixes/_box-shadow";
+@import "../prefixes/transition";
+@import "../prefixes/clearfix";
+// A mixin that generates CSS for a footer that is fixed on the bottom of the page (Don't forget to add a bottom margin to the previous element to avoid overlapping the footer)
+// @mixin form
+// @category layout
+// @usage:
+// .form{
+// 	=form;
+// }
 @mixin form{
 	input,
 	label,

@@ -1,0 +1,34 @@
+@import "helpers/_visuallyhidden";
+@import "helpers/_hidden";
+@import "helpers/_invisible";
+@import "helpers/_ir";
+@import "helpers/_clearfix";
+
+.float--right { float:right!important; }
+.float--left { float:left !important; }
+.float--none { float:none !important; }
+
+.align--left { text-align: left; }
+.align--right { text-align: right; }
+.align--center { text-align: center; }
+.align--justify { text-align: justify; }
+
+.visuallyhidden {
+	@include visuallyhidden;
+}
+
+.hidden {
+	@include hidden;
+}
+
+.invisible {
+	@include invisible;
+}
+
+.ir {
+	@include ir;
+}
+
+.clearfix {
+	@include clearfix;
+}
