@@ -147,10 +147,7 @@ For the SASS syntax lovers or the SCSS syntax haters, you can use `sass-convert`
 
 ### v1.X.X to v2.X.X
 
-Currently the only differences between v1 and v2 are:
-
-* the name of the library folder was renamed from `lib` to `verepo` to avoid getting folders mixed due to it's generic name.
-* In the past  if only included `_base`, you now need to import `_normalize` as well because it's no longer imported inside `_base`.
+There are a dozen differences between v1 and v2, so be careful when updating.
 
 ## Contribution Guidelines
 
