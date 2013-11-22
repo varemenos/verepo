@@ -61,20 +61,20 @@
 			@include box-shadow(0 0 3px $bg-color, 0 0 0.5em rgba(black, 0.25) inset);
 		}
 	}
-}
 
-.button--xsmall{
-	font-size: 70%;
-}
+	&.xsmall{
+		font-size: 70%;
+	}
 
-.button--small{
-	font-size: 85%;
-}
+	&.small{
+		font-size: 85%;
+	}
 
-.button--large{
-	font-size: 115%;
-}
+	&.large{
+		font-size: 115%;
+	}
 
-.button--xlarge{
-	font-size: 130%;
+	&.xlarge{
+		font-size: 130%;
+	}
 }
