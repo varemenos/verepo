@@ -24,6 +24,19 @@ module.exports = function (grunt) {
 					interrupt: true
 				}
 			}
+		},
+		bump: {
+			options: {
+				createTag: true,
+				tagName: 'v%VERSION%',
+				tagMessage: 'v%VERSION%',
+				commit: false,
+				push: false,
+				files: [
+					'package.json',
+					'bower.json',
+				]
+			}
 		}
 	});
 
