@@ -1,4 +1,3 @@
-@import "../helpers/clearfix";
 // A mixin that generates CSS for unstyled lists
 // @mixin unstyled-list
 // @category layout
@@ -27,7 +26,7 @@
 // @param $direction {String} is the value that defines the floated-list's direction (defaults to left) [left, right]
 // @usage:
 // .my-list{
-// 	=unstyled-list;
+// 	=floated-list;
 // }
 
 @mixin floated-list($spacing: false, $direction: left){

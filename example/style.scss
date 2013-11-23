@@ -1,14 +1,4 @@
-@import "../verepo/_prefixes";
-@import "../verepo/_helpers";
-@import "../verepo/modules/_normalize";
-@import "../verepo/modules/_grid";
-@import "../verepo/layout/_button";
-@import "../verepo/layout/_truncate";
-@import "../verepo/layout/_loading";
-@import "../verepo/layout/_triangle";
-@import "../verepo/layout/_blockquote";
-@import "../verepo/layout/_fixed-footer";
-@import "../verepo/layout/_form";
+@import "../verepo/_verepo";
 
 // generate a 12-column grid with 1em gutter spacing
 @include grid(12, 1em);

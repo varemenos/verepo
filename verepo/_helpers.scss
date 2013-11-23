@@ -2,16 +2,18 @@
 @import "helpers/_hidden";
 @import "helpers/_invisible";
 @import "helpers/_ir";
+@import "helpers/_align";
+@import "helpers/_float";
 @import "helpers/_clearfix";
 
-.float--right { float:right!important; }
-.float--left { float:left !important; }
-.float--none { float:none !important; }
+@include float(left);
+@include float(right);
+@include float(none);
 
-.align--left { text-align: left; }
-.align--right { text-align: right; }
-.align--center { text-align: center; }
-.align--justify { text-align: justify; }
+@include align(left);
+@include align(right);
+@include align(center);
+@include align(justify);
 
 .visuallyhidden {
 	@include visuallyhidden;

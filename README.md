@@ -25,18 +25,20 @@ Assuming that your current file structure looks like this:
 	css
 	└── style.scss
 	├── verepo
-	│   ├── generic
+	└────── _verepo.scss
+	└────── _*.scss
+	│   ├── prefixes
 	│   │   ├── _*.scss
 	│   └── modules
 	│       ├── _*.scss
 
-Where `style.scss` is the main stylesheet of your project and `verepo` is the verepo library folder. Now all you have to do is to import the parts of verepo you want to use inside of `style.scss` and then use them with `@include`.
+Where `style.scss` is the main stylesheet of your project and `verepo` is the verepo library folder. Now all you have to do is to import the `_verepo.scss` file or the partials of verepo you want to use inside of `style.scss` and then use them with `@include`.
 
 __example #1:__
 
 ```scss
-@import "verepo/generic/_box-sizing";
-@import "verepo/generic/_background-clip";
+@import "verepo/prefixes/_box-sizing";
+@import "verepo/prefixes/_background-clip";
 ```
 
 And then inside a declaration block, include the imported items, for example:
@@ -64,8 +66,8 @@ which will be processed into the following:
 __example #2:__
 
 ```scss
-@import "verepo/modules/_triangle";
-@import "verepo/modules/_button";
+@import "verepo/layout/_triangle";
+@import "verepo/layout/_button";
 ```
 
 And then inside a declaration block, include the imported items, for example:
@@ -151,7 +153,22 @@ There are a dozen differences between v1 and v2, so be careful when updating.
 
 ## Contribution Guidelines
 
-[CONTRIBUTE.md](CONTRIBUTE.md)
+1. Read [CONTRIBUTE.md](CONTRIBUTE.md)
+2. When creating a new verepo "object", you need to:
+	1. include the file inside the verepo library's directory
+	2. name it after it's mixin
+3. Inside the file _the-name.scss there should follow this order:
+	1. Include the documentation declaration (for syntax and information, [read here](https://github.com/eoneill/sassdoc))
+	2. Include any import declarations
+	3. Include any `TODO:` declarations
+	4. Include the code (mixins, functions etc)
+	5. If the mixin you've created requires no parameters, then you should also create an `@extend` declaration with the same name which will include the mixin you've just created
+	6. Repeat the previous steps for each item in this .scss file
+4. Finally you need to do the following to submit your changes:
+	1. Update the file that imports the partials (depends on the folder you modified, for example `_helpers.scss` should import all the partials inside of the `helpers` directory)
+	2. Re-generate the verepo documentation locally (there is a guide for this which is mentioned above)
+	3. Commit & push the changes
+	4. Update ghpages by running this command while in the root of the verepo repository directory: `git checkout gh-pages && git merge master && git push && git checkout master`
 
 ## License
 
