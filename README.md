@@ -40,6 +40,8 @@ I suggest including the whole library by using the following:
 @import "verepo/_verepo";
 ```
 
+### Usage Examples
+
 __example #1:__
 
 ```scss
