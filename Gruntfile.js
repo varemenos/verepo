@@ -31,6 +31,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-shell');
+	grunt.loadNpmTasks('grunt-bump');
 
 	// default task
 	grunt.registerTask('default', ['shell']);
