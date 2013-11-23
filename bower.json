@@ -1,21 +1,21 @@
 {
 	"name": "veRepo",
-	"version": "2.0.0",
+	"version": "2.0.3",
 	"main": "verepo/",
 	"ignore": [
-		"example",
-		"docs",
 		"node_modules",
-		"README.md",
-		"LICENSE.md",
-		"CONTRIBUTE.md",
-		".gitignore",
+		"docs",
+		"example",
 		".editorconfig",
-		".bower.json",
-		"bower.json",
-		"package.json",
+		".gitignore",
+		"CONTRIBUTE.md",
 		"Gruntfile.js",
-		"index.html"
+		"LICENSE.md",
+		"README.md",
+		"bower.json",
+		".bower.json",
+		"index.html",
+		"package.json"
 	],
 	"dependencies": {},
 	"devDependencies": {}
