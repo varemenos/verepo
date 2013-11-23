@@ -28,7 +28,6 @@
 // .my-list{
 // 	=floated-list;
 // }
-
 @mixin floated-list($spacing: false, $direction: left){
 	@include unstyled-list;
 	@include clearfix;
@@ -46,4 +45,31 @@
 
 %floated-list{
 	@include floated-list;
+}
+
+// A mixin that generates CSS for inline lists
+// @mixin inline-list
+// @category layout
+// @param $spacing {Number} is the value that defines the inline-list's spacing (defaults to 0)
+// @param $direction {String} is the value that defines the inline-list's direction (defaults to left) [left, right]
+// @usage:
+// .my-list{
+// 	=inline-list;
+// }
+@mixin inline-list($spacing: false, $direction: left){
+	@include unstyled-list;
+
+	& > li {
+		display: inline-block;
+	}
+
+	@if $spacing{
+		& > li + li{
+			margin-#{$direction}: $spacing;
+		}
+	}
+}
+
+%inline-list{
+	@include inline-list;
 }
