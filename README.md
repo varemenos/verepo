@@ -34,16 +34,26 @@ Assuming that your current file structure looks like this:
 
 Where `style.scss` is the main stylesheet of your project and `verepo` is the verepo library folder. Now all you have to do is to import the `_verepo.scss` file or the partials of verepo you want to use inside of `style.scss` and then use them with `@include`.
 
+I suggest including the whole library by using the following:
+
+```scss
+@import "verepo/_verepo";
+```
+
 __example #1:__
 
 ```scss
-@import "verepo/prefixes/_box-sizing";
-@import "verepo/prefixes/_background-clip";
+@import "verepo/_verepo";
+@include normalize;
 ```
 
-And then inside a declaration block, include the imported items, for example:
+which will include the latest normalize.css version
+
+__example #2:__
 
 ```scss
+@import "verepo/_verepo";
+
 .aClass{
 	@include box-sizing(border-box);
 	@include background-clip(padding-box);
@@ -63,16 +73,14 @@ which will be processed into the following:
 }
 ```
 
-__example #2:__
+__example #3:__
+
+You can also import partials instead of the whole library
 
 ```scss
 @import "verepo/layout/_triangle";
 @import "verepo/layout/_button";
-```
 
-And then inside a declaration block, include the imported items, for example:
-
-```scss
 .triangle-topright{
 	@include triangle(30px, #0099ff, top right);
 }
@@ -81,6 +89,8 @@ And then inside a declaration block, include the imported items, for example:
 	@include button(#fff, #09f, 0);
 }
 ```
+
+which will be processed into the following:
 
 ```css
 .triangle-topright {
