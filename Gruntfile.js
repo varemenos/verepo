@@ -41,7 +41,7 @@ module.exports = function (grunt) {
 					'src/layout/_**.scss',
 					'src/modules/_**.scss',
 				],
-				dest: 'dist/_verepo.scss'
+				dest: '_verepo.scss'
 			}
 		},
 		sass: {
