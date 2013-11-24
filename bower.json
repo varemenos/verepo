@@ -1,11 +1,12 @@
 {
 	"name": "veRepo",
-	"version": "2.0.12",
-	"main": "_verepo.scss",
+	"version": "2.0.13",
+	"main": "dist/_verepo.scss",
 	"ignore": [
 		"node_modules",
 		"docs",
 		"example",
+		"src",
 		".editorconfig",
 		".gitignore",
 		"CONTRIBUTE.md",
