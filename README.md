@@ -22,30 +22,19 @@ Visit [this link](http://varemenos.github.io/verepo/docs/) to read the online ve
 
 Assuming that your current file structure looks like this:
 
-	css
-	└── style.scss
-	├── verepo
-	└────── _verepo.scss
-	└────── _*.scss
-	│   ├── prefixes
-	│   │   ├── _*.scss
-	│   └── modules
-	│       ├── _*.scss
+	assets
+	└──css
+		├── _style.scss
+		└── _verepo.scss
 
-Where `style.scss` is the main stylesheet of your project and `verepo` is the verepo library folder. Now all you have to do is to import the `_verepo.scss` file or the partials of verepo you want to use inside of `style.scss` and then use them with `@include`.
-
-I suggest including the whole library by using the following:
-
-```scss
-@import "verepo/_verepo";
-```
+Where `style.scss` is the main stylesheet of your project and `verepo` is the distributable verepo library file found in the `dist` directory of this repository. Now all you have to do is to import the `_verepo.scss` file inside of `style.scss` and then use it's components by using `@include`.
 
 ### Usage Examples
 
 __example #1:__
 
 ```scss
-@import "verepo/_verepo";
+@import "_verepo";
 @include normalize;
 ```
 
@@ -54,7 +43,7 @@ which will include the latest normalize.css version
 __example #2:__
 
 ```scss
-@import "verepo/_verepo";
+@import "_verepo";
 
 .aClass{
 	@include box-sizing(border-box);
@@ -77,11 +66,8 @@ which will be processed into the following:
 
 __example #3:__
 
-You can also import partials instead of the whole library
-
 ```scss
-@import "verepo/layout/_triangle";
-@import "verepo/layout/_button";
+@import "_verepo";
 
 .triangle-topright{
 	@include triangle(30px, #0099ff, top right);
@@ -146,12 +132,13 @@ veRepo is now in the bower package directory and you can install it by simply ru
 
 ### Grunt.js
 
-For grunt to start working you need to run `npm install --save-dev` so that npm can install all the dependencies then you can now use grunt.js. After that while being in the root directory of the repository, you can perform one of these tasks:
+While being in the root directory of the repository you need to run `npm install` which will allow you to use gruntjs by installing all the dependencies of the current project. After that, you can perform one of these tasks:
 
-1. `grunt` to compile the docs (it only runs once, if you want a watch-like task, using 3.)
-2. `grunt shell` same as 1.
-3. `grunt watch` to watch any changes you do to the .scss files which will automatically regenerate the docs
-4. `grunt connect` to initiate a simple http server at http://localhost:8080 which will server a local viewer for the docs
+1. `grunt update-docs` to compile the docs
+2. `grunt update-dist` to compile the distributable `_verepo.scss` file
+3. `grunt update-example` to compile the sass file for the example page
+4. `grunt update` or `grunt` to run the 3 tasks above.
+6. `grunt connect` to initiate a simple http server at http://localhost:8000 which will server a local viewer for the example website and docs
 
 to stop the tasks, you need to press `CTRL` + `C`
 
@@ -161,7 +148,7 @@ For the SASS syntax lovers or the SCSS syntax haters, you can use `sass-convert`
 
 ### v1.X.X to v2.X.X
 
-There are a dozen differences between v1 and v2, so be careful when updating.
+There are a countless differences between v1 and v2, so be careful when updating.
 
 ## Contribution Guidelines
 
@@ -179,8 +166,12 @@ There are a dozen differences between v1 and v2, so be careful when updating.
 4. Finally you need to do the following to submit your changes:
 	1. Update the file that imports the partials (depends on the folder you modified, for example `_helpers.scss` should import all the partials inside of the `helpers` directory)
 	2. Re-generate the verepo documentation locally (there is a guide for this which is mentioned above)
-	3. Commit & push the changes
-	4. Update ghpages by running this command while in the root of the verepo repository directory: `git checkout gh-pages && git merge master && git push && git checkout master`
+	3. Run `grunt update` to update the documentation, example page and distributable `_verepo.scss` file
+	4. Update the project version by doing the following:
+		1. Read [semver's spec](http://semver.org/) and deside whether the changes you've made are considered `patch`, `minor` or `major`
+		2. Then use grunt bump to update the project verion with the following command: `grunt bump:patch` or `grunt bump:minor` or `grunt bump:major`
+	5. Commit & push the changes
+	6. Update ghpages by running this command while in the root of the verepo repository directory: `git checkout gh-pages && git merge master && git push && git checkout master`
 
 ## License
 
@@ -208,6 +199,7 @@ There are a dozen differences between v1 and v2, so be careful when updating.
 
 ## Credits
 
-The `CONTRIBUTE.md` file of this project is a slightly modified copy `CONTRIBUTE.md` file from the normalize.css project.
+* The `CONTRIBUTE.md` file of this project is a slightly modified copy `CONTRIBUTE.md` file from the normalize.css project.
+* Some of the partials in this repo were inspired by [scut](https://github.com/davidtheclark/scut)
 
 	#TODO add more

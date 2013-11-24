@@ -1,6 +1,6 @@
 {
   "name": "verepo",
-  "version": "2.0.10",
+  "version": "2.0.12",
   "repository": {
     "type": "git",
     "url": "git@github.com:varemenos/verepo.git"
@@ -8,8 +8,9 @@
   "devDependencies": {
     "grunt": ">=0.4.1",
     "grunt-shell": ">=0.3.1",
-    "grunt-contrib-watch": ">=0.5.3",
     "grunt-contrib-connect": ">=0.3.0",
-    "grunt-bump": "0.0.11"
+    "grunt-bump": "0.0.11",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-sass": "~0.5.1"
   }
 }

@@ -14,6 +14,7 @@
 	-ms-flex: 1;
 	flex: 1;
 }
+
 // A mixin that generates CSS prefixes for a flexboxed element's order
 // @mixin order
 // @category prefixes
@@ -29,6 +30,7 @@
 	-webkit-order: $order;
 	order: $order;
 }
+
 // A mixin that generates CSS prefixes for "display: flex;"
 // @mixin display-flex
 // @category prefixes

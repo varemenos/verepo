@@ -23,10 +23,6 @@
 // .dark-blue-curved-button{
 //	=button(#fff, #458, 2px);
 // }
-@import "../prefixes/_border-radius";
-@import "../prefixes/_transition";
-@import "../prefixes/_box-shadow";
-@import "../prefixes/_transform";
 @mixin button($font-color, $bg-color, $radius: 0){
 	position: relative;
 	display: inline-block;

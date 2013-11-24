@@ -26,13 +26,13 @@
 	}
 
 	@include animation(loadingSpin 1s linear infinite);
-}
 
-@include keyframes(loadingSpin){
-	0%: {
-		@include transform(rotate(0deg));
-	}
-	100%: {
-		@include transform(rotate(360deg));
+	@include keyframes(loadingSpin){
+		0%: {
+			@include transform(rotate(0deg));
+		}
+		100%: {
+			@include transform(rotate(360deg));
+		}
 	}
 }
