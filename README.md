@@ -1,5 +1,21 @@
 # veRepo - SASS Library
 
+## Table of Content
+
+* [About](#about)
+* [Documentation](#documentation)
+	* [Live](#live)
+* [Guides](#guides)
+	[How to use veRepo](#how-to-use-verepo)
+	[Usage Examples](#usage-examples)
+	* [Bower](#bower)
+	* [Grunt.js](#gruntjs)
+	* [SCSS to SASS](#scss-to-sass)
+	* [v1.X.X to v2.X.X](#v1xx-to-v2xx)
+* [Contribution Guidelines](#contribution-guidelines)
+* [License](#license)
+* [Credits](#credits)
+
 ## About
 
 veRepo is a SASS library of modules and mixins for robust and maintainable front-end development using SASS. Most of the modular items/objects in this repo will work by just adding 1 class name to the html element you desire to style (although there are some exceptions).
