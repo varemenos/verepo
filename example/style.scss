@@ -101,11 +101,11 @@ blockquote{
 }
 
 .loading1{
-	@include loading(1.5em);
+	@include loading(1.5em, 1, #0099ff);
 }
 
 .loading2{
-	@include loading(1.5em, 2);
+	@include loading(1.5em, 2, #0099ff);
 }
 
 [class*=triangle]{

@@ -45,6 +45,19 @@
 
 			&:last-child{
 				padding-bottom: 0;
+				// experimental code is commented-out
+				// display: table-cell;
+				// float: none;
+				// width: auto;
+
+				// &:after{
+				// 	content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+				// 	visibility: hidden;
+				// 	clear: both;
+				// 	height: 0 !important;
+				// 	display: block;
+				// 	line-height: 0;
+				// }
 			}
 		}
 
