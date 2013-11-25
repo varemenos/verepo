@@ -27,7 +27,7 @@ Assuming that your current file structure looks like this:
 		├── _style.scss
 		└── _verepo.scss
 
-Where `style.scss` is the main stylesheet of your project and `verepo` is the distributable verepo library file found in the `dist` directory of this repository. Now all you have to do is to import the `_verepo.scss` file inside of `style.scss` and then use it's components by using `@include`.
+Where `style.scss` is the main stylesheet of your project and `verepo` is the distributable verepo library file found in the root directory of this repository. Now all you have to do is to import the `_verepo.scss` file inside of `style.scss` and then use it's components by using `@include`.
 
 ### Usage Examples
 
@@ -201,5 +201,6 @@ There are a countless differences between v1 and v2, so be careful when updating
 
 * The `CONTRIBUTE.md` file of this project is a slightly modified copy `CONTRIBUTE.md` file from the normalize.css project.
 * Some of the partials in this repo were inspired by [scut](https://github.com/davidtheclark/scut)
+* Stubbornella for the [media object](www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/)
 
 	#TODO add more
