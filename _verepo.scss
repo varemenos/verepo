@@ -354,7 +354,7 @@
 // @mixin align
 // @category helpers
 // @param $direction {String} is the value that defines the align class' direction.
-// @param $important {String} is the value that declares whether the align will be forced via !important or not.
+// @param $important {String} is the value that declares whether the align will be forced via !important or not [any value with trigger the effect].
 // @usage:
 // =align(right);
 // =align(left, important);

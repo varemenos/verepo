@@ -4,10 +4,16 @@
 
 @include float(left, true);
 @include float(right, true);
+@include float(none, true);
 
 @include align(left);
 @include align(right);
+@include align(center);
 @include align(justify);
+
+.clearfix{
+	@include clearfix;
+}
 
 // generate a 12-column grid with 1em gutter spacing
 @include grid(12, 1em);
@@ -94,10 +100,38 @@
 	@include triangle(30px, #0099ff, top bottom right);
 }
 
+// media partials
+
+.media{
+	@include media;
+}
+
+.media--left{
+	@include media(left);
+}
+
+.media--right{
+	@include media(right);
+}
+
 // form partials
 
 .vertical-form{
 	@include vertical-form;
+}
+
+// list partials
+
+.unstyled-list{
+	@include unstyled-list;
+}
+
+.floated-list{
+	@include floated-list;
+}
+
+.inline-list{
+	@include inline-list;
 }
 
 // other partials
