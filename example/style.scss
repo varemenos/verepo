@@ -1,5 +1,14 @@
 @import "../_verepo";
 
+@include normalize;
+
+@include float(left, true);
+@include float(right, true);
+
+@include align(left);
+@include align(right);
+@include align(justify);
+
 // generate a 12-column grid with 1em gutter spacing
 @include grid(12, 1em);
 
