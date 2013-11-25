@@ -21,6 +21,7 @@ module.exports = function (grunt) {
 				tagName: 'v%VERSION%',
 				tagMessage: 'v%VERSION%',
 				commitMessage: 'v%VERSION%',
+				pushTo: 'upstream',
 				files: [
 					'package.json',
 					'bower.json',
