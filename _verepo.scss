@@ -776,7 +776,7 @@
 // }
 @mixin unstyled-list{
 	list-style: none;
-	list-position: outside;
+	list-style-position: outside;
 	list-style-image: none;
 	list-style-type: none;
 	margin: 0;
