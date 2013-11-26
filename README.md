@@ -170,15 +170,15 @@ There are a countless differences between v1 and v2, so be careful when updating
 
 1. Read [CONTRIBUTE.md](CONTRIBUTE.md)
 2. When creating a new verepo "object", you need to:
-	1. include the file inside the verepo library's directory
-	2. name it after it's mixin
-3. Inside the file _the-name.scss there should follow this order:
+	1. include the `.scss` file inside the verepo library's directory
+	2. name it after it's mixin but since it's a partial, prepend a `_` in the name (for example `_grid.scss`)
+3. Inside the file you just created:
 	1. Include the documentation declaration (for syntax and information, [read here](https://github.com/eoneill/sassdoc))
 	2. Include any import declarations
 	3. Include any `TODO:` declarations
 	4. Include the code (mixins, functions etc)
-	5. If the mixin you've created requires no parameters, then you should also create an `@extend` declaration with the same name which will include the mixin you've just created
-	6. Repeat the previous steps for each item in this .scss file
+	5. If the mixin you've created takes no parameters, then create an `@extend` declaration with the same name which will include the mixin you've just created (for example: `%clearfix{ @include @clearfix; }`)
+	6. If you create more than 1 mixin in the file, then repeat the previous steps for each mixin
 4. Finally you need to do the following to submit your changes:
 	1. Update the file that imports the partials (depends on the folder you modified, for example `_helpers.scss` should import all the partials inside of the `helpers` directory)
 	2. Re-generate the verepo documentation locally (there is a guide for this which is mentioned above)
