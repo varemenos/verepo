@@ -182,11 +182,12 @@ There are a countless differences between v1 and v2, so be careful when updating
 4. Finally you need to do the following to submit your changes:
 	1. Re-generate the verepo documentation locally (there is a guide for this which is mentioned above)
 	2. Run `grunt update` to update the documentation, example page and distributable `_verepo.scss` file
-	3. Commit & push the changes
+	3. Push the changes
 	4. Update ghpages by running this command while in the root of the verepo repository directory: `git checkout gh-pages && git merge master && git push && git checkout master`
 	5. Finally bump the project version by doing the following:
 		1. Read [semver's spec](http://semver.org/) and deside whether the changes you've made are considered `patch`, `minor` or `major`
 		2. Then use grunt bump to update the project verion with the following command: `grunt bump:patch` or `grunt bump:minor` or `grunt bump:major`
+	6. Do a Pull-Request
 
 ## License
 
