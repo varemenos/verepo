@@ -1,6 +1,6 @@
 {
 	"name": "veRepo",
-	"version": "2.0.17",
+	"version": "2.0.18",
 	"main": "_verepo.scss",
 	"ignore": [
 		"node_modules",
