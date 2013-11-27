@@ -218,5 +218,4 @@ There are a countless differences between v1 and v2, so be careful when updating
 * The `CONTRIBUTE.md` file of this project is a slightly modified copy `CONTRIBUTE.md` file from the normalize.css project.
 * Some of the partials in this repo were inspired by [scut](https://github.com/davidtheclark/scut)
 * Stubbornella for the [media object](www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/)
-
-	#TODO add more
+* TODO add more
