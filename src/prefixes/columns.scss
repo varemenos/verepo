@@ -1,0 +1,13 @@
+// A mixin that generates CSS prefixes for columns
+// @mixin columns
+// @category prefixes
+// @param $val {String} columns' valid value
+// @usage:
+// .an-element{
+// 	=columns(value);
+// }
+@mixin box-sizing($val){
+	-webkit-columns: $val;
+	-moz-columns: $val;
+	columns: $val;
+}
