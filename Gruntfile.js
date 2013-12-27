@@ -1,6 +1,6 @@
 module.exports = function (grunt) {
 	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
+		project: grunt.file.readJSON('package.json'),
 		shell: {
 			compileDocs: {
 				command: "sassdoc -d ./docs -n veRepo"
@@ -31,7 +31,7 @@ module.exports = function (grunt) {
 		},
 		concat: {
 			options: {
-				banner: '/*! veRepo.scss v%VERSION% | MIT License | https://github.com/varemenos/verepo */\n\n'
+				banner: '/*! veRepo.scss <%= project.version %> | MIT License | https://github.com/varemenos/verepo */\n\n'
 			},
 			dist: {
 				src: [

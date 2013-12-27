@@ -8,8 +8,6 @@
 // }
 @mixin transform-origin($val...){
 	-webkit-transform-origin: $val;
-	-moz-transform-origin: $val;
-	-o-transform-origin: $val;
 	-ms-transform-origin: $val;
 	transform-origin: $val;
 }
