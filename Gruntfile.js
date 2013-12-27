@@ -33,7 +33,7 @@ module.exports = function (grunt) {
 				push: true,
 				pushTo: 'origin',
 			}
-		}
+		},
 		concat: {
 			options: {
 				banner: '/*! veRepo.scss <%= project.version %> | MIT License | https://github.com/varemenos/verepo */\n\n'
