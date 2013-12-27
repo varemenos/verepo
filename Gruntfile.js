@@ -17,18 +17,23 @@ module.exports = function (grunt) {
 		},
 		bump: {
 			options: {
+				files: [
+					'package.json',
+					'bower.json',
+				],
+				commitFiles: [
+					'package.json',
+					'bower.json',
+				],
 				createTag: true,
 				tagName: 'v%VERSION%',
 				tagMessage: 'v%VERSION%',
 				commitMessage: 'v%VERSION%',
-				commit: false,
-				push: false,
-				files: [
-					'package.json',
-					'bower.json',
-				]
+				commit: true,
+				push: true,
+				pushTo: 'origin',
 			}
-		},
+		}
 		concat: {
 			options: {
 				banner: '/*! veRepo.scss <%= project.version %> | MIT License | https://github.com/varemenos/verepo */\n\n'
