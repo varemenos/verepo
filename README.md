@@ -11,7 +11,6 @@
 	* [Bower](#bower)
 	* [Grunt.js](#gruntjs)
 	* [SCSS to SASS](#scss-to-sass)
-	* [v1.X.X to v2.X.X](#v1xx-to-v2xx)
 * [Contribution Guidelines](#contribution-guidelines)
 * [License](#license)
 * [Credits](#credits)
@@ -161,10 +160,6 @@ to stop the tasks, you need to press `CTRL` + `C`
 ### SCSS to SASS
 
 For the SASS syntax lovers or the SCSS syntax haters, you can use `sass-convert` to convert the scss files to sass. Later on I might write a script to automate it but currently it doesn't seem wise to develop a tool which will most probably be rewriten again due to this repository's current state (alpha phase).
-
-### v1.X.X to v2.X.X
-
-There are a countless differences between v1 and v2, so be careful when updating.
 
 ## Contribution Guidelines
 
