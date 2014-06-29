@@ -184,6 +184,10 @@ For the SASS syntax lovers or the SCSS syntax haters, you can use `sass-convert`
 		2. Then use grunt bump to update the project verion with the following command: `grunt bump:patch` or `grunt bump:minor` or `grunt bump:major`
 	6. Do a Pull-Request
 
+## About prefix mixins
+
+From v0.0.3 and onwards prefixes will be removed. Please Autoprefixer instead!
+
 ## License
 
 	The MIT License (MIT)
