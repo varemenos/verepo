@@ -17,21 +17,21 @@
 	width: 0;
 	height: 0;
 	border: solid $width;
-	@include border-radius($width*10);
+	border-radius: $width*10;
 	@if($style == 1){
 		border-color: $color transparent $color transparent;
 	}@else{
 		border-color: $color transparent transparent transparent;
 	}
 
-	@include animation(loadingSpin 1s linear infinite);
+	animation: loadingSpin 1s linear infinite;
 
-	@include keyframes(loadingSpin){
+	@keyframes loadingSpin{
 		0%: {
-			@include transform(rotate(0deg));
+			transform: rotate(0deg);
 		}
 		100%: {
-			@include transform(rotate(360deg));
+			transform: rotate(360deg);
 		}
 	}
 }

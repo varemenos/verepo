@@ -11,3 +11,7 @@
 	bottom:0px;
 	width:100%;
 }
+
+%fixed-footer{
+	@include fixed-footer;
+}

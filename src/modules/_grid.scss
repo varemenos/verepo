@@ -27,8 +27,8 @@
 	}
 
 	.grid{
-		@include borderbox;
-		@include clearfix;
+		box-sizing: border-box;
+		@extend clearfix;
 		display: block;
 		margin: 0;
 		padding: 0;
@@ -36,8 +36,8 @@
 	}
 
 	.row{
-		@include borderbox;
-		@include clearfix;
+		box-sizing: border-box;
+		@extend clearfix;
 		display: block;
 
 		@if($gutter != 0){
@@ -62,7 +62,7 @@
 		}
 
 		& > *{
-			@include borderbox;
+			box-sizing: border-box;
 			display: block;
 			float: left;
 

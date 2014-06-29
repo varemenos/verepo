@@ -696,8 +696,8 @@
 	text-decoration: none;
 	background-color: $bg-color;
 	border: 1px solid darken($bg-color, 10%);
-	@include border-radius($radius);
-	@include transition(150ms ease-in-out background-color, 150ms ease-in-out box-shadow);
+	border-radius: $radius;
+	transition: (150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
 
 	&:hover,
 	&:focus{
@@ -769,10 +769,10 @@
 	output,
 	meter,
 	keygen{
-		@include borderbox;
+		box-sizing: border-box;
 		padding: 0.5em;
 		display: inline-block;
-		@include transition(150ms linear border-color);
+		transition: 150ms linear border-color;
 	}
 
 	input[type=text]:focus,
@@ -813,8 +813,8 @@
 	select{
 		background-color: #fff;
 		border: 1px solid #ccc;
-		@include border-radius(0);
-		@include box-shadow(0 1px 5px #ccc inset);
+		border-radius: 0;
+		box-shadow: 0 1px 5px #ccc inset;
 	}
 
 	// Form Helpers
@@ -927,8 +927,8 @@
 // 	=floated-list;
 // }
 @mixin floated-list($spacing: false, $direction: left){
-	@include unstyled-list;
-	@include clearfix;
+	@extend %unstyled-list;
+	@extend %clearfix;
 
 	& > li {
 		float: $direction;
@@ -1182,7 +1182,7 @@
 	}
 
 	.grid{
-		@include borderbox;
+		box-sizing: border-box;
 		@include clearfix;
 		display: block;
 		margin: 0;
@@ -1191,7 +1191,7 @@
 	}
 
 	.row{
-		@include borderbox;
+		box-sizing: border-box;
 		@include clearfix;
 		display: block;
 
@@ -1217,7 +1217,7 @@
 		}
 
 		& > *{
-			@include borderbox;
+			box-sizing: border-box;
 			display: block;
 			float: left;
 
