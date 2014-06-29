@@ -15,7 +15,7 @@
 // 	=media;
 // }
 @mixin media($direction: left){
-	@extend clearfix;
+	@extend %clearfix;
 
 	& > .img {
 		float: $direction;
