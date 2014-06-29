@@ -1,4 +1,4 @@
-/*! veRepo.scss v%VERSION% | MIT License | https://github.com/varemenos/verepo */
+/*! veRepo.scss 0.0.2 | MIT License | https://github.com/varemenos/verepo */
 
 // A function that convert pixels into em values
 // @function px2em
@@ -23,331 +23,6 @@
 // }
 @function unitless($value){
 	@return $value/($value*0+1);
-}
-
-// A mixin that generates CSS prefixes for animation-delay
-// @mixin animation-delay
-// @category prefixes
-// @param $val {String} animation-delay's valid value
-// @usage:
-// .an-element{
-// 	=animation-delay(3s, 4s);
-// }
-@mixin animation-delay($val...){
-	-webkit-animation-delay: $val;
-	-moz-animation-delay: $val;
-	-o-animation-delay: $val;
-	animation-delay: $val;
-}
-
-// A mixin that generates CSS prefixes for animation
-// @mixin animation
-// @category prefixes
-// @param $val {String} animation's valid value
-// @usage:
-// .an-element{
-// 	=animation(doSomethin 1s linear infinite);
-// }
-@mixin animation($val...){
-	-webkit-animation: $val;
-	-moz-animation: $val;
-	-o-animation: $val;
-	animation: $val;
-}
-
-// A mixin that generates CSS prefixes for background-clip
-// @mixin background-clip
-// @category prefixes
-// @param $val {String} background-clip's valid value
-// @usage:
-// .an-element{
-// 	=background-clip(padding-box);
-// }
-@mixin background-clip($val...){
-	-webkit-background-clip: $val;
-	-moz-background-clip: $val;
-	background-clip: $val;
-}
-
-// A mixin that generates CSS prefixes for border-radius
-// @mixin border-radius
-// @category prefixes
-// @param $val {String} border-radius's valid value
-// @import verepo/generic/_border-radius
-// @usage:
-// .an-element{
-// 	=border-radius(5px 0 0 5px);
-// }
-@mixin border-radius($val...){
-	-webkit-border-radius: $val;
-	-moz-border-radius: $val;
-	border-radius: $val;
-}
-
-// A mixin that generates CSS prefixes for box-sizing's border-box
-// @mixin borderbox
-// @category prefixes
-// @usage:
-// .an-element{
-// 	=borderbox;
-// }
-@mixin borderbox{
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-// A mixin that generates CSS prefixes for box-shadow
-// @mixin box-shadow
-// @category prefixes
-// @param $val {String} box-shadow's valid value
-// @usage:
-// .an-element{
-// 	=box-shadow(0 0 5px #222);
-// }
-@mixin box-shadow($val...){
-	-webkit-box-shadow: $val;
-	-moz-box-shadow: $val;
-	box-shadow: $val;
-}
-
-// A mixin that generates CSS prefixes for box-sizing
-// @mixin box-sizing
-// @category prefixes
-// @param $val {String} box-sizing's valid value
-// @usage:
-// .an-element{
-// 	=box-sizing(padding-box);
-// }
-@mixin box-sizing($val){
-	-webkit-box-sizing: $val;
-	-moz-box-sizing: $val;
-	-ms-box-sizing: $val;
-	box-sizing: $val;
-}
-
-// A mixin that generates CSS prefixes for flex (required, to support older syntax)
-// @mixin flex
-// @category prefixes
-// @param $width {Number} is the value that defines the width of the old syntax's flex width value
-// @usage:
-// .an-element{
-//  =flex(5em);
-// }
-@mixin flex($width){
-	-webkit-box-flex: 1;
-	-moz-box-flex: 1;
-	width: $width; // required width for older syntax
-	-webkit-flex: 1;
-	-ms-flex: 1;
-	flex: 1;
-}
-
-// A mixin that generates CSS prefixes for a flexboxed element's order
-// @mixin order
-// @category prefixes
-// @param $order {Number} is the value that defines the element's flexbox order
-// @usage:
-// .an-element{
-//  =order(2);
-// }
-@mixin order($order){
-	-webkit-box-ordinal-group: $order;
-	-moz-box-ordinal-group: $order;
-	-ms-flex-order: $order;
-	-webkit-order: $order;
-	order: $order;
-}
-
-// A mixin that generates CSS prefixes for "display: flex;"
-// @mixin display-flex
-// @category prefixes
-// @usage:
-// .an-element{
-//  =display-flex;
-// }
-@mixin display-flex{
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-}
-
-// A mixin that generates CSS prefixes for webfonts downloaded from Font Squirrel
-// @mixin font-face
-// @category prefixes
-// @param $name {String} is the value that defines the font-face's name when being used by font, font-family etc
-// @param $url {String} is the value that defines the location of the wefont files that should include the filename but not the file prefix
-// @usage:
-// =font-face("Ubuntu Dark", "http://varemenos.com/assets/fonts/Ubuntu/Ubuntu Dark");
-// body{
-// 	font-family: "Ubuntu Dark";
-// }
-@mixin font-face($name, $url){
-	@font-face{
-		font-family: $name;
-		src: url($url + '.eot');
-		src: url($url + '.eot?#iefix') format('embedded-opentype'),
-			 url($url + '.woff') format('woff'),
-			 url($url + '.ttf') format('truetype'),
-			 url($url + '.svg#' + $name) format('svg');
-		font-weight: normal;
-		font-style: normal;
-	}
-}
-
-// A mixin that generates CSS prefixes for 2-color gradients
-// @mixin gradient
-// @category prefixes
-// @param $color1 {String} is the value that defines the gradient's 1st color
-// @param $color2 {String} is the value that defines the gradient's 2nd color
-// @param $type {String} is the value that defines the gradient's type [vertical, radial]
-// @usage:
-// .an-element{
-// 	=gradient(#222, #000, radial);
-// }
-// TODO: make it more flexible
-@mixin gradient($color1, $color2, $type:''){
-	@if($type == vertical){
-		background: $color1;
-		background: -moz-linear-gradient(top,  $color1 0%, $color2 100%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color1), color-stop(100%,$color2));
-		background: -webkit-linear-gradient(top,  $color1 0%,$color2 100%);
-		background: -o-linear-gradient(top,  $color1 0%,$color2 100%);
-		background: -ms-linear-gradient(top,  $color1 0%,$color2 100%);
-		background: linear-gradient(to bottom,  $color1 0%,$color2 100%);
-	}@else if($type == radial){
-		background: $color1;
-		background: -moz-radial-gradient(center, ellipse cover,  $color1 0%, $color2 100%);
-		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$color1), color-stop(100%,$color2));
-		background: -webkit-radial-gradient(center, ellipse cover,  $color1 0%,$color2 100%);
-		background: -o-radial-gradient(center, ellipse cover,  $color1 0%,$color2 100%);
-		background: -ms-radial-gradient(center, ellipse cover,  $color1 0%,$color2 100%);
-		background: radial-gradient(ellipse at center,  $color1 0%,$color2 100%);
-	}@else{
-		background: $color1;
-		background: -moz-linear-gradient(left, $color1 0%, $color2 100%);
-		background: -webkit-gradient(linear, left top, right top, color-stop(0%,$color1), color-stop(100%,$color2));
-		background: -webkit-linear-gradient(left, $color1 0%,$color2 100%);
-		background: -o-linear-gradient(left, $color1 0%,$color2 100%);
-		background: -ms-linear-gradient(left, $color1 0%,$color2 100%);
-		background: linear-gradient(right, $color1 0%,$color2 100%);
-	}
-}
-
-// A mixin that generates CSS prefixes for hyphens
-// @mixin hyphens
-// @category prefixes
-// @param $val {String} hyphens's valid value
-// @usage:
-// .an-element{
-// 	=hyphens(auto);
-// }
-@mixin hyphens($val){
-	-moz-hyphens: $val;
-	-webkit-hyphens: $val;
-	hyphens: $val;
-}
-
-// A mixin that generates CSS prefixes for keyframes
-// @mixin keyframes
-// @category prefixes
-// @param $animation {String} is the value that defines the name of the animation's keyframes
-// @usage:
-// =keyframes(animationName){
-// 	0%: {
-// 		=transform(rotate(0deg));
-// 	}
-// 	100%: {
-// 		=transform(rotate(360deg));
-// 	}
-// }
-// .an-element{
-// 	=animation(animationName 1s linear infinite);
-// }
-@mixin keyframes($animation){
-	@-webkit-keyframes $animation{
-		@content;
-	}
-	@-moz-keyframes $animation{
-		@content;
-	}
-	@-ms-keyframes $animation{
-		@content;
-	}
-	@-o-keyframes $animation{
-		@content;
-	}
-	@keyframes $animation{
-		@content;
-	}
-}
-
-// A mixin that generates CSS prefixes for transform-origin
-// @mixin transform-origin
-// @category prefixes
-// @param $val {String} transform-origin's valid value
-// @usage:
-// .an-element{
-// 	=transform-origin(top center);
-// }
-@mixin transform-origin($val...){
-	-webkit-transform-origin: $val;
-	-moz-transform-origin: $val;
-	-o-transform-origin: $val;
-	-ms-transform-origin: $val;
-	transform-origin: $val;
-}
-
-// A mixin that generates CSS prefixes for transform
-// @mixin transform
-// @category prefixes
-// @param $val {String} transform's valid value
-// @usage:
-// .an-element{
-// 	=transform(rotateX(20deg));
-// }
-@mixin transform($val...){
-	-webkit-transform: $val;
-	-moz-transform: $val;
-	-o-transform: $val;
-	-ms-transform: $val;
-	transform: $val;
-}
-
-// A mixin that generates CSS prefixes for transition
-// @mixin transition
-// @category prefixes
-// @param $val {String} transition's valid value
-// @usage:
-// .an-element{
-// 	=transition(500ms all ease-in-out);
-// }
-@mixin transition($val...){
-	-webkit-transition: $val;
-	-moz-transition: $val;
-	-o-transition: $val;
-	-ms-transition: $val;
-	transition: $val;
-}
-
-// A mixin that generates CSS prefixes for user-select
-// @mixin user-select
-// @category prefixes
-// @param $val {String} user-select's valid value
-// @usage:
-// .an-element{
-// 	=user-select(none);
-// }
-@mixin user-select($val...){
-	-webkit-touch-callout: $val;
-	-webkit-user-select: $val;
-	-khtml-user-select: $val;
-	-moz-user-select: $val;
-	-ms-user-select: $val;
-	user-select: $val;
 }
 
 // Generate helper classes for aligning elements.
@@ -562,8 +237,8 @@
 	text-decoration: none;
 	background-color: $bg-color;
 	border: 1px solid darken($bg-color, 10%);
-	@include border-radius($radius);
-	@include transition(150ms ease-in-out background-color, 150ms ease-in-out box-shadow);
+	border-radius: $radius;
+	transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
 
 	&:hover,
 	&:focus{
@@ -582,9 +257,9 @@
 	&:active{
 		cursor: pointer;
 		@if(lightness($bg-color) > 50%) {
-			@include box-shadow(0 0 3px rgba(black, 0.125), 0 0 0.5em rgba(black, 0.125) inset);
+			box-shadow: 0 0 3px rgba(black, 0.125), 0 0 0.5em rgba(black, 0.125) inset;
 		}@else {
-			@include box-shadow(0 0 3px $bg-color, 0 0 0.5em rgba(black, 0.25) inset);
+			box-shadow: 0 0 3px $bg-color, 0 0 0.5em rgba(black, 0.25) inset;
 		}
 	}
 
@@ -619,6 +294,10 @@
 	width:100%;
 }
 
+%fixed-footer{
+	@include fixed-footer;
+}
+
 // A mixin that generates CSS for a footer that is fixed on the bottom of the page (Don't forget to add a bottom margin to the previous element to avoid overlapping the footer)
 // @mixin form
 // @category layout
@@ -635,10 +314,10 @@
 	output,
 	meter,
 	keygen{
-		@include borderbox;
+		box-sizing: border-box;
 		padding: 0.5em;
 		display: inline-block;
-		@include transition(150ms linear border-color);
+		transition: 150ms linear border-color;
 	}
 
 	input[type=text]:focus,
@@ -679,8 +358,8 @@
 	select{
 		background-color: #fff;
 		border: 1px solid #ccc;
-		@include border-radius(0);
-		@include box-shadow(0 1px 5px #ccc inset);
+		border-radius: 0;
+		box-shadow: 0 1px 5px #ccc inset;
 	}
 
 	// Form Helpers
@@ -762,6 +441,10 @@
 	}
 }
 
+%vertical-form{
+	@include vertical-form;
+}
+
 // A mixin that generates CSS for unstyled lists
 // @mixin unstyled-list
 // @category layout
@@ -793,8 +476,8 @@
 // 	=floated-list;
 // }
 @mixin floated-list($spacing: false, $direction: left){
-	@include unstyled-list;
-	@include clearfix;
+	@extend %unstyled-list;
+	@extend %clearfix;
 
 	& > li {
 		float: $direction;
@@ -821,7 +504,7 @@
 // 	=inline-list;
 // }
 @mixin inline-list($spacing: false, $direction: left){
-	@include unstyled-list;
+	@extend %unstyled-list;
 
 	& > li {
 		display: inline-block;
@@ -857,21 +540,21 @@
 	width: 0;
 	height: 0;
 	border: solid $width;
-	@include border-radius($width*10);
+	border-radius: $width*10;
 	@if($style == 1){
 		border-color: $color transparent $color transparent;
 	}@else{
 		border-color: $color transparent transparent transparent;
 	}
 
-	@include animation(loadingSpin 1s linear infinite);
+	animation: loadingSpin 1s linear infinite;
 
-	@include keyframes(loadingSpin){
+	@keyframes loadingSpin{
 		0%: {
-			@include transform(rotate(0deg));
+			transform: rotate(0deg);
 		}
 		100%: {
-			@include transform(rotate(360deg));
+			transform: rotate(360deg);
 		}
 	}
 }
@@ -893,7 +576,7 @@
 // 	=media;
 // }
 @mixin media($direction: left){
-	@include clearfix;
+	@extend %clearfix;
 
 	& > .img {
 		float: $direction;
@@ -1048,8 +731,8 @@
 	}
 
 	.grid{
-		@include borderbox;
-		@include clearfix;
+		box-sizing: border-box;
+		@extend %clearfix;
 		display: block;
 		margin: 0;
 		padding: 0;
@@ -1057,8 +740,8 @@
 	}
 
 	.row{
-		@include borderbox;
-		@include clearfix;
+		box-sizing: border-box;
+		@extend %clearfix;
 		display: block;
 
 		@if($gutter != 0){
@@ -1083,7 +766,7 @@
 		}
 
 		& > *{
-			@include borderbox;
+			box-sizing: border-box;
 			display: block;
 			float: left;
 

@@ -14,10 +14,10 @@
 	output,
 	meter,
 	keygen{
-		@include borderbox;
+		box-sizing: border-box;
 		padding: 0.5em;
 		display: inline-block;
-		@include transition(150ms linear border-color);
+		transition: 150ms linear border-color;
 	}
 
 	input[type=text]:focus,
@@ -58,8 +58,8 @@
 	select{
 		background-color: #fff;
 		border: 1px solid #ccc;
-		@include border-radius(0);
-		@include box-shadow(0 1px 5px #ccc inset);
+		border-radius: 0;
+		box-shadow: 0 1px 5px #ccc inset;
 	}
 
 	// Form Helpers
@@ -139,4 +139,8 @@
 		vertical-align: baseline;
 		width: auto;
 	}
+}
+
+%vertical-form{
+	@include vertical-form;
 }

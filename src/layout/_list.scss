@@ -29,8 +29,8 @@
 // 	=floated-list;
 // }
 @mixin floated-list($spacing: false, $direction: left){
-	@include unstyled-list;
-	@include clearfix;
+	@extend %unstyled-list;
+	@extend %clearfix;
 
 	& > li {
 		float: $direction;
@@ -57,7 +57,7 @@
 // 	=inline-list;
 // }
 @mixin inline-list($spacing: false, $direction: left){
-	@include unstyled-list;
+	@extend %unstyled-list;
 
 	& > li {
 		display: inline-block;

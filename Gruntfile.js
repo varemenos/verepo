@@ -1,6 +1,6 @@
 module.exports = function (grunt) {
 	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
+		project: grunt.file.readJSON('package.json'),
 		shell: {
 			compileDocs: {
 				command: "sassdoc -d ./docs -n veRepo"
@@ -17,21 +17,26 @@ module.exports = function (grunt) {
 		},
 		bump: {
 			options: {
+				files: [
+					'package.json',
+					'bower.json',
+				],
+				commitFiles: [
+					'package.json',
+					'bower.json',
+				],
 				createTag: true,
 				tagName: 'v%VERSION%',
 				tagMessage: 'v%VERSION%',
 				commitMessage: 'v%VERSION%',
-				commit: false,
-				push: false,
-				files: [
-					'package.json',
-					'bower.json',
-				]
+				commit: true,
+				push: true,
+				pushTo: 'origin',
 			}
 		},
 		concat: {
 			options: {
-				banner: '/*! veRepo.scss v%VERSION% | MIT License | https://github.com/varemenos/verepo */\n\n'
+				banner: '/*! veRepo.scss <%= project.version %> | MIT License | https://github.com/varemenos/verepo */\n\n'
 			},
 			dist: {
 				src: [

@@ -173,7 +173,7 @@ h1{
 	& > a:visited{
 		color: #222;
 		text-decoration: none;
-		@include transition(250ms ease-in-out text-shadow);
+		transition: 250ms ease-in-out text-shadow;
 	}
 	& > a:hover{
 		text-shadow: 0 0 1em #4db8ff, 0 0px 15px #C89;
@@ -196,7 +196,7 @@ footer{
 	background-color: #eee;
 	border-top: 3px solid #ddd;
 	text-shadow: 0 1px 1px rgba(black, 0.5);
-	@include fixed-footer;
+	@extend %fixed-footer;
 
 	p{
 		margin: 0;
@@ -212,7 +212,7 @@ footer{
 }
 
 #wrapper{
-	@include borderbox;
+	box-sizing: border-box;
 	width: 1140px;
 	margin: 0 auto;
 
@@ -227,7 +227,7 @@ footer{
 }
 
 .item{
-	@include borderbox;
+	box-sizing: border-box;
 	padding: 1em;
 	background-color: #f5f5f5;
 	border: 1px solid #eee;

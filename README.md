@@ -11,7 +11,6 @@
 	* [Bower](#bower)
 	* [Grunt.js](#gruntjs)
 	* [SCSS to SASS](#scss-to-sass)
-	* [v1.X.X to v2.X.X](#v1xx-to-v2xx)
 * [Contribution Guidelines](#contribution-guidelines)
 * [License](#license)
 * [Credits](#credits)
@@ -162,10 +161,6 @@ to stop the tasks, you need to press `CTRL` + `C`
 
 For the SASS syntax lovers or the SCSS syntax haters, you can use `sass-convert` to convert the scss files to sass. Later on I might write a script to automate it but currently it doesn't seem wise to develop a tool which will most probably be rewriten again due to this repository's current state (alpha phase).
 
-### v1.X.X to v2.X.X
-
-There are a countless differences between v1 and v2, so be careful when updating.
-
 ## Contribution Guidelines
 
 1. Read [CONTRIBUTE.md](CONTRIBUTE.md)
@@ -188,6 +183,10 @@ There are a countless differences between v1 and v2, so be careful when updating
 		1. Read [semver's spec](http://semver.org/) and deside whether the changes you've made are considered `patch`, `minor` or `major`
 		2. Then use grunt bump to update the project verion with the following command: `grunt bump:patch` or `grunt bump:minor` or `grunt bump:major`
 	6. Do a Pull-Request
+
+## About prefix mixins
+
+From v0.0.3 and onwards prefixes will be removed. Please Autoprefixer instead!
 
 ## License
 
