@@ -62,15 +62,15 @@ module.exports = function (grunt) {
 				}]
 			}
 		},
-        autoprefixer: {
-            options: {
-                browsers: ["last 2 versions", "> 1%", "ie 8", "ie 9", "Firefox ESR"]
-            },
-            dist: {
-                src: 'example/style.css',
-                dest: 'example/style.css'
-            }
-        }
+		autoprefixer: {
+			options: {
+				browsers: ["last 2 versions", "> 1%", "ie 8", "ie 9", "Firefox ESR"]
+			},
+			dist: {
+				src: 'example/style.css',
+				dest: 'example/style.css'
+			}
+		}
 	});
 
 	// load npm tasks
@@ -78,7 +78,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-shell');
 	grunt.loadNpmTasks('grunt-bump');
 
