@@ -61,6 +61,15 @@ module.exports = function (grunt) {
 					'example/style.css': 'example/style.scss'
 				}]
 			}
+		},
+		autoprefixer: {
+			options: {
+				browsers: ["last 2 versions", "> 1%", "ie 8", "ie 9", "Firefox ESR"]
+			},
+			dist: {
+				src: 'example/style.css',
+				dest: 'example/style.css'
+			}
 		}
 	});
 
@@ -69,13 +78,14 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-shell');
 	grunt.loadNpmTasks('grunt-bump');
 
 	// register custom tasks
 	grunt.registerTask('update-docs', ['shell:compileDocs']);
 	grunt.registerTask('update-dist', ['concat:dist']);
-	grunt.registerTask('update-example', ['sass:dist']);
+	grunt.registerTask('update-example', ['sass:dist', 'autoprefixer']);
 	grunt.registerTask('update', ['update-docs', 'concat:dist', 'update-example']);
 	grunt.registerTask('default', 'update');
 };
