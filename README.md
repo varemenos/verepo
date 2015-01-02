@@ -53,58 +53,21 @@ __example #1:__
 @include normalize;
 ```
 
-which will include the latest normalize.css version
+This will include the latest normalize.css version
 
 __example #2:__
 
 ```scss
 @import "_verepo";
 
-.aClass{
-	@include box-sizing(border-box);
-	@include background-clip(padding-box);
-}
-```
-
-which will be processed into the following:
-
-```css
-.aClass{
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding-box;
-	background-clip: padding-box;
-}
-```
-
-__example #3:__
-
-```scss
-@import "_verepo";
-
-.triangle-topright{
-	@include triangle(30px, #0099ff, top right);
-}
-
 .blue-flat-button{
 	@include button(#fff, #09f, 0);
 }
 ```
 
-which will be processed into the following:
+The above will be processed into the following:
 
 ```css
-.triangle-topright {
-	content: "";
-	display: inline-block;
-	width: 0;
-	height: 0;
-	border: solid 30px;
-	border-color: #0099ff #0099ff transparent transparent;
-}
-
 .blue-flat-button {
 	position: relative;
 	display: inline-block;
@@ -113,28 +76,19 @@ which will be processed into the following:
 	text-decoration: none;
 	background-color: #0099ff;
 	border: 1px solid #007acc;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
 	border-radius: 0;
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding-box;
 	background-clip: padding-box;
-	-webkit-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
-	-moz-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
-	-o-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
-	-ms-transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
 	transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
 }
 
-.blue-flat-button:hover, .blue-flat-button:focus {
+.blue-flat-button:hover,
+.blue-flat-button:focus {
 	cursor: pointer;
 	background-color: #4db8ff;
 }
 
 .blue-flat-button:active {
 	cursor: pointer;
-	-webkit-box-shadow: 0 0 3px #0099ff, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
-	-moz-box-shadow: 0 0 3px #0099ff, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
 	box-shadow: 0 0 3px #0099ff, 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
 }
 ```
