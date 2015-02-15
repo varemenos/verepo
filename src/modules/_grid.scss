@@ -1,12 +1,15 @@
-// A mixin that generates CSS for a grid system
-// @mixin grid
-// @category modules
-// @param $N {Number} is the value that defines the grid's amount of columns (defaults to a 12-column grid system)
-// @param $gutter {Number} is the value that defines the grid's gutter spacing (defaults to 0)
-// @usage:
-// .grid{
-// 	=grid(16, 1em);
-// }
+////
+/// @group modules
+/// @author Adonis K.
+////
+
+/// A mixin that generates CSS for a grid system
+/// @param {Number} $N [12] is the value that defines the grid's amount of columns
+/// @param {Number} $gutter [0] is the value that defines the grid's gutter spacing
+/// @example
+/// .grid{
+/// 	@include grid(16, 1em);
+/// }
 @mixin grid($N : false, $gutter : 0){
 	// if no $N was selected, create a 12-column grid
 	@if($N == false){
@@ -45,19 +48,6 @@
 
 			&:last-child{
 				padding-bottom: 0;
-				// experimental code is commented-out
-				// display: table-cell;
-				// float: none;
-				// width: auto;
-
-				// &:after{
-				// 	content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
-				// 	visibility: hidden;
-				// 	clear: both;
-				// 	height: 0 !important;
-				// 	display: block;
-				// 	line-height: 0;
-				// }
 			}
 		}
 

@@ -1,35 +1,995 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>veRepo</title>
-  <script type="text/javascript" src="js/lib/jquery.js"></script>
-  <script type="text/javascript" src="js/lib/jquery.scrollto.js"></script>
-  <script type="text/javascript" src="js/lib/dust.js"></script>
-  <script type="text/javascript" src="js/lib/sassdoc.js"></script>
-  <script type="text/javascript">
-    window.Sassdoc.settings = {"docs":"sassdoc.json"};
-    window.Sassdoc.init();
-  </script>
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/sassdoc.css" rel="stylesheet">
-</head>
-<body class="hide-privates show-index toggle-search">
-<div id="tmpl-nav"></div>
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span3">
-      <ul class="filters">
-        <li><a href="#filter:mixins" class="label label-info mixins">Mixins</a></li>
-        <li><a href="#filter:functions" class="label label-info functions">Functions</a></li>
-        <li><a href="#filter:privates" class="label privates">Privates</a></li>
-      </ul>
-      <div class="well sidebar-nav" id="tmpl-toc">
-        <img class="spinner" src="img/spinner.gif" alt="loading"/>
-      </div>
-    </div>
-    <div class="span9" id="tmpl-view">
-      <img class="spinner" src="img/spinner.gif" alt="loading"/>
-    </div>
-  </div>
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Verepo - v0.1.1</title><link rel="stylesheet" href="assets/css/main.css"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Verepo - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="Release the docs!"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">Verepo - 0.1.1</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="forms"><a href="#forms">forms</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="forms-mixin"><a href="#forms-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="form" data-type="mixin"><a href="#mixin-form">form</a></li><li class="sidebar__item sassdoc__item" data-name="vertical-form" data-type="mixin"><a href="#mixin-vertical-form">vertical-form</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="functions"><a href="#functions">functions</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="functions-function"><a href="#functions-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="px2em" data-type="function"><a href="#function-px2em">px2em</a></li><li class="sidebar__item sassdoc__item" data-name="unitless" data-type="function"><a href="#function-unitless">unitless</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="helpers"><a href="#helpers">helpers</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="helpers-mixin"><a href="#helpers-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="align" data-type="mixin"><a href="#mixin-align">align</a></li><li class="sidebar__item sassdoc__item" data-name="clearfix" data-type="mixin"><a href="#mixin-clearfix">clearfix</a></li><li class="sidebar__item sassdoc__item" data-name="float" data-type="mixin"><a href="#mixin-float">float</a></li><li class="sidebar__item sassdoc__item" data-name="hidden" data-type="mixin"><a href="#mixin-hidden">hidden</a></li><li class="sidebar__item sassdoc__item" data-name="invisible" data-type="mixin"><a href="#mixin-invisible">invisible</a></li><li class="sidebar__item sassdoc__item" data-name="ir" data-type="mixin"><a href="#mixin-ir">ir</a></li><li class="sidebar__item sassdoc__item" data-name="visuallyhidden" data-type="mixin"><a href="#mixin-visuallyhidden">visuallyhidden</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="helpers-placeholder"><a href="#helpers-placeholder">placeholders</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="clearfix" data-type="placeholder"><a href="#placeholder-clearfix">clearfix</a></li><li class="sidebar__item sassdoc__item" data-name="hidden" data-type="placeholder"><a href="#placeholder-hidden">hidden</a></li><li class="sidebar__item sassdoc__item" data-name="invisible" data-type="placeholder"><a href="#placeholder-invisible">invisible</a></li><li class="sidebar__item sassdoc__item" data-name="ir" data-type="placeholder"><a href="#placeholder-ir">ir</a></li><li class="sidebar__item sassdoc__item" data-name="visuallyhidden" data-type="placeholder"><a href="#placeholder-visuallyhidden">visuallyhidden</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="layout"><a href="#layout">layout</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="layout-mixin"><a href="#layout-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="blockquote" data-type="mixin"><a href="#mixin-blockquote">blockquote</a></li><li class="sidebar__item sassdoc__item" data-name="button" data-type="mixin"><a href="#mixin-button">button</a></li><li class="sidebar__item sassdoc__item" data-name="fixed-footer" data-type="mixin"><a href="#mixin-fixed-footer">fixed-footer</a></li><li class="sidebar__item sassdoc__item" data-name="loading" data-type="mixin"><a href="#mixin-loading">loading</a></li><li class="sidebar__item sassdoc__item" data-name="media" data-type="mixin"><a href="#mixin-media">media</a></li><li class="sidebar__item sassdoc__item" data-name="triangle" data-type="mixin"><a href="#mixin-triangle">triangle</a></li><li class="sidebar__item sassdoc__item" data-name="truncate" data-type="mixin"><a href="#mixin-truncate">truncate</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="layout-placeholder"><a href="#layout-placeholder">placeholders</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="fixed-footer" data-type="placeholder"><a href="#placeholder-fixed-footer">fixed-footer</a></li><li class="sidebar__item sassdoc__item" data-name="form" data-type="placeholder"><a href="#placeholder-form">form</a></li><li class="sidebar__item sassdoc__item" data-name="vertical-form" data-type="placeholder"><a href="#placeholder-vertical-form">vertical-form</a></li><li class="sidebar__item sassdoc__item" data-name="unstyled-list" data-type="placeholder"><a href="#placeholder-unstyled-list">unstyled-list</a></li><li class="sidebar__item sassdoc__item" data-name="floated-list" data-type="placeholder"><a href="#placeholder-floated-list">floated-list</a></li><li class="sidebar__item sassdoc__item" data-name="inline-list" data-type="placeholder"><a href="#placeholder-inline-list">inline-list</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="list"><a href="#list">list</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="list-mixin"><a href="#list-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="unstyled-list" data-type="mixin"><a href="#mixin-unstyled-list">unstyled-list</a></li><li class="sidebar__item sassdoc__item" data-name="floated-list" data-type="mixin"><a href="#mixin-floated-list">floated-list</a></li><li class="sidebar__item sassdoc__item" data-name="inline-list" data-type="mixin"><a href="#mixin-inline-list">inline-list</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="modules"><a href="#modules">modules</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="modules-mixin"><a href="#modules-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="grid" data-type="mixin"><a href="#mixin-grid">grid</a></li><li class="sidebar__item sassdoc__item" data-name="normalize" data-type="mixin"><a href="#mixin-normalize">normalize</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="forms"><div class="container">forms</div></h1><section class="main__sub-section" id="forms-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="mixin-form"><h3 class="item__heading"><a class="item__name" href="#mixin-form">form</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin form() { 
+	input,
+	label,
+	textarea,
+	select,
+	progress,
+	output,
+	meter,
+	keygen{
+		box-sizing: border-box;
+		padding: 0.5em;
+		display: inline-block;
+		transition: 150ms linear border-color;
+	}
+
+	input[type=text]:focus,
+	input[type=password]:focus,
+	input[type=email]:focus,
+	input[type=url]:focus,
+	input[type=date]:focus,
+	input[type=month]:focus,
+	input[type=time]:focus,
+	input[type=datetime]:focus,
+	input[type=datetime-local]:focus,
+	input[type=week]:focus,
+	input[type=number]:focus,
+	input[type=search]:focus,
+	input[type=tel]:focus,
+	input[type=color]:focus,
+	select:focus,
+	textarea:focus{
+		outline: 0;
+		border-color: #09f;
+	}
+
+	input[type=text],
+	input[type=password],
+	input[type=email],
+	input[type=url],
+	input[type=date],
+	input[type=month],
+	input[type=time],
+	input[type=datetime],
+	input[type=datetime-local],
+	input[type=week],
+	input[type=number],
+	input[type=search],
+	input[type=tel],
+	input[type=color],
+	textarea,
+	select{
+		background-color: #fff;
+		border: 1px solid #ccc;
+		border-radius: 0;
+		box-shadow: 0 1px 5px #ccc inset;
+	}
+
+	// Form Helpers
+	[required]:focus:invalid,
+	.invalid{
+		outline: 0;
+		border-color: red !important;
+	}
+
+	[required]:focus:valid,
+	.valid{
+		outline: 0;
+		border-color: green !important;
+	}
+
+	[disabled],
+	.disabled{
+		opacity: 0.5;
+
+		&amp;:hover{
+			cursor: not-allowed !important;
+		}
+	}
+
+	.resize--vertical{
+		resize: vertical;
+	}
+
+	.resize--horizontal{
+		resize: horizontal;
+	}
+
+	.resize--both{
+		resize: both;
+	}
+ }" data-collapsed="@mixin form() { ... }"><code>@mixin form() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A mixin that generates CSS for a footer that is fixed on the bottom of the page (Don&#39;t forget to add a bottom margin to the previous element to avoid overlapping the footer)</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.form{
+	@include form;
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-vertical-form"><code>vertical-form</code></a></li><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-form"><code>form</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="mixin-vertical-form"><h3 class="item__heading"><a class="item__name" href="#mixin-vertical-form">vertical-form</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin vertical-form() { 
+	@extend %form;
+
+	&amp; &gt; input,
+	&amp; &gt; label,
+	&amp; &gt; textarea,
+	&amp; &gt; select,
+	&amp; &gt; progress,
+	&amp; &gt; output,
+	&amp; &gt; meter,
+	&amp; &gt; keygen{
+		padding: 0.5em 0;
+	}
+
+	&amp; label,
+	&amp; input,
+	&amp; select,
+	&amp; textarea{
+		width: 100%;
+		margin-bottom: 1em;
+
+		&amp;:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	&amp; label &gt; input[type=&quot;radio&quot;],
+	&amp; label &gt; input[type=&quot;checkbox&quot;]{
+		vertical-align: baseline;
+		width: auto;
+	}
+ }" data-collapsed="@mixin vertical-form() { ... }"><code>@mixin vertical-form() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A mixin that generates CSS for a vertical form</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.vertical-form{
+	@include vertical-form;
+}</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-form"><code>form</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-vertical-form"><code>vertical-form</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="functions"><div class="container">functions</div></h1><section class="main__sub-section" id="functions-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="function-px2em"><h3 class="item__heading"><a class="item__name" href="#function-px2em">px2em</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function px2em($pixels, $base: 16) { 
+	@return ($pixels / $base) * 1em;
+ }" data-collapsed="@function px2em($pixels, $base: 16) { ... }"><code>@function px2em($pixels, $base: 16) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A function that convert pixels into em values</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$pixels</code></th><td data-label="desc"><p>the value in pixels you want to convert into em</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$base</code></th><td data-label="desc"><p>the base value for em, defaults to 16</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>16</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.a{
+	padding: px2em(12, 16); // padding: 0.75em;
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="function-unitless"><h3 class="item__heading"><a class="item__name" href="#function-unitless">unitless</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function unitless() { 
+	@return $value/($value*0+1);
+ }" data-collapsed="@function unitless() { ... }"><code>@function unitless() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.a{
+	padding:#{unitless(1em)}rem; // padding: 1rem;
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="helpers"><div class="container">helpers</div></h1><section class="main__sub-section" id="helpers-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="mixin-align"><h3 class="item__heading"><a class="item__name" href="#mixin-align">align</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin align() { 
+	.align--#{$direction}{
+		@if $important{
+			text-align: $direction !important;
+		} @else {
+			text-align: $direction;
+		}
+	}
+ }" data-collapsed="@mixin align() { ... }"><code>@mixin align() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.a{
+	@include align(right); // text-align: right;
+}
+.b{
+	@include align(left, important); // text-align: left !important;
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="mixin-clearfix"><h3 class="item__heading"><a class="item__name" href="#mixin-clearfix">clearfix</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin clearfix() { 
+	&amp;:before,
+	&amp;:after {
+		content: &quot; &quot;;
+		display: table;
+	}
+
+	&amp;:after {
+		clear: both;
+	}
+ }" data-collapsed="@mixin clearfix() { ... }"><code>@mixin clearfix() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A mixin that generates CSS for an element that needs to be cleared</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.a{
+	@include clearfix;
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-clearfix"><code>clearfix</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-media"><code>media</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-floated-list"><code>floated-list</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-grid"><code>grid</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="mixin-float"><h3 class="item__heading"><a class="item__name" href="#mixin-float">float</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin float($direction, $important: false) { 
+	.float--#{$direction}{
+		@if $important{
+			float: $direction !important;
+		} @else {
+			float: $direction;
+		}
+	}
+ }" data-collapsed="@mixin float($direction, $important: false) { ... }"><code>@mixin float($direction, $important: false) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Generate helper classes for floating elements.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$direction</code></th><td data-label="desc"><p>is the value that defines the align class&#39; direction.</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$important</code></th><td data-label="desc"><p>is the value that declares whether the float will be forced via !important or not.</p></td><td data-label="type"><code>Boolean</code></td><td data-label="default"><code>false</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.a{
+	@include float(right); // float: right;
+}
+.b{
+	@include float(left, important); // float: left !important;
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="mixin-hidden"><h3 class="item__heading"><a class="item__name" href="#mixin-hidden">hidden</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin hidden() { 
+	display: none !important;
+	visibility: hidden;
+ }" data-collapsed="@mixin hidden() { ... }"><code>@mixin hidden() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A mixin that generates CSS for hidden</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.hidden{
+	@include hidden;
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-hidden"><code>hidden</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="mixin-invisible"><h3 class="item__heading"><a class="item__name" href="#mixin-invisible">invisible</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin invisible() { 
+	visibility: hidden;
+ }" data-collapsed="@mixin invisible() { ... }"><code>@mixin invisible() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A mixin that generates CSS for invisible</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.invisible{
+	@include invisible;
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-invisible"><code>invisible</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="mixin-ir"><h3 class="item__heading"><a class="item__name" href="#mixin-ir">ir</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin ir() { 
+	background-color: transparent;
+	border: 0;
+	overflow: hidden;
+	*text-indent: -9999px;
+
+	&amp;:before {
+		content: &quot;&quot;;
+		display: block;
+		width: 0;
+		height: 150%;
+	}
+ }" data-collapsed="@mixin ir() { ... }"><code>@mixin ir() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A mixin that generates CSS for image replacement</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.image-replacement{
+	@include ir;
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-ir"><code>ir</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="mixin-visuallyhidden"><h3 class="item__heading"><a class="item__name" href="#mixin-visuallyhidden">visuallyhidden</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin visuallyhidden() { 
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+
+	&amp;.focusable:active,
+	&amp;.focusable:focus {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
+ }" data-collapsed="@mixin visuallyhidden() { ... }"><code>@mixin visuallyhidden() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A mixin that generates CSS for visuallyhidden</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.visuallyhidden{
+	@include visuallyhidden;
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-visuallyhidden"><code>visuallyhidden</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section></section><section class="main__sub-section" id="helpers-placeholder"><h2 class="main__heading--secondary"><div class="container">placeholders</div></h2><section class="main__item container item" id="placeholder-clearfix"><h3 class="item__heading"><a class="item__name" href="#placeholder-clearfix">clearfix</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%clearfix { 
+	@include clearfix;
+ }" data-collapsed="%clearfix { ... }"><code>%clearfix { ... }</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-clearfix"><code>clearfix</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="placeholder-hidden"><h3 class="item__heading"><a class="item__name" href="#placeholder-hidden">hidden</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%hidden { 
+	@include hidden;
+ }" data-collapsed="%hidden { ... }"><code>%hidden { ... }</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-hidden"><code>hidden</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="placeholder-invisible"><h3 class="item__heading"><a class="item__name" href="#placeholder-invisible">invisible</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%invisible { 
+	@include invisible;
+ }" data-collapsed="%invisible { ... }"><code>%invisible { ... }</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-invisible"><code>invisible</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="placeholder-ir"><h3 class="item__heading"><a class="item__name" href="#placeholder-ir">ir</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%ir { 
+	@include ir;
+ }" data-collapsed="%ir { ... }"><code>%ir { ... }</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-ir"><code>ir</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="placeholder-visuallyhidden"><h3 class="item__heading"><a class="item__name" href="#placeholder-visuallyhidden">visuallyhidden</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%visuallyhidden { 
+	@include visuallyhidden;
+ }" data-collapsed="%visuallyhidden { ... }"><code>%visuallyhidden { ... }</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-visuallyhidden"><code>visuallyhidden</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="layout"><div class="container">layout</div></h1><section class="main__sub-section" id="layout-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="mixin-blockquote"><h3 class="item__heading"><a class="item__name" href="#mixin-blockquote">blockquote</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin blockquote($border-color) { 
+	margin: 0;
+	padding: 0 0 0 0.5em;
+	border-left: 0.25em solid $border-color;
+
+	&amp; &gt; *{
+		margin: 0.5em 0;
+		padding: 0.25em 0;
+	}
+
+	&amp; &gt; p{
+		text-indent: 1em;
+	}
+
+	&amp; cite{
+			font-style: italic;
+	}
+
+	&amp; cite:before {
+		content: &quot;\2014 \2009&quot;;
+	}
+ }" data-collapsed="@mixin blockquote($border-color) { ... }"><code>@mixin blockquote($border-color) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A mixin that generates CSS for a styled blockquote</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$border-color</code></th><td data-label="desc"><p>is the value that defines the blockquote&#39;s border color</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.a{
+	@include blockquote(#ccc);
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="mixin-button"><h3 class="item__heading"><a class="item__name" href="#mixin-button">button</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin button($font-color, $bg-color, $radius: 0) { 
+	position: relative;
+	display: inline-block;
+	padding: 0.5em 1em;
+	color: $font-color;
+	text-decoration: none;
+	background-color: $bg-color;
+	border: 1px solid darken($bg-color, 10%);
+	border-radius: $radius;
+	transition: 150ms ease-in-out background-color, 150ms ease-in-out box-shadow;
+
+	&amp;:hover,
+	&amp;:focus{
+		cursor: pointer;
+		@if(lightness($bg-color) &gt; 50%) {
+			@if(lightness($bg-color) &gt; 75%) {
+				background-color: darken($bg-color, 5%);
+			}@else{
+				background-color: darken($bg-color, 10%);
+			}
+		}@else {
+			background-color: lighten($bg-color, 15%);
+		}
+	}
+
+	&amp;:active{
+		cursor: pointer;
+		@if(lightness($bg-color) &gt; 50%) {
+			box-shadow: 0 0 3px rgba(black, 0.125), 0 0 0.5em rgba(black, 0.125) inset;
+		}@else {
+			box-shadow: 0 0 3px $bg-color, 0 0 0.5em rgba(black, 0.25) inset;
+		}
+	}
+
+	&amp;.xsmall{
+		font-size: 70%;
+	}
+
+	&amp;.small{
+		font-size: 85%;
+	}
+
+	&amp;.large{
+		font-size: 115%;
+	}
+
+	&amp;.xlarge{
+		font-size: 130%;
+	}
+ }" data-collapsed="@mixin button($font-color, $bg-color, $radius: 0) { ... }"><code>@mixin button($font-color, $bg-color, $radius: 0) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A mixin that generates CSS for a styled button</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$font-color</code></th><td data-label="desc"><p>is the value that defines the button&#39;s font color</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$bg-color</code></th><td data-label="desc"><p>is the value that defines the button&#39;s background color</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$radius</code></th><td data-label="desc"><p>is the value that defines the button&#39;s border radius</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>0</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.blue-flat-button{
+	@include button(#fff, #09f, 0);
+}
+
+.blue-curved-button{
+	@include button(#fff, #09f, 2px);
+}
+
+.white-flat-button{
+	@include button(#222, #fff, 0);
+}
+
+.white-curved-button{
+	@include button(#222, #fff, 2px);
+}
+
+.dark-blue-flat-button{
+	@include button(#fff, #458, 0);
+}
+
+.dark-blue-curved-button{
+	@include button(#fff, #458, 2px);
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="mixin-fixed-footer"><h3 class="item__heading"><a class="item__name" href="#mixin-fixed-footer">fixed-footer</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin fixed-footer() { 
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	width:100%;
+ }" data-collapsed="@mixin fixed-footer() { ... }"><code>@mixin fixed-footer() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A mixin that generates CSS for a footer that is fixed on the bottom of the page (Don&#39;t forget to add a bottom margin to the previous element to avoid overlapping the footer)</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.fixed-footer{
+	@include footer;
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-fixed-footer"><code>fixed-footer</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="mixin-loading"><h3 class="item__heading"><a class="item__name" href="#mixin-loading">loading</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin loading($width: 1.5em, $style: 1, $color: #666) { 
+	content: &quot;&quot;;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border: solid $width;
+	border-radius: $width*10;
+	@if($style == 1){
+		border-color: $color transparent $color transparent;
+	}@else{
+		border-color: $color transparent transparent transparent;
+	}
+
+	animation: verepoLoadingSpinner 1s linear infinite;
+ }" data-collapsed="@mixin loading($width: 1.5em, $style: 1, $color: #666) { ... }"><code>@mixin loading($width: 1.5em, $style: 1, $color: #666) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A mixin that generates CSS for an animated loading element</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$width</code></th><td data-label="desc"><p>is the value that defines the loading element&#39;s size</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>1.5em</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$style</code></th><td data-label="desc"><p>is the value that defines the loading&#39;s style</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>1</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc"><p>is the value that defines the loading&#39;s color</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>#666</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.loading1{
+	@include loading(1.5em);
+}
+
+.loading2{
+	@include loading(1.5em, 2);
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="mixin-media"><h3 class="item__heading"><a class="item__name" href="#mixin-media">media</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin media($direction: left) { 
+	@extend %clearfix;
+
+	&amp; &gt; .img {
+		float: $direction;
+		display: block;
+		@if $direction == &#39;right&#39;{
+			margin: 0 0 0 1rem;
+		} @else {
+			margin: 0 1rem 0 0;
+		}
+	}
+
+	&amp; &gt; .img &gt; img {
+		display: block;
+	}
+
+	&amp; &gt; .img + *{
+		display:table-cell;
+		width:10000px;
+	}
+ }" data-collapsed="@mixin media($direction: left) { ... }"><code>@mixin media($direction: left) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A mixin that generates CSS for a media object</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$direction</code></th><td data-label="desc"><p>is the value that defines the media object&#39;s direction</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>left</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>&lt;div class=&quot;media&quot;&gt;
+	&lt;div class=&quot;img&quot;&gt;
+		&lt;img src=&quot;http://placekitten.com/50/50&quot;&gt;
+	&lt;/div&gt;
+	&lt;div&gt;
+		&lt;p&gt;Your content goes here&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+.media{
+	@include media;
+}
+
+.media-right{
+	@include media(right);
+}</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-clearfix"><code>clearfix</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="mixin-triangle"><h3 class="item__heading"><a class="item__name" href="#mixin-triangle">triangle</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin triangle($size, $color, $direction) { 
+	content: &quot;&quot;;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border: solid $size;
+
+	$direction: &quot;#{$direction}&quot;;
+
+	@if($direction == &quot;top&quot;){
+		border-color: $color transparent transparent transparent;
+	}@else if($direction == &quot;bottom&quot;){
+		border-color: transparent transparent $color transparent;
+	}@else if($direction == &quot;left&quot;){
+		border-color: transparent transparent transparent $color;
+	}@else if($direction == &quot;right&quot;){
+		border-color: transparent $color transparent transparent;
+	}@else if($direction == &quot;top left&quot; or $direction == &quot;left top&quot;){
+		border-color: $color transparent transparent $color;
+	}@else if($direction == &quot;bottom left&quot; or $direction == &quot;left bottom&quot;){
+		border-color: transparent transparent $color $color;
+	}@else if($direction == &quot;top right&quot; or $direction == &quot;right top&quot;){
+		border-color: $color $color transparent transparent;
+	}@else if($direction == &quot;bottom right&quot; or $direction == &quot;right bottom&quot;){
+		border-color: transparent $color $color transparent;
+	}@else if($direction == &quot;top bottom&quot; or $direction == &quot;bottom top&quot;){
+		border-color: $color transparent $color transparent;
+	}@else if($direction == &quot;left right&quot; or $direction == &quot;right left&quot;){
+		border-color: transparent $color transparent $color;
+	}@else if($direction == &quot;top bottom left&quot; or $direction == &quot;top left bottom&quot; or $direction == &quot;bottom top left&quot; or $direction == &quot;bottom left top&quot; or $direction == &quot;left top bottom&quot; or $direction == &quot;left bottom top&quot;){
+		border-color: $color transparent $color $color;
+	}@else if($direction == &quot;top bottom right&quot; or $direction == &quot;top right bottom&quot; or $direction == &quot;bottom top right&quot; or $direction == &quot;bottom right top&quot; or $direction == &quot;right top bottom&quot; or $direction == &quot;left bottom top&quot;){
+		border-color: $color $color $color transparent;
+	}@else if($direction == &quot;left right top&quot; or $direction == &quot;left top right&quot; or $direction == &quot;right left top&quot; or $direction == &quot;right top left&quot; or $direction == &quot;top left right&quot; or $direction == &quot;top right left&quot;){
+		border-color: $color $color transparent $color;
+	}@else if($direction == &quot;left right bottom&quot; or $direction == &quot;left bottom right&quot; or $direction == &quot;right left bottom&quot; or $direction == &quot;right bottom left&quot; or $direction == &quot;bottom left right&quot; or $direction == &quot;bottom right left&quot;){
+		border-color: transparent $color $color $color;
+	}
+ }" data-collapsed="@mixin triangle($size, $color, $direction) { ... }"><code>@mixin triangle($size, $color, $direction) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A mixin that generates CSS for a triangle</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$size</code></th><td data-label="desc"><p>is the value that defines the triangle&#39;s size</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc"><p>is the value that defines the triangle&#39;s color</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$direction</code></th><td data-label="desc"><p>is the value that defines the triangle&#39;s directions color [top, left, bottom, right, top left, bottom left, bottom right, top right, left right, top bottom, top left right, bottom left right, top bottom left, top bottom right]</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.triangle-top{
+	include triangle(30px, #0099ff, top);
+}
+.triangle-left{
+	include triangle(30px, #0099ff, left);
+}
+.triangle-bottom{
+	include triangle(30px, #0099ff, bottom);
+}
+.triangle-right{
+	include triangle(30px, #0099ff, right);
+}
+.triangle-topleft{
+	include triangle(30px, #0099ff, top left);
+}
+.triangle-bottomleft{
+	include triangle(30px, #0099ff, bottom left);
+}
+.triangle-bottomright{
+	include triangle(30px, #0099ff, bottom right);
+}
+.triangle-topright{
+	include triangle(30px, #0099ff, top right);
+}
+.triangle-leftright{
+	include triangle(30px, #0099ff, left right);
+}
+.triangle-topbottom{
+	include triangle(30px, #0099ff, top bottom);
+}
+.triangle-topleftright{
+	include triangle(30px, #0099ff, top left right);
+}
+.triangle-bottomleftright{
+	include triangle(30px, #0099ff, bottom left right);
+}
+.triangle-topbottomleft{
+	include triangle(30px, #0099ff, top bottom left);
+}
+.triangle-topbottomright{
+	include triangle(30px, #0099ff, top bottom right);
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="mixin-truncate"><h3 class="item__heading"><a class="item__name" href="#mixin-truncate">truncate</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin truncate($width: 100%) { 
+	width: $width;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+ }" data-collapsed="@mixin truncate($width: 100%) { ... }"><code>@mixin truncate($width: 100%) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A mixin that generates CSS for an effect added to a string containing element whose text will be truncated and then an extra character of ellipsis will be added.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$width</code></th><td data-label="desc"><p>is the value that defines where the text will be truncated</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>100%</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.truncate{
+	@include truncate(2em);
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section></section><section class="main__sub-section" id="layout-placeholder"><h2 class="main__heading--secondary"><div class="container">placeholders</div></h2><section class="main__item container item" id="placeholder-fixed-footer"><h3 class="item__heading"><a class="item__name" href="#placeholder-fixed-footer">fixed-footer</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%fixed-footer { 
+	@include fixed-footer;
+ }" data-collapsed="%fixed-footer { ... }"><code>%fixed-footer { ... }</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-fixed-footer"><code>fixed-footer</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="placeholder-form"><h3 class="item__heading"><a class="item__name" href="#placeholder-form">form</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%form { 
+	@include form;
+ }" data-collapsed="%form { ... }"><code>%form { ... }</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-form"><code>form</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="placeholder-vertical-form"><h3 class="item__heading"><a class="item__name" href="#placeholder-vertical-form">vertical-form</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%vertical-form { 
+	@include vertical-form;
+ }" data-collapsed="%vertical-form { ... }"><code>%vertical-form { ... }</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-vertical-form"><code>vertical-form</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="placeholder-unstyled-list"><h3 class="item__heading"><a class="item__name" href="#placeholder-unstyled-list">unstyled-list</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%unstyled-list { 
+	@include unstyled-list;
+ }" data-collapsed="%unstyled-list { ... }"><code>%unstyled-list { ... }</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-unstyled-list"><code>unstyled-list</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-unstyled-list"><code>unstyled-list</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-floated-list"><code>floated-list</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-inline-list"><code>inline-list</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="placeholder-floated-list"><h3 class="item__heading"><a class="item__name" href="#placeholder-floated-list">floated-list</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%floated-list { 
+	@include floated-list;
+ }" data-collapsed="%floated-list { ... }"><code>%floated-list { ... }</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-floated-list"><code>floated-list</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-floated-list"><code>floated-list</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="placeholder-inline-list"><h3 class="item__heading"><a class="item__name" href="#placeholder-inline-list">inline-list</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%inline-list { 
+	@include inline-list;
+ }" data-collapsed="%inline-list { ... }"><code>%inline-list { ... }</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-inline-list"><code>inline-list</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-inline-list"><code>inline-list</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="list"><div class="container">list</div></h1><section class="main__sub-section" id="list-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="mixin-unstyled-list"><h3 class="item__heading"><a class="item__name" href="#mixin-unstyled-list">unstyled-list</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin unstyled-list() { 
+	list-style: none;
+	list-style-position: outside;
+	list-style-image: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+ }" data-collapsed="@mixin unstyled-list() { ... }"><code>@mixin unstyled-list() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A mixin that generates CSS for unstyled lists</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.list{
+	@include unstyled-list;
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="mixin-floated-list"><h3 class="item__heading"><a class="item__name" href="#mixin-floated-list">floated-list</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin floated-list($spacing, $direction) { 
+	@extend %unstyled-list;
+	@extend %clearfix;
+
+	&amp; &gt; li {
+		float: $direction;
+	}
+
+	@if $spacing{
+		&amp; &gt; li + li{
+			margin-#{$direction}: $spacing;
+		}
+	}
+ }" data-collapsed="@mixin floated-list($spacing, $direction) { ... }"><code>@mixin floated-list($spacing, $direction) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A mixin that generates CSS for floated lists</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$spacing</code></th><td data-label="desc"><p>{Number} [0] $spacing is the value that defines the floated-list&#39;s spacing</p></td><td data-label="type"><code></code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$direction</code></th><td data-label="desc"><p>{String} $direction [left] is the value that defines the floated-list&#39;s direction .list{ @include floated-list; }</p></td><td data-label="type"><code></code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code></code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-unstyled-list"><code>unstyled-list</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-clearfix"><code>clearfix</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="mixin-inline-list"><h3 class="item__heading"><a class="item__name" href="#mixin-inline-list">inline-list</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin inline-list($spacing, $direction) { 
+	@extend %unstyled-list;
+
+	&amp; &gt; li {
+		display: inline-block;
+	}
+
+	@if $spacing{
+		&amp; &gt; li + li{
+			margin-#{$direction}: $spacing;
+		}
+	}
+ }" data-collapsed="@mixin inline-list($spacing, $direction) { ... }"><code>@mixin inline-list($spacing, $direction) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A mixin that generates CSS for inline lists</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$spacing</code></th><td data-label="desc"><p>$spacing {Number} is the value that defines the inline-list&#39;s spacing (defaults to 0)</p></td><td data-label="type"><code></code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$direction</code></th><td data-label="desc"><p>$direction {String} [left] is the value that defines the inline-list&#39;s direction</p></td><td data-label="type"><code></code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.my-list{
+	@include inline-list;
+}</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-unstyled-list"><code>unstyled-list</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="modules"><div class="container">modules</div></h1><section class="main__sub-section" id="modules-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="mixin-grid"><h3 class="item__heading"><a class="item__name" href="#mixin-grid">grid</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin grid($N: 12, $gutter: 0) { 
+	// if no $N was selected, create a 12-column grid
+	@if($N == false){
+		$N : 12;
+	}
+
+	// left-edge-case : if(i - 1 == 0) then convert that value to 1
+	$last : 1;
+	@if($N - 1 != 0){
+		$last : $N - 1;
+	}
+
+	// loop through the numbers given and generate column unit classes
+	@for $i from 1 through ($last + 1){
+		.col-#{$i}-#{$N}{
+			width: percentage($i / $N);
+		}
+	}
+
+	.grid{
+		box-sizing: border-box;
+		@extend %clearfix;
+		display: block;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+	}
+
+	.row{
+		box-sizing: border-box;
+		@extend %clearfix;
+		display: block;
+
+		@if($gutter != 0){
+			padding-bottom: $gutter;
+
+			&amp;:last-child{
+				padding-bottom: 0;
+			}
+		}
+
+		&amp; &gt; *{
+			box-sizing: border-box;
+			display: block;
+			float: left;
+
+			@if($gutter != 0){
+				padding-right: $gutter;
+
+				&amp;:last-child{
+					padding-right: 0;
+				}
+			}
+
+			@media only screen and (max-width: 1023px){
+				width: 100%;
+				float: none;
+				padding: 0;
+
+				@if($gutter != 0){
+					padding-bottom: $gutter;
+
+					&amp;:last-child{
+						padding-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+ }" data-collapsed="@mixin grid($N: 12, $gutter: 0) { ... }"><code>@mixin grid($N: 12, $gutter: 0) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A mixin that generates CSS for a grid system</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$N</code></th><td data-label="desc"><p>is the value that defines the grid&#39;s amount of columns</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>12</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$gutter</code></th><td data-label="desc"><p>is the value that defines the grid&#39;s gutter spacing</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>0</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.grid{
+	@include grid(16, 1em);
+}</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-clearfix"><code>clearfix</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section><section class="main__item container item" id="mixin-normalize"><h3 class="item__heading"><a class="item__name" href="#mixin-normalize">normalize</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin normalize() { 
+	/* normalize.css v2.1.3 | MIT License | git.io/normalize */
+
+	/* ==========================================================================
+		 HTML5 display definitions
+		 ========================================================================== */
+
+	/**
+	 * Correct `block` display not defined in IE 8/9.
+	 */
+
+	article,
+	aside,
+	details,
+	figcaption,
+	figure,
+	footer,
+	header,
+	hgroup,
+	main,
+	nav,
+	section,
+	summary {
+			display: block;
+	}
+
+	/**
+	 * Correct `inline-block` display not defined in IE 8/9.
+	 */
+
+	audio,
+	canvas,
+	video {
+			display: inline-block;
+	}
+
+	/**
+	 * Prevent modern browsers from displaying `audio` without controls.
+	 * Remove excess height in iOS 5 devices.
+	 */
+
+	audio:not([controls]) {
+			display: none;
+			height: 0;
+	}
+
+	/**
+	 * Address `[hidden]` styling not present in IE 8/9.
+	 * Hide the `template` element in IE, Safari, and Firefox &lt; 22.
+	 */
+
+	[hidden],
+	template {
+			display: none;
+	}
+
+	/* ==========================================================================
+		 Base
+		 ========================================================================== */
+
+	/**
+	 * 1. Set default font family to sans-serif.
+	 * 2. Prevent iOS text size adjust after orientation change, without disabling
+	 *    user zoom.
+	 */
+
+	html {
+			font-family: sans-serif; /* 1 */
+			-ms-text-size-adjust: 100%; /* 2 */
+			-webkit-text-size-adjust: 100%; /* 2 */
+	}
+
+	/**
+	 * Remove default margin.
+	 */
+
+	body {
+			margin: 0;
+	}
+
+	/* ==========================================================================
+		 Links
+		 ========================================================================== */
+
+	/**
+	 * Remove the gray background color from active links in IE 10.
+	 */
+
+	a {
+			background: transparent;
+	}
+
+	/**
+	 * Address `outline` inconsistency between Chrome and other browsers.
+	 */
+
+	a:focus {
+			outline: thin dotted;
+	}
+
+	/**
+	 * Improve readability when focused and also mouse hovered in all browsers.
+	 */
+
+	a:active,
+	a:hover {
+			outline: 0;
+	}
+
+	/* ==========================================================================
+		 Typography
+		 ========================================================================== */
+
+	/**
+	 * Address variable `h1` font-size and margin within `section` and `article`
+	 * contexts in Firefox 4+, Safari 5, and Chrome.
+	 */
+
+	h1 {
+			font-size: 2em;
+			margin: 0.67em 0;
+	}
+
+	/**
+	 * Address styling not present in IE 8/9, Safari 5, and Chrome.
+	 */
+
+	abbr[title] {
+			border-bottom: 1px dotted;
+	}
+
+	/**
+	 * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+	 */
+
+	b,
+	strong {
+			font-weight: bold;
+	}
+
+	/**
+	 * Address styling not present in Safari 5 and Chrome.
+	 */
+
+	dfn {
+			font-style: italic;
+	}
+
+	/**
+	 * Address differences between Firefox and other browsers.
+	 */
+
+	hr {
+			-moz-box-sizing: content-box;
+			box-sizing: content-box;
+			height: 0;
+	}
+
+	/**
+	 * Address styling not present in IE 8/9.
+	 */
+
+	mark {
+			background: #ff0;
+			color: #000;
+	}
+
+	/**
+	 * Correct font family set oddly in Safari 5 and Chrome.
+	 */
+
+	code,
+	kbd,
+	pre,
+	samp {
+			font-family: monospace, serif;
+			font-size: 1em;
+	}
+
+	/**
+	 * Improve readability of pre-formatted text in all browsers.
+	 */
+
+	pre {
+			white-space: pre-wrap;
+	}
+
+	/**
+	 * Set consistent quote types.
+	 */
+
+	q {
+			quotes: &quot;\201C&quot; &quot;\201D&quot; &quot;\2018&quot; &quot;\2019&quot;;
+	}
+
+	/**
+	 * Address inconsistent and variable font size in all browsers.
+	 */
+
+	small {
+			font-size: 80%;
+	}
+
+	/**
+	 * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+	 */
+
+	sub,
+	sup {
+			font-size: 75%;
+			line-height: 0;
+			position: relative;
+			vertical-align: baseline;
+	}
+
+	sup {
+			top: -0.5em;
+	}
+
+	sub {
+			bottom: -0.25em;
+	}
+
+	/* ==========================================================================
+		 Embedded content
+		 ========================================================================== */
+
+	/**
+	 * Remove border when inside `a` element in IE 8/9.
+	 */
+
+	img {
+			border: 0;
+	}
+
+	/**
+	 * Correct overflow displayed oddly in IE 9.
+	 */
+
+	svg:not(:root) {
+			overflow: hidden;
+	}
+
+	/* ==========================================================================
+		 Figures
+		 ========================================================================== */
+
+	/**
+	 * Address margin not present in IE 8/9 and Safari 5.
+	 */
+
+	figure {
+			margin: 0;
+	}
+
+	/* ==========================================================================
+		 Forms
+		 ========================================================================== */
+
+	/**
+	 * Define consistent border, margin, and padding.
+	 */
+
+	fieldset {
+			border: 1px solid #c0c0c0;
+			margin: 0 2px;
+			padding: 0.35em 0.625em 0.75em;
+	}
+
+	/**
+	 * 1. Correct `color` not being inherited in IE 8/9.
+	 * 2. Remove padding so people aren&#39;t caught out if they zero out fieldsets.
+	 */
+
+	legend {
+			border: 0; /* 1 */
+			padding: 0; /* 2 */
+	}
+
+	/**
+	 * 1. Correct font family not being inherited in all browsers.
+	 * 2. Correct font size not being inherited in all browsers.
+	 * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+	 */
+
+	button,
+	input,
+	select,
+	textarea {
+			font-family: inherit; /* 1 */
+			font-size: 100%; /* 2 */
+			margin: 0; /* 3 */
+	}
+
+	/**
+	 * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+	 * the UA stylesheet.
+	 */
+
+	button,
+	input {
+			line-height: normal;
+	}
+
+	/**
+	 * Address inconsistent `text-transform` inheritance for `button` and `select`.
+	 * All other form control elements do not inherit `text-transform` values.
+	 * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+	 * Correct `select` style inheritance in Firefox 4+ and Opera.
+	 */
+
+	button,
+	select {
+			text-transform: none;
+	}
+
+	/**
+	 * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+	 *    and `video` controls.
+	 * 2. Correct inability to style clickable `input` types in iOS.
+	 * 3. Improve usability and consistency of cursor style between image-type
+	 *    `input` and others.
+	 */
+
+	button,
+	html input[type=&quot;button&quot;], /* 1 */
+	input[type=&quot;reset&quot;],
+	input[type=&quot;submit&quot;] {
+			-webkit-appearance: button; /* 2 */
+			cursor: pointer; /* 3 */
+	}
+
+	/**
+	 * Re-set default cursor for disabled elements.
+	 */
+
+	button[disabled],
+	html input[disabled] {
+			cursor: default;
+	}
+
+	/**
+	 * 1. Address box sizing set to `content-box` in IE 8/9/10.
+	 * 2. Remove excess padding in IE 8/9/10.
+	 */
+
+	input[type=&quot;checkbox&quot;],
+	input[type=&quot;radio&quot;] {
+			box-sizing: border-box; /* 1 */
+			padding: 0; /* 2 */
+	}
+
+	/**
+	 * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+	 * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+	 *    (include `-moz` to future-proof).
+	 */
+
+	input[type=&quot;search&quot;] {
+			-webkit-appearance: textfield; /* 1 */
+			-moz-box-sizing: content-box;
+			-webkit-box-sizing: content-box; /* 2 */
+			box-sizing: content-box;
+	}
+
+	/**
+	 * Remove inner padding and search cancel button in Safari 5 and Chrome
+	 * on OS X.
+	 */
+
+	input[type=&quot;search&quot;]::-webkit-search-cancel-button,
+	input[type=&quot;search&quot;]::-webkit-search-decoration {
+			-webkit-appearance: none;
+	}
+
+	/**
+	 * Remove inner padding and border in Firefox 4+.
+	 */
+
+	button::-moz-focus-inner,
+	input::-moz-focus-inner {
+			border: 0;
+			padding: 0;
+	}
+
+	/**
+	 * 1. Remove default vertical scrollbar in IE 8/9.
+	 * 2. Improve readability and alignment in all browsers.
+	 */
+
+	textarea {
+			overflow: auto; /* 1 */
+			vertical-align: top; /* 2 */
+	}
+
+	/* ==========================================================================
+		 Tables
+		 ========================================================================== */
+
+	/**
+	 * Remove most spacing between table cells.
+	 */
+
+	table {
+			border-collapse: collapse;
+			border-spacing: 0;
+	}
+ }" data-collapsed="@mixin normalize() { ... }"><code>@mixin normalize() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Normalize.css</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>	@include normalize;</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Adonis K.</p></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --><span class="project-info__name">Verepo</span><!-- Version --> <span class="project-info__version">- v0.1.1</span><!-- License --></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>

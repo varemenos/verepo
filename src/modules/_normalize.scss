@@ -1,8 +1,11 @@
-// Normalize.css
-// @mixin normalize
-// @category modules
-// @usage:
-// =normalize;
+////
+/// @group modules
+/// @author Adonis K.
+////
+
+/// Normalize.css
+/// @example
+/// 	@include normalize;
 @mixin normalize{
 	/* normalize.css v2.1.3 | MIT License | git.io/normalize */
 

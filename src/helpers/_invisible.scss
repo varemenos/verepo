@@ -1,14 +1,18 @@
-// A mixin that generates CSS for invisible
-// @mixin invisible
-// @category helpers
-// @usage:
-// .invisible{
-// 	=invisible;
-// }
+////
+/// @group helpers
+/// @author Adonis K.
+////
+
+/// A mixin that generates CSS for invisible
+/// @example
+/// .invisible{
+/// 	@include invisible;
+/// }
 @mixin invisible {
 	visibility: hidden;
 }
 
+///
 %invisible{
 	@include invisible;
 }

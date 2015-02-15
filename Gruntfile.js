@@ -3,7 +3,7 @@ module.exports = function (grunt) {
 		project: grunt.file.readJSON('package.json'),
 		shell: {
 			compileDocs: {
-				command: "sassdoc -d ./docs -n veRepo"
+				command: "./node_modules/sassdoc/bin/sassdoc src ./src/ -d docs"
 			}
 		},
 		connect: {

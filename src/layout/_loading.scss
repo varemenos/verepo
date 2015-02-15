@@ -1,16 +1,20 @@
-// A mixin that generates CSS for an animated loading element
-// @mixin loading
-// @category layout
-// @param $width {Number} is the value that defines the loading element's size (defaults to 1.5em)
-// @param $style {Number} is the value that defines the loading's style (defaults to style #1) (currently there are only 2 styles available)
-// @param $color {String} is the value that defines the loading's color (defaults to #ccc)
-// @usage:
-// .loading1{
-//	=loading(1.5em);
-// }
-// .loading2{
-//	=loading(1.5em, 2);
-// }
+////
+/// @group layout
+/// @author Adonis K.
+////
+
+/// A mixin that generates CSS for an animated loading element
+/// @param {Number} $width [1.5em] is the value that defines the loading element's size
+/// @param {Number} $style [1] is the value that defines the loading's style
+/// @param {String} $color [#666] is the value that defines the loading's color
+/// @example
+/// .loading1{
+/// 	@include loading(1.5em);
+/// }
+///
+/// .loading2{
+/// 	@include loading(1.5em, 2);
+/// }
 @mixin loading($width: 1.5em, $style: 1, $color: #666){
 	content: "";
 	display: inline-block;

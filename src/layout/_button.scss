@@ -1,28 +1,36 @@
-// A mixin that generates CSS for a styled button
-// @category layout
-// @mixin button
-// @param $font-color {String} is the value that defines the button's font color
-// @param $bg-color {String} is the value that defines the button's background color
-// @param $radius {Number} is the value that defines the button's border radius (default value is 0)
-// @usage:
-// .blue-flat-button{
-//	=button(#fff, #09f, 0);
-// }
-// .blue-curved-button{
-//	=button(#fff, #09f, 2px);
-// }
-// .white-flat-button{
-//	=button(#222, #fff, 0);
-// }
-// .white-curved-button{
-//	=button(#222, #fff, 2px);
-// }
-// .dark-blue-flat-button{
-//	=button(#fff, #458, 0);
-// }
-// .dark-blue-curved-button{
-//	=button(#fff, #458, 2px);
-// }
+////
+/// @group layout
+/// @author Adonis K.
+////
+
+/// A mixin that generates CSS for a styled button
+/// @param {String} $font-color is the value that defines the button's font color
+/// @param {String} $bg-color is the value that defines the button's background color
+/// @param {Number} $radius [0] is the value that defines the button's border radius
+/// @example
+/// .blue-flat-button{
+/// 	@include button(#fff, #09f, 0);
+/// }
+///
+/// .blue-curved-button{
+/// 	@include button(#fff, #09f, 2px);
+/// }
+///
+/// .white-flat-button{
+/// 	@include button(#222, #fff, 0);
+/// }
+///
+/// .white-curved-button{
+/// 	@include button(#222, #fff, 2px);
+/// }
+///
+/// .dark-blue-flat-button{
+///		@include button(#fff, #458, 0);
+/// }
+///
+/// .dark-blue-curved-button{
+///		@include button(#fff, #458, 2px);
+/// }
 @mixin button($font-color, $bg-color, $radius: 0){
 	position: relative;
 	display: inline-block;

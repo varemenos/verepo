@@ -1,11 +1,14 @@
-// A mixin that generates CSS for unstyled lists
-// @mixin unstyled-list
-// @category layout
-// @param $gutter {Number} is the value that defines the grid's gutter spacing (defaults to 0)
-// @usage:
-// .my-list{
-// 	=unstyled-list;
-// }
+////
+/// @group layout
+/// @author Adonis K.
+////
+
+/// A mixin that generates CSS for unstyled lists
+/// @group list
+/// @example
+/// .list{
+/// 	@include unstyled-list;
+/// }
 @mixin unstyled-list{
 	list-style: none;
 	list-style-position: outside;
@@ -15,19 +18,19 @@
 	padding: 0;
 }
 
+///
 %unstyled-list{
 	@include unstyled-list;
 }
 
-// A mixin that generates CSS for floated lists
-// @mixin floated-list
-// @category layout
-// @param $spacing {Number} is the value that defines the floated-list's spacing (defaults to 0)
-// @param $direction {String} is the value that defines the floated-list's direction (defaults to left) [left, right]
-// @usage:
-// .my-list{
-// 	=floated-list;
-// }
+/// A mixin that generates CSS for floated lists
+/// @group list
+/// @example
+/// @param spacing {Number} [0] $spacing is the value that defines the floated-list's spacing
+/// @param direction {String} $direction [left] is the value that defines the floated-list's direction
+/// .list{
+/// 	@include floated-list;
+/// }
 @mixin floated-list($spacing: false, $direction: left){
 	@extend %unstyled-list;
 	@extend %clearfix;
@@ -43,19 +46,19 @@
 	}
 }
 
+///
 %floated-list{
 	@include floated-list;
 }
 
-// A mixin that generates CSS for inline lists
-// @mixin inline-list
-// @category layout
-// @param $spacing {Number} is the value that defines the inline-list's spacing (defaults to 0)
-// @param $direction {String} is the value that defines the inline-list's direction (defaults to left) [left, right]
-// @usage:
-// .my-list{
-// 	=inline-list;
-// }
+/// A mixin that generates CSS for inline lists
+/// @group list
+/// @param spacing $spacing {Number} is the value that defines the inline-list's spacing (defaults to 0)
+/// @param direction $direction {String} [left] is the value that defines the inline-list's direction
+/// @example
+/// .my-list{
+/// 	@include inline-list;
+/// }
 @mixin inline-list($spacing: false, $direction: left){
 	@extend %unstyled-list;
 
@@ -70,6 +73,7 @@
 	}
 }
 
+///
 %inline-list{
 	@include inline-list;
 }

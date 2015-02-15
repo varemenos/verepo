@@ -1,11 +1,14 @@
-// A function that strips the unit off the value you input
-// @function unitless
-// @category functions
-// @param $value {Number} the value you want to remove the unit from
-// @usage:
-// .a{
-// 	padding:#{unitless(1em)}rem; // padding: 1rem;
-// }
+////
+/// @group functions
+/// @author Adonis K.
+////
+
+/// A function that strips the unit off the value you input
+// @param {Number} $value the value you want to remove the unit from
+/// @example
+/// .a{
+///		padding:#{unitless(1em)}rem; // padding: 1rem;
+/// }
 @function unitless($value){
 	@return $value/($value*0+1);
 }

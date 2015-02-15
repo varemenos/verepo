@@ -1,10 +1,14 @@
-// A mixin that generates CSS for a footer that is fixed on the bottom of the page (Don't forget to add a bottom margin to the previous element to avoid overlapping the footer)
-// @mixin form
-// @category layout
-// @usage:
-// .form{
-// 	=form;
-// }
+////
+/// @group layout
+/// @author Adonis K.
+////
+
+/// A mixin that generates CSS for a footer that is fixed on the bottom of the page (Don't forget to add a bottom margin to the previous element to avoid overlapping the footer)
+/// @group forms
+/// @example
+/// .form{
+/// 	@include form;
+/// }
 @mixin form{
 	input,
 	label,
@@ -97,17 +101,17 @@
 	}
 }
 
+///
 %form{
 	@include form;
 }
 
-// A mixin that generates CSS for a vertical form
-// @mixin vertical-form
-// @category layout
-// @usage:
-// .vertical-form{
-// 	=vertical-form;
-// }
+/// A mixin that generates CSS for a vertical form
+/// @group forms
+/// @example
+/// .vertical-form{
+/// 	@include vertical-form;
+/// }
 @mixin vertical-form{
 	@extend %form;
 
@@ -141,6 +145,7 @@
 	}
 }
 
+///
 %vertical-form{
 	@include vertical-form;
 }
