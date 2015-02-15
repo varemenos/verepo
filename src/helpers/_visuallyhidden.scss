@@ -1,10 +1,13 @@
-// A mixin that generates CSS for visuallyhidden
-// @mixin visuallyhidden
-// @category helpers
-// @usage:
-// .visuallyhidden{
-// 	=visuallyhidden;
-// }
+////
+/// @group helpers
+/// @author Adonis K.
+////
+
+/// A mixin that generates CSS for visuallyhidden
+/// @example
+/// .visuallyhidden{
+/// 	@include visuallyhidden;
+/// }
 @mixin visuallyhidden {
 	border: 0;
 	clip: rect(0 0 0 0);
@@ -26,6 +29,7 @@
 	}
 }
 
+///
 %visuallyhidden{
 	@include visuallyhidden;
 }

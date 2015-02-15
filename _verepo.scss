@@ -1,14 +1,17 @@
 /*! veRepo.scss 0.1.1 | MIT License | https://github.com/varemenos/verepo */
 
-// A function that convert pixels into em values
-// @function px2em
-// @category functions
-// @param $pixels {Number} the value in pixels you want to convert into em
-// @param $base {Number} the base value for em, defaults to 16
-// @usage:
-// .a{
-// 	padding: px2em(12); // padding: 0.75em;
-// }
+////
+/// @group functions
+/// @author Adonis K.
+////
+
+/// A function that convert pixels into em values
+/// @param $pixels {Number} the value in pixels you want to convert into em
+/// @param $base {Number} the base value for em, defaults to 16
+/// @example:
+/// .a{
+/// 	padding: px2em(12, 16); // padding: 0.75em;
+/// }
 @function px2em($pixels, $base: 16) {
 	@return ($pixels / $base) * 1em;
 }

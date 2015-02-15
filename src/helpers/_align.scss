@@ -1,11 +1,18 @@
-// Generate helper classes for aligning elements.
-// @mixin align
-// @category helpers
-// @param $direction {String} is the value that defines the align class' direction.
-// @param $important {String} is the value that declares whether the align will be forced via !important or not [any value with trigger the effect].
-// @usage:
-// =align(right);
-// =align(left, important);
+////
+/// @group helpers
+/// @author Adonis K.
+////
+
+/// Generate helper classes for aligning elements.
+// @param {String} $direction is the value that defines the align class' direction.
+// @param {Boolean} $important [false] is the value that declares whether the align will be forced via !important or not [any value with trigger the effect].
+/// @example
+/// .a{
+/// 	@include align(right); // text-align: right;
+/// }
+/// .b{
+/// 	@include align(left, important); // text-align: left !important;
+/// }
 @mixin align($direction, $important: false){
 	.align--#{$direction}{
 		@if $important{

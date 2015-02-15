@@ -1,19 +1,27 @@
-// A mixin that generates CSS for a media object
-// @category layout
-// @mixin media
-// @param $direction {String} is the value that defines the media object's direction.
-// @usage:
-// <div class="media">
-// 	<div class="img">
-// 		<img src="http://placekitten.com/50/50">
-// 	</div>
-// 	<div>
-// 		<p>Your content goes here</p>
-// 	</div>
-// </div>
-// .media{
-// 	=media;
-// }
+////
+/// @group layout
+/// @author Adonis K.
+////
+
+/// A mixin that generates CSS for a media object
+/// @param {String} $direction [left] is the value that defines the media object's direction
+/// @example
+/// <div class="media">
+/// 	<div class="img">
+/// 		<img src="http://placekitten.com/50/50">
+/// 	</div>
+/// 	<div>
+/// 		<p>Your content goes here</p>
+/// 	</div>
+/// </div>
+///
+/// .media{
+/// 	@include media;
+/// }
+///
+/// .media-right{
+/// 	@include media(right);
+/// }
 @mixin media($direction: left){
 	@extend %clearfix;
 
