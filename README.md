@@ -25,7 +25,7 @@ veRepo is a SASS library of modules and mixins for robust and maintainable front
 
 Visit [this link](http://varemenos.github.io/verepo/docs/) to read the online version, or follow the next steps to get a local version:
 
-1. To generate the docs for this library you need to have the sassdoc gem installed (`gem install sassdoc`) and then while being inside the verepo, type: `sassdoc -d ./docs -n veRepo`. Or you can use the grunt command that generates the docs mentioned [here](https://github.com/varemenos/verepo#gruntjs).
+1. To generate the docs you have to use the grunt command that generates the docs mentioned [here](https://github.com/varemenos/verepo#gruntjs).
 
 2. To view the docs you need to serve them in an http server. One of the fastest ways to do that is via python's httpserver: `cd docs` and then `python -m http.server`
 
@@ -122,7 +122,7 @@ For the SASS syntax lovers or the SCSS syntax haters, you can use `sass-convert`
 	1. include the `.scss` file inside the verepo library's directory
 	2. name it after it's mixin but since it's a partial, prepend a `_` in the name (for example `_grid.scss`)
 3. Inside the file you just created:
-	1. Include the documentation declaration (for syntax and information, [read here](https://github.com/eoneill/sassdoc))
+	1. Include the documentation declaration (for syntax and information, [read here](http://sassdoc.com/annotations/))
 	2. Include any import declarations
 	3. Include any `TODO:` declarations
 	4. Include the code (mixins, functions etc)
